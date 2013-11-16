@@ -1,0 +1,528 @@
+/**
+ * su-identity.css
+ * ========================================================
+ * Custom base styles
+ * Last edited: 4/19/2013 by Nate Hardison <nate@edx.org>
+ */
+
+#su-header .su-container,
+#su-footer .su-container {
+  margin: 0 auto;
+}
+
+#su-header .span2,
+#su-footer .span2 {
+  display: block;
+  min-height: 1px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#su-header .span10,
+#su-footer .span10 {
+  display: block;
+  min-height: 1px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#su-header .su-container:after,
+#su-footer .su-container:after {
+  clear: both;
+}
+
+#su-header .row:after,
+#su-footer .row:after {
+  clear: both;
+}
+
+/* Background gradient */
+/*
+.home>header .media .hero {
+  background: url(../../images/ionis-video-thumb.png) no-repeat -88px -49px;
+}
+*/
+.home>header .media .hero .play-intro {
+  width: 50px;
+  height: 50px;
+  top: 53%;
+  left: 53%;
+}
+
+.home>header .media .hero .play-intro::after {
+  margin-top: -19px;
+}
+
+/*
+.home>header {
+  background: url(../../images/ionis-online.jpg) no-repeat center 0;
+  height: 550px;
+}
+*/
+
+.home>header .outer-wrapper {
+  padding-top: 330px;
+}
+
+header.global,
+.wrapper-footer {
+  background: #FFF;
+}
+
+#su-header {
+  background: #303030;
+  box-shadow: inset 0 -4px 8px -2px rgba(0, 0, 0, 0.2); /* Horizontal offset , vertical offset, blur, internal spacing */
+  min-height: 100px;
+}
+
+header.global .nav-global li a:hover,
+header.global .nav-global li a:active,
+.highlighted-courses .courses .course .info .bottom .university:hover,
+.find-courses .courses .course .info .bottom .university:hover,
+.wrapper-footer footer .colophon .nav-colophon li a:hover,
+.wrapper-footer footer .colophon .nav-colophon li a:active
+{
+  color: #2daae1;
+}
+
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses,
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart
+{
+  background: #0f70b7;
+  border: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses:hover:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled),
+.cta-login:hover
+{
+  background: #2daae1 !important;
+  border: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+a:link,
+a:visited,
+p a:link,
+p a:visited
+{
+  color: #2daae1;
+}
+
+p a:link:hover,
+p a:visited:hover
+{
+  color: #0f70b7;
+}
+
+h2 {
+  color: #2daae1;
+}
+
+p,
+header.global .nav-global li a,
+h2 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.course-preview h2:hover,
+.course-preview .info-link:hover {
+  color: #2daae1 !important;
+}
+
+.cta-login {
+  background: #303030 !important;
+}
+
+#su-footer,
+#su-footer .su-container {
+  background: #303030;
+  color: #e3dfd5;
+  box-shadow: inset 0 4px 8px -2px rgba(0, 0, 0, 0.2); /* Horizontal offset , vertical offset, blur, internal spacing */
+}
+
+/* Prevent flush left */
+#su-header .su-container img {
+  padding: 4px 0 0 10px;
+}
+
+#su-footer a {
+  color: #e3dfd5;
+}
+
+#su-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Prevent horizontal scroll bar */
+#su-footer .su-container {
+  padding: 3px 7px 20px;
+}
+
+#su-footer .su-container .su-row {
+  margin: 30px 0 0;
+}
+
+/* Align logo and text */
+#su-footer-logo {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+#su-footer-text {
+  margin-top: 0;
+}
+
+#su-footer-text ul {
+  margin: 2px 0 0;
+  padding: 0;
+  line-height: 1em;
+}
+
+#su-footer-text ul li {
+  display: block;
+  list-style: none;
+}
+
+#su-footer-text ul li a {
+  text-decoration: none;
+}
+
+#su-footer p.copyright {
+  margin: 0;
+  padding: 30px 0 0;
+  line-height: 1.5em;
+  color: #e3dfd5;
+}
+
+#su-footer p.copyright span {
+  color: #e3dfd5;
+}
+
+/* Footer two columns */
+#su-footer .span2 {
+  width: 48%;
+  float: left;
+}
+
+#su-footer .span10 {
+  width: 48%;
+  float: right;
+}
+
+#su-footer img {
+  margin: 0 auto;
+  display: block;
+}
+
+/* Clear the floats */
+#su-footer .clear {
+  clear: both;
+}
+
+/*
+========================================================
+Media queries
+*/
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 768px) {
+  /* Prevent double background gradient */
+  #su-footer .su-container {
+    background:none;
+    box-shadow:none;
+  }
+
+  #bottom-text {
+    margin-top:2px;
+  }
+
+  /* Remove left padding */
+  #su-header .su-container img {
+    padding:4px 0 0;
+  }
+
+  /* Bootstrap style */
+  #su-header .su-container,
+  #su-footer .su-container {
+    width:724px;
+  }
+
+  #su-footer .su-container .su-row {
+    margin:30px 0 0 -20px;
+  }
+  /* Footer single column */
+  #su-footer .span2 {
+    float:left;
+    width:104px;
+    padding-left:8px; /* Prevent flush left */
+  }
+  /* Bootstrap style */
+  #su-footer .span10 {
+    width:600px;
+    margin-left:20px;
+    margin:0 12px 0 20px;
+    float:left;
+  }
+
+  #su-footer img {
+    margin:0 auto;
+  }
+
+  #su-footer ul li.alt {
+  	clear:right;
+  }
+  /* Footer two column */
+  #su-footer ul {
+    width:100%;
+    float:left;
+  }
+
+  #su-footer ul li {
+  	width:auto;
+  	margin:0 13px 3px 0;
+  	padding:0;
+  	float:none;
+  	clear:left;
+    display:inline-block;
+  }
+
+  #bottom-logo {
+    margin:-5px 0 10px;
+  }
+
+  #su-footer .clear {
+    clear:none;
+  }
+
+  p.copyright {
+    text-align:left;
+    padding-left:17%;
+    padding-top:25px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  /* Bootstrap style */
+  #su-header .su-container,
+  #su-footer .su-container {
+    width:940px;
+  }
+
+  #su-footer .span2 {
+    width:140px;
+  }
+
+  #su-footer .span10 {
+    width:780px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Bootstrap style */
+  
+  #su-header .su-container,
+  #su-footer .su-container {
+    width:1180px;
+  }
+
+  #su-footer .span2 {
+    width:170px;
+  }
+
+  #su-footer .span10 {
+    width:970px;
+  }
+
+  p.copyright {
+    padding-left:16%;
+  }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.wrapper-footer {
+  background: #303030;
+  padding: 0;
+}
+
+.wrapper-footer footer a:link,
+.wrapper-footer footer a:active,
+.wrapper-footer footer a:visited {
+  color: #FFF;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper-footer footer a:hover,
+.wrapper-footer footer a:active {
+  border-bottom: none;
+}
+
+.wrapper-footer footer {
+    width: 960px !important;
+    background: #303030 url(http://www.ionis-group.com/images/design/bg/bg-footer.png) scroll no-repeat 0 0;
+    padding: 20px;
+    margin-top: 70px;
+    margin: auto;
+}
+.wrapper-footer footer section {
+    float: left;
+}
+.wrapper-footer footer .apropos {
+    width: 600px;
+}
+.wrapper-footer footer .nosecoles {
+    width: 270px;
+}
+.wrapper-footer footer .ionis20 {
+    width: 92px;
+}
+.wrapper-footer footer .infospratiques {
+    width: 157px;
+    margin-left: 40px;
+}
+.wrapper-footer footer h3 {
+    margin: 0;
+    color:#FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    line-height: 19px;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+footer .left, footer .right {
+    float: left;
+    width: 133px;
+    margin: 0;
+    padding: 0;
+}
+.wrapper-footer footer .infospratiques h3 {margin-bottom: 10px;}
+.wrapper-footer footer .ionis20 h3 {margin-bottom: 30px;}
+.wrapper-footer footer p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    line-height: 16px;
+    color:#FFF;
+    padding-right: 34px;
+    margin: 0;
+}
+.wrapper-footer footer ul {
+    margin: 0;
+    padding: 0;
+}
+.wrapper-footer footer li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    list-style: none;
+}
+.wrapper-footer footer a {
+    color:#FFF;
+    text-decoration: none;
+}
+.wrapper-footer footer a:hover {text-decoration: underline !important;}
+.wrapper-footer .lt-ie8 footer .ionis20 li {
+    display: inline;
+}
+.wrapper-footer footer .ionis20 ul li{
+    text-align: center;
+    margin-bottom: 15px;
+    width: 46px;
+    float: left;
+}
+.wrapper-footer .ionis20 a {
+    text-indent: -9999px;
+    display: inline-block;
+    width: 27px;
+    height: 22px;
+    background: url(http://www.ionis-group.com/images/design/bg/bg-footer-ionis20.png) scroll no-repeat 0 0;
+}
+.wrapper-footer .ionis20 .rss {
+    width: 21px;
+    background-position: 0 0;
+}
+.wrapper-footer .ionis20 .facebook {
+    width: 10px;
+    background-position: -30px 0;
+}
+.wrapper-footer .ionis20 .twitter {
+    width: 26px;
+    background-position: -52px 0;
+    margin: 0;
+}
+.wrapper-footer .ionis20 .googleplus {
+    width: 22px;
+    background-position: -88px 0;
+}
+.wrapper-footer .ionis20 .rss:hover {
+    background-position: 0 -22px;
+}
+.wrapper-footer .ionis20 .facebook:hover {
+    background-position: -30px -22px;
+}
+.wrapper-footer .ionis20 .twitter:hover {
+    background-position: -52px -22px;
+}
+.wrapper-footer .ionis20 .googleplus:hover {
+    background-position: -88px -22px;
+}
+
+/*
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+
+/*html, body {*/
+	/*height: 100%;*/
+/*}*/
+/*#su-wrap {*/
+	/*min-height: 100%;*/
+/*}*/
+/*#su-content {*/
+	/*overflow:visible;*/
+	/*padding-bottom: 120px; [> must be same height as the footer <]*/
+/*}*/
+/*#su-footer {*/
+	/*position: relative;*/
+	/*margin-top: -120px; [> negative value of footer height <]*/
+	/*height: 120px;*/
+	/*clear:both;*/
+/*} */
+
+/*[> IE6/7 uses media, <]*/
+/*@media, {*/
+  /*#su-footer {*/
+    /*height: 219px;*/
+  /*}*/
+/*}*/
+
+/*[> IE8 uses \0/ <]*/
+/*@media all {*/
+  /*#su-footer {*/
+    /*height: 196px\0/;*/
+  /*}*/
+/*}*/
+
+/*[>Opera Fix<]*/
+	/*body:before { [> thanks to Maleika (Kohoutec)<]*/
+	/*content:"";*/
+	/*height:100%;*/
+	/*float:left;*/
+	/*width:0;*/
+	/*margin-top:-32767px;[> thank you Erik J - negate effect of float<]*/
+/*}*/

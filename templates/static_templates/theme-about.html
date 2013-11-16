@@ -1,0 +1,105 @@
+<%! from django.core.urlresolvers import reverse %>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="/main.html" />
+
+<%block name="title"><title>A propos de IONIS Online Courses</title></%block>
+
+<section class="container about">
+  <nav>
+    <a href="#about" class="active">A Propos</a>
+    <a href="#faq">Questions fréquentes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="vision">
+    <section class="message left" id="about">
+      <div class="photo">
+        <img src="${static.url('themes/stanford/images/ionis-campus-paris-sud.jpg')}" alt="Campus IONIS Paris Sud" />
+      </div>
+      <article>
+        <h2>About <span class="edx">IONIS Online Courses</span></h2>
+        
+        <p>IONIS Education Group d&eacute;veloppe de nouveaux supports de cours en ligne afin d&cute;am&eacute;liorer les enseignements de ses campus et permettre au grand public d&cute;acc&eacute;der &agrave; un enseignement d&cute;exception.</p>
+        <p>L'équipe Opérations de la Direction de l'Enseignement Numérique exécute et développe une instance de la plateforme <a href="http://code.edx.org">OpenEdX</a>.</p>
+      </article>
+      <hr class="fade-right-hr-divider">
+    </section>
+
+    <section class="message left" id="faq">
+      <div class="photo">
+        <img src="${static.url('themes/stanford/images/memchu.jpg')}" alt="Stanford Memorial Church Facade" />
+          <!-- Image Copyright owned by Giulio Gratta -->
+      </div>
+      <article>
+        <h2>FAQs</h2>
+        <p><strong>Has Stanford joined the edX consortium?</strong><br />
+        No.  We're partnering on the open source software.</p>
+        
+        <p><strong>What browsers are recommended for use with Stanford OpenEdX?</strong><br />
+        The latest versions of <a href="http://chrome.google.com/">Google Chrome</a>, <a href="http://www.mozilla.org/firefox">Mozilla Firefox</a>, and <a href="http://www.apple.com/safari/">Apple Safari</a>. (The site is currently not optimized for mobile use.)</p>
+
+        <p><strong>If I'm a Stanford faculty member, and I'd like to use the platform to host content for an on-campus or public course, who should I get in touch with?</strong><br />
+        <a href="mailto:courseops@class.stanford.edu">Click here to get in touch</a></p>
+
+        <p><strong>If I'm at another university, and I'd like to find out about using the open source platform, who should I get in touch with?</strong><br />
+        <a href="mailto:techsupport@class.stanford.edu">Click here to get in touch</a></p>
+      </article>
+      <hr class="fade-right-hr-divider">
+    </section>
+
+    <section class="message left" id="contact">
+      <div class="photo">
+        <img src="${static.url('themes/stanford/images/dish.jpg')}" alt="Stanford Dish by Twilight" />
+          <!-- Image Copyright owned by Stanford University -->
+      </div>
+      <article id="stanford-OpenEdX-contact">
+        <h2>Contact Information</h2>
+        <p><strong>For general information email us at:</strong><br />
+        <a href="mailto:contact@class.stanford.edu">contact@class.stanford.edu</a></p>
+
+        <p><strong>For copyright concerns email us at:</strong><br />
+        <a href="mailto:copyright@class.stanford.edu">copyright@class.stanford.edu</a></p>
+
+        <p><strong>For bug reports email us at:</strong><br />
+        <a href="mailto:bugs@class.stanford.edu">bugs@class.stanford.edu</a></p>
+
+        <p><strong>For suggestions email us at:</strong><br />
+        <a href="mailto:suggestions@class.stanford.edu">suggestions@class.stanford.edu</a></p>
+
+        <p><strong>For technical support reports email us at:</strong><br />
+        <a href="mailto:techsupport@class.stanford.edu">techsupport@class.stanford.edu</a></p>
+
+        <p><strong>For disability-related questions email us at:</strong><br />
+        <a href="mailto:accessibility@class.stanford.edu">accessibility@class.stanford.edu</a></p>
+
+        <p><strong>For questions about privacy-related issues email us at:</strong><br />
+        <a href="mailto:privacy@class.stanford.edu">privacy@class.stanford.edu</a></p>
+
+        <p>&nbsp;</p>
+        <h2>Contact Coursera</h2>
+        <p><strong>Coursera Student Support Center:</strong><br />
+        <a href="http://help.coursera.org/" class="external">http://help.coursera.org/</a></p>
+        
+        <p>&nbsp;</p>
+        <h2>Contact NovoEd</h2>
+        <p><strong>NovoEd Support Center:</strong><br />
+        <a href="mailto:support@novoed.com" class="external">support@novoed.com</a></p>
+      </article>
+      <script>
+        $(function() {
+          var ua = navigator.userAgent;
+          
+          $('#stanford-OpenEdX-contact a').each(function() {
+            var href = $(this).attr('href') + "?body=User Agent String: " + ua + " (Please do not delete, this text helps us help you. - Stanford OpenEdX Team)";
+            if (!$(this).hasClass('external')) {
+              $(this).attr('href', href);
+            }
+          });
+        });
+      </script>
+      <hr class="fade-right-hr-divider">
+    </section>
+  </section>
+
+</section>
