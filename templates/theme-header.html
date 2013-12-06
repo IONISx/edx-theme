@@ -8,7 +8,7 @@
   <div id="su-header">
     <div class="su-container">
       <a href="/">
-        <img src="/static/themes/ioc-edx-theme/images/logo-ionis-online-courses.jpg" alt="IONIS online courses" width="170" height="94" />
+        <img src="/static/themes/ioc-edx-theme/images/logo-ionis-online-courses.jpg" alt="IONIS Online Courses" width="170" height="94" />
       </a>
     </div>
   </div>
@@ -24,17 +24,16 @@
 ## When unauthenticated, only show the about page link
 <%block name="navigation_global_links">
   <li class="nav-global-01">
-    <a href="${marketing_link('ABOUT')}">A Propos</a>
+    <a href="${marketing_link('ABOUT')}">À Propos</a>
   </li>
 </%block>
 
 ## When authenticated, show both the about page and find courses
 <%block name="navigation_global_links_authenticated">
   <li class="nav-global-01">
-    <a href="${marketing_link('ABOUT')}">A Propos</a>
+    <a href="${marketing_link('ABOUT')}">À Propos</a>
   </li>
   <li class="nav-global-02">
     <a href="${marketing_link('COURSES')}">Chercher des cours</a>
   </li>
 </%block>
-
