@@ -6,12 +6,12 @@
 ****************************************************************************************************/
 
 //-----------------
-//  Color variables (from Stanford palette unless noted)
+//  Color variables
 //-----------------
 
-//Cardinal Color Variables
-$cardinal-red: #8C1515;
-$dark-red: #820000; //Link Color
+$beautiful-blue: #2daae1;
+$darker-blue: #0984BA;
+
 $cardinal-light: #c83737; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
 $cardinal-bg: #e9afaf; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
@@ -80,12 +80,12 @@ $base-font-color: $black;
 $lighter-base-font-color: $black-80;
 $very-light-text: $gray-1;
 
-$link-color: $dark-red;
-$link-color-d1: $dark-red;
+$link-color: $beautiful-blue;
+$link-color-d1: $beautiful-blue;
 $link-hover: $cardinal-light;
 $site-status-color: $cardinal-bg;
 
-$button-color: $cardinal-red;
+$button-color: $darker-blue;
 $button-archive-color: $gray-3;
 
 $shadow-color: $gray;
@@ -96,16 +96,16 @@ $button-bg-color: $gray-3;
 $button-bg-hover-color: $gray-1;
 
 // actions - primary
-$action-primary-bg: $cardinal-red;
+$action-primary-bg: $darker-blue;
 $action-primary-fg: $gray-2;
 $action-primary-shadow: none;
 
 // focused - hover/active pseudo states
-$action-primary-focused-bg: $dark-red;
+$action-primary-focused-bg: $beautiful-blue;
 $action-primary-focused-fg: $gray-1;
 
 // current or active navigation item
-$action-primary-active-bg: $dark-red;
+$action-primary-active-bg: $beautiful-blue;
 $action-primary-active-fg: $gray-1;
 $action-primary-active-shadow: none;
 $action-primary-active-focused-fg: $gray-2;
