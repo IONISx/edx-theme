@@ -480,6 +480,10 @@ footer .left, footer .right {
     background-position: -88px -22px;
 }
 
+.register .content {
+    margin-top: 55px;
+}
+
 /*
 Sticky Footer Solution
 by Steve Hatcher 
