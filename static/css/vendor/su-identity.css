@@ -484,6 +484,11 @@ footer .left, footer .right {
     margin-top: 55px;
 }
 
+header.global.slim h1.logo {
+    margin: -2px 39px 0px 0px;
+    padding-right: 0;
+}
+
 /*
 Sticky Footer Solution
 by Steve Hatcher 
