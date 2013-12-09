@@ -372,7 +372,7 @@ Media queries
 
 .wrapper-footer footer {
     width: 960px !important;
-    background: #303030 url(../themes/ioc-edx-theme/images/bg-footer.png) scroll no-repeat 0 0;
+    background: #303030 url(../../images/bg-footer.png) scroll no-repeat 0 0;
     padding: 20px;
     margin-top: 70px;
     margin: auto;
@@ -448,7 +448,7 @@ footer .left, footer .right {
     display: inline-block;
     width: 27px;
     height: 22px;
-    background: url(../themes/ioc-edx-theme/images/bg-footer-ionis20.png) scroll no-repeat 0 0;
+    background: url(../../images/bg-footer-ionis20.png) scroll no-repeat 0 0;
 }
 .wrapper-footer .ionis20 .rss {
     width: 21px;
