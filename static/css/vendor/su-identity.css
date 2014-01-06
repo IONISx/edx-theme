@@ -489,6 +489,14 @@ TODO: REMOVE THIS ASAP (ugly overrides)
 
 *********************************************************/
 
+.highlighted-courses .courses .course .bottom .university, .find-courses .courses .course .bottom .university {
+    display: inline;
+}
+
+header.global.slim h1.logo:before {
+    display: none;
+}
+
 .register .content {
     margin-top: 55px;
 }
