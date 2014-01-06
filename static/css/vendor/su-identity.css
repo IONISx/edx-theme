@@ -493,15 +493,6 @@ TODO: REMOVE THIS ASAP (ugly overrides)
     margin-top: 55px;
 }
 
-header.global.slim h1.logo {
-    margin: -2px 39px 0px 0px;
-    padding-right: 0;
-}
-
-.xmodule_display.xmodule_VideoModule div.video article.video-wrapper section.video-controls div.secondary-controls div.speeds>a {
-    width: auto;
-}
-
 /*
 Sticky Footer Solution
 by Steve Hatcher 
