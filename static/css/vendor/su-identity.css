@@ -489,6 +489,10 @@ TODO: REMOVE THIS ASAP (ugly overrides)
 
 *********************************************************/
 
+xmodule_display.xmodule_VideoModule div.video article.video-wrapper section.video-controls div.secondary-controls div.speeds>a {
+    width: auto;
+}
+
 .highlighted-courses .courses .course .bottom .university, .find-courses .courses .course .bottom .university {
     display: inline;
 }
