@@ -389,11 +389,7 @@ Media queries
     width: 270px;
 }
 .wrapper-footer footer .ionis20 {
-    width: 92px;
-}
-.wrapper-footer footer .infospratiques {
-    width: 157px;
-    margin-left: 40px;
+    width: 249px;
 }
 .wrapper-footer footer h3 {
     margin: 0;
@@ -440,7 +436,6 @@ footer .left, footer .right {
     display: inline;
 }
 .wrapper-footer footer .ionis20 ul li{
-    text-align: center;
     margin-bottom: 15px;
     width: 46px;
     float: left;
@@ -500,50 +495,3 @@ header.global.slim h1.logo:before {
 .register .content {
     margin-top: 55px;
 }
-
-/*
-Sticky Footer Solution
-by Steve Hatcher 
-http://stever.ca
-http://www.cssstickyfooter.com
-*/
-
-/*html, body {*/
-	/*height: 100%;*/
-/*}*/
-/*#su-wrap {*/
-	/*min-height: 100%;*/
-/*}*/
-/*#su-content {*/
-	/*overflow:visible;*/
-	/*padding-bottom: 120px; [> must be same height as the footer <]*/
-/*}*/
-/*#su-footer {*/
-	/*position: relative;*/
-	/*margin-top: -120px; [> negative value of footer height <]*/
-	/*height: 120px;*/
-	/*clear:both;*/
-/*} */
-
-/*[> IE6/7 uses media, <]*/
-/*@media, {*/
-  /*#su-footer {*/
-    /*height: 219px;*/
-  /*}*/
-/*}*/
-
-/*[> IE8 uses \0/ <]*/
-/*@media all {*/
-  /*#su-footer {*/
-    /*height: 196px\0/;*/
-  /*}*/
-/*}*/
-
-/*[>Opera Fix<]*/
-	/*body:before { [> thanks to Maleika (Kohoutec)<]*/
-	/*content:"";*/
-	/*height:100%;*/
-	/*float:left;*/
-	/*width:0;*/
-	/*margin-top:-32767px;[> thank you Erik J - negate effect of float<]*/
-/*}*/
