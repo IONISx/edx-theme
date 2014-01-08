@@ -1,9 +1,7 @@
-Introduction
-============
-Ce dossier contient les fichiers de personnalisation de l'instance
-OpenEdX "IONIS Online Courses" de [http://www.ionis-group.com]IONIS Education Group.
+# ioc-edx-theme
 
-Celui-ci est basé sur les travaux de personnalisation précédemment
-réalisés par Stanford.
+This repository contains the OpenEdX theme used by IONIS Online Courses.
 
-Pour tout commentaires ou questions, veuillez contacter digital.learning@ionis-group.com.
+It is based on Stanford’s [works](https://github.com/Stanford-Online/edx-theme).
+
+If you have any comments or questions, please contact digital.learning@ionis-group.com.
