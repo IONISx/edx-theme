@@ -5,10 +5,37 @@
 
 <%block name="title"><title>À propos de IONIS Online Courses</title></%block>
 
+<%block name="js_extra">
+  <script type="text/javascript">
+    $(function() {
+        $('section.message').hide();
+        $('#about-menu a').removeClass('active');
+        window.scrollTo(0,0);
+
+        if (document.location.href.indexOf('#ibc') > -1) {
+            $('section#ibc').show();
+            $('#about-menu a.ibc').addClass('active');
+        } else {
+            $('section#about').show();
+            $('#about-menu a.about').addClass('active');
+        }
+
+        $('#about-menu a').click(function(event) {
+            event.preventDefault();
+            $('#about-menu a').removeClass('active');
+            $(this).addClass('active');
+            var clickId = "section" + $(this).attr('href');
+            $('section.message').hide();
+            $(clickId).show();
+        });
+    });
+  </script>
+</%block>
+
 <section class="container about">
-  <nav>
-    <a href="#about" class="active">À Propos</a>
-    <a href="#ibc">IONIS Brand Culture</a>
+  <nav id="about-menu">
+    <a href="#about" class="about active">À Propos</a>
+    <a href="#ibc" class="ibc">IONIS Brand Culture</a>
   </nav>
 
   <section class="vision">
@@ -18,7 +45,7 @@
       </div>
       <article>
         <h2>À propos de IONIS Online Courses</span></h2>
-        
+
         <p>IONIS Education Group développe de nouveaux supports de cours en ligne complétant ses enseignements en campus et permettant au grand public d'accéder à ses contenus originaux.</p>
         <p>Nous exécutons et développons une instance de la plateforme <a href="http://code.edx.org">OpenEdX</a>.</p>
       </article>
