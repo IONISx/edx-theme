@@ -374,7 +374,6 @@ Media queries
 
 .wrapper-footer footer {
     width: 960px !important;
-    background: #303030 url(../../images/bg-footer.png) scroll no-repeat 0 0;
     padding: 20px;
     margin-top: 70px;
     margin: auto;
