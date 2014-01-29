@@ -122,11 +122,12 @@ header.global > nav {
 }
 
 header.global ol.nav-global {
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 header.global ol.nav-global li a {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: normal;
     color: #fff;
 }
 
