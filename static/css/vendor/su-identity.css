@@ -5,34 +5,6 @@
  * Last edited: 4/19/2013 by Nate Hardison <nate@edx.org>
  */
 
-#su-header .su-container {
-  margin: 0 auto;
-}
-
-#su-header .span2 {
-  display: block;
-  min-height: 1px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#su-header .span10 {
-  display: block;
-  min-height: 1px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#su-header .su-container:after {
-  clear: both;
-}
-
-#su-header .row:after {
-  clear: both;
-}
-
 /* Background gradient */
 /*
 .home>header .media .hero {
@@ -61,15 +33,6 @@
   padding-top: 330px;
 }
 
-header.global {
-  background: #FFF;
-}
-
-#su-header {
-  background: #303030;
-  box-shadow: inset 0 -4px 8px -2px rgba(0, 0, 0, 0.2); /* Horizontal offset , vertical offset, blur, internal spacing */
-  min-height: 100px;
-}
 
 header.global .nav-global li a:hover,
 header.global .nav-global li a:active,
@@ -136,50 +99,6 @@ h2 {
   background: #303030 !important;
 }
 
-/* Prevent flush left */
-#su-header .su-container img {
-  padding: 4px 0 0 10px;
-}
-
-/*
-========================================================
-Media queries
-*/
-
-@media screen and (min-width: 768px) {
-  #bottom-text {
-    margin-top:2px;
-  }
-
-  /* Remove left padding */
-  #su-header .su-container img {
-    padding:4px 0 0;
-  }
-
-  /* Bootstrap style */
-  #su-header .su-container {
-    width:724px;
-  }
-
-  #bottom-logo {
-    margin:-5px 0 10px;
-  }
-}
-
-@media screen and (min-width: 980px) {
-  /* Bootstrap style */
-  #su-header .su-container {
-    width:940px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  /* Bootstrap style */
-
-  #su-header .su-container {
-    width:1180px;
-  }
-}
 
 /* ==========================================================================
    Footer
@@ -210,6 +129,15 @@ footer > div > p {
 
 header.global {
     height: 100px;
+    background-color: #fff;
+}
+
+header.global ol.nav-global {
+    margin-top: 20px;
+}
+
+header.global ol.nav-courseware {
+    margin-top: 15px;
 }
 
 /*********************************************************
