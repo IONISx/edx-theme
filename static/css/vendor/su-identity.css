@@ -190,14 +190,14 @@ footer {
     padding: 20px 0 10px;
 }
 
-footer .container {
+footer > div {
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-footer .container p {
+footer > div > p {
     margin: 0 0 10px;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
