@@ -100,6 +100,12 @@ h2 {
 }
 
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -133,7 +139,8 @@ header.global {
 }
 
 header.global > nav {
-    max-width: 1170px
+    height: auto;
+    max-width: 1170px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
