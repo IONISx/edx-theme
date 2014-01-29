@@ -164,31 +164,12 @@ Media queries
   #bottom-logo {
     margin:-5px 0 10px;
   }
-
-  #su-footer .clear {
-    clear:none;
-  }
-
-  p.copyright {
-    text-align:left;
-    padding-left:17%;
-    padding-top:25px;
-  }
 }
 
 @media screen and (min-width: 980px) {
   /* Bootstrap style */
-  #su-header .su-container,
-  #su-footer .su-container {
+  #su-header .su-container {
     width:940px;
-  }
-
-  #su-footer .span2 {
-    width:140px;
-  }
-
-  #su-footer .span10 {
-    width:780px;
   }
 }
 
@@ -205,8 +186,10 @@ Media queries
    ========================================================================== */
 
 footer {
-  background: #303030;
-  padding: 20px 0 10px;
+    font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #303030;
+    color: #fff;
+    padding: 20px 0 10px;
 }
 
 footer .container {
@@ -214,6 +197,10 @@ footer .container {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+footer .container p {
+    margin: 0 0 10px;
 }
 
 /*********************************************************
