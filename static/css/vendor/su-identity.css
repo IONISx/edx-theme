@@ -115,6 +115,11 @@ header.global > nav {
     padding-right: 15px;
 }
 
+.view-login header.global > nav,
+.view-register header.global > nav {
+    width: auto;
+}
+
 header.global ol.nav-global {
     margin-top: 20px;
 }
