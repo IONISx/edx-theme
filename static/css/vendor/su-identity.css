@@ -79,6 +79,7 @@ footer > div {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
+    max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
