@@ -132,6 +132,14 @@ header.global {
     background-color: #fff;
 }
 
+header.global > nav {
+    max-width: 1170px
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 header.global ol.nav-global {
     margin-top: 20px;
 }
