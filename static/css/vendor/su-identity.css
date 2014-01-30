@@ -180,6 +180,12 @@ section.content-wrapper {
     padding: 0;
 }
 
+.view-login section.content-wrapper .introduction > header > h1.title > span.title-super,
+.view-register section.content-wrapper .introduction > header > h1.title > span.title-super,
+.view-login section.content-wrapper .introduction > header > h1.title > span.title-sub,
+.view-register section.content-wrapper .introduction > header > h1.title > span.title-sub {
+    text-transform: none;
+}
 
 
 /*********************************************************
