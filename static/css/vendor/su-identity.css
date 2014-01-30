@@ -147,12 +147,14 @@ header.global ol.nav-courseware {
     margin-top: 20px;
 }
 
+.view-login header.global ol.nav-courseware li a.cta-login,
 header.global ol.nav-courseware li a.cta-login {
     -webkit-transition: none;
     transition: none;
     -webkit-border-radius: 0;
     border-radius: 0;
 
+    display: inline-block;
     background-color: #eef0f1;
     color: black;
     font-size: 14px;
