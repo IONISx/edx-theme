@@ -134,7 +134,7 @@ header.global ol.nav-global {
 header.global ol.nav-global li a {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: normal;
-    color: #fff
+    color: #fff !important;
 }
 
 .view-login header.global ol.nav-global li a:hover,
