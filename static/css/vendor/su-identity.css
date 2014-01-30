@@ -72,6 +72,7 @@ h2 {
 footer {
     background-color: #303030;
     padding: 20px 0 10px;
+    margin: 0;
 }
 
 footer > div {
@@ -142,16 +143,21 @@ header.global ol.nav-courseware li .cta-login {
 }
 
 header.global ol.user {
-    margin-top: 17px;
+    margin-top: 18px;
 }
 
+header.global ol.user > li.primary > a {
+    border: 0 none;
+    background-color: #ebf0f2;
+}
+
+
 /* ==========================================================================
-   Header
+   Content
    ========================================================================== */
 
-
 section.content-wrapper {
-    margin-top: 1px;
+    backgroun-color: #ebf0f2;
 }
 
 .view-register section.content-wrapper .container,
