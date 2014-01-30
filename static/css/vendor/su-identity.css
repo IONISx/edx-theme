@@ -146,6 +146,22 @@ header.global ol.user {
     margin-top: 18px;
 }
 
+header.global ol.user ul.dropdown-menu {
+    right: -3px;
+    border: 0 none;
+    padding: 4px 8px;
+    z-index: 10;
+}
+
+header.global ol.user ul.dropdown-menu li > a {
+    border: 0 none;
+    color: #303030;
+}
+
+header.global ol.user ul.dropdown-menu li > a:hover {
+    background-color: #ebf0f2;
+}
+
 header.global ol.user > li.primary > a {
     border: 0 none;
     background-color: #ebf0f2;
