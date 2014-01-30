@@ -155,6 +155,7 @@ header.global ol.user ul.dropdown-menu {
 
 header.global ol.user ul.dropdown-menu li > a {
     border: 0 none;
+    outline: none;
     color: #303030;
 }
 
