@@ -137,9 +137,19 @@ header.global ol.nav-courseware {
     margin-top: 15px;
 }
 
-header.global ol.nav-courseware li .cta-login {
-    background: #eef0f1;
-    color: #000;
+header.global ol.nav-courseware li a.cta-login {
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+
+    background-color: #eef0f1;
+    color: black;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+header.global ol.nav-courseware li a.cta-login:hover {
+    background-color: white;
 }
 
 header.global ol.user {
