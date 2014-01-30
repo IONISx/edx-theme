@@ -172,7 +172,7 @@ section.content-wrapper {
 .view-login section.content-wrapper .container > section.content,
 .view-passwordreset section.content-wrapper .container > section.content {
     width: auto;
-    margin-right: 50px;
+    min-width: 700px;
 }
 
 .view-login section.content-wrapper .introduction > header,
