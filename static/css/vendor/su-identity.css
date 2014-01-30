@@ -171,11 +171,13 @@ section.content-wrapper {
 .view-login section.content-wrapper .introduction > header,
 .view-register section.content-wrapper .introduction > header {
     height: auto;
+    margin-top: 30px;
 }
 
 .view-login section.content-wrapper .introduction > header > h1.title,
 .view-register section.content-wrapper .introduction > header > h1.title {
     position: static;
+    padding: 0;
 }
 
 
