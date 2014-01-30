@@ -168,7 +168,7 @@ section.content-wrapper {
     padding-right: 15px;
 }
 
-.view-login section.content-wrapper .introduction > header
+.view-login section.content-wrapper .introduction > header,
 .view-register section.content-wrapper .introduction > header {
     height: auto;
 }
@@ -192,8 +192,4 @@ TODO: REMOVE THIS ASAP (ugly overrides)
 
 header.global.slim h1.logo:before {
     display: none;
-}
-
-.register .content {
-    margin-top: 55px;
 }
