@@ -150,6 +150,25 @@ section.content-wrapper {
     margin-top: 1px;
 }
 
+.view-register section.content-wrapper .container,
+.view-register section.content-wrapper .introduction,
+.view-login section.content-wrapper .container,
+.view-login section.content-wrapper .introduction,
+.view-passwordreset section.content-wrapper .container,
+.view-passwordreset section.content-wrapper .introduction {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: auto;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
 /*********************************************************
 
 TODO: REMOVE THIS ASAP (ugly overrides)
