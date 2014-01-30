@@ -151,6 +151,9 @@ header.global ol.user > li.primary > a {
     background-color: #ebf0f2;
 }
 
+header.global ol.user > li.primary > a:hover {
+    background-color: #fff;
+}
 
 /* ==========================================================================
    Content
