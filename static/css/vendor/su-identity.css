@@ -186,7 +186,10 @@ header.global ol.user > li.primary > a:hover {
    Content
    ========================================================================== */
 
-section.content-wrapper {
+section.content-wrapper,
+.view-register .content-wrapper,
+.view-login .content-wrapper,
+.view-passwordreset .content-wrapper {
     background-color: #eef0f1;
 }
 
