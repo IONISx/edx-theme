@@ -246,6 +246,32 @@ section.content-wrapper .find-courses {
 }
 
 
+/* ==========================================================================
+   Course list
+   ========================================================================== */
+
+section.profile-sidebar header.profile {
+    display: none;
+}
+
+section.profile-sidebar section.user-info {
+    border-right: 1px solid #ddd;
+}
+
+section.profile-sidebar section.user-info > ul {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    background: none;
+    border: 0 none;
+    padding: 0 10px 10px
+}
+
+section.my-courses header {
+    border-bottom: 1px solid #ddd;
+}
+
 /*********************************************************
 
 TODO: REMOVE THIS ASAP (ugly overrides)
