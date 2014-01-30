@@ -138,7 +138,7 @@ header.global ol.nav-courseware {
 }
 
 header.global ol.nav-courseware li .cta-login {
-    background: #f2f1eb;
+    background: #eef0f1;
     color: #000;
 }
 
@@ -160,12 +160,12 @@ header.global ol.user ul.dropdown-menu li > a {
 }
 
 header.global ol.user ul.dropdown-menu li > a:hover {
-    background-color: #ebf0f2;
+    background-color: #eef0f1;
 }
 
 header.global ol.user > li.primary > a {
     border: 0 none;
-    background-color: #ebf0f2;
+    background-color: #eef0f1;
 }
 
 header.global ol.user > li.primary > a:hover {
@@ -177,7 +177,7 @@ header.global ol.user > li.primary > a:hover {
    ========================================================================== */
 
 section.content-wrapper {
-    background-color: #ebf0f2;
+    background-color: #eef0f1;
 }
 
 .view-register section.content-wrapper .container,
