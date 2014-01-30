@@ -5,7 +5,7 @@
  * Last edited: 4/19/2013 by Nate Hardison <nate@edx.org>
  */
 
-body {
+html, body {
     background-color: #303030;
 }
 
@@ -195,6 +195,10 @@ section.content-wrapper,
 .view-login .content-wrapper,
 .view-passwordreset .content-wrapper {
     background-color: #eef0f1;
+}
+
+section.content-wrapper .find-courses {
+    background: none;
 }
 
 .view-register section.content-wrapper .container,
