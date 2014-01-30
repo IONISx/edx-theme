@@ -129,11 +129,18 @@ header.global ol.nav-global {
     margin-top: 24px;
 }
 
-view-register header.global ol.nav-global li a,
+.view-login header.global ol.nav-global li a,
+.view-register header.global ol.nav-global li a,
 header.global ol.nav-global li a {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: normal;
-    color: #fff !important;
+    color: #fff
+}
+
+.view-login header.global ol.nav-global li a:hover,
+.view-register header.global ol.nav-global li a:hover,
+header.global ol.nav-global li a:hover {
+    color: #eef0f1;
 }
 
 header.global ol.nav-courseware {
