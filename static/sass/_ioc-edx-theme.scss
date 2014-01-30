@@ -182,17 +182,3 @@ $register-banner-image: none;
 
 $video-thumb-url: '../themes/ioc-edx-theme/images/ionis-video-thumb.png';
 
-//-----------------
-//  Mixin Styles
-//-----------------
-@mixin login_register_h1_style {
-    clip: auto !important;
-    height: 50px;
-    width: 550px;
-    margin-top: 50px;
-}
-
-@mixin footer_references_style {
-    margin: 0 !important;
-    text-align: right;
-}

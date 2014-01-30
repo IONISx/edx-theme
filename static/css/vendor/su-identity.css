@@ -168,6 +168,17 @@ section.content-wrapper {
     padding-right: 15px;
 }
 
+.view-login section.content-wrapper .introduction > header
+.view-register section.content-wrapper .introduction > header {
+    height: auto;
+}
+
+.view-login section.content-wrapper .introduction > header > h1.title,
+.view-register section.content-wrapper .introduction > header > h1.title {
+    position: static;
+}
+
+
 
 /*********************************************************
 
