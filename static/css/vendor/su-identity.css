@@ -5,6 +5,10 @@
  * Last edited: 4/19/2013 by Nate Hardison <nate@edx.org>
  */
 
+body {
+    background-color: #303030;
+}
+
 header.global .nav-global li a:hover,
 header.global .nav-global li a:active,
 .highlighted-courses .courses .course .info .bottom .university:hover,
