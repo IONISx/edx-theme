@@ -27,7 +27,6 @@ header.global .nav-global li a:active,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled),
-.cta-login:hover
 {
   background: #2daae1 !important;
   border: none;
@@ -134,13 +133,14 @@ header.global ol.nav-global li a {
 }
 
 header.global ol.nav-courseware {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 header.global ol.nav-courseware li a.cta-login {
     -webkit-transition: none;
-    -moz-transition: none;
     transition: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
 
     background-color: #eef0f1;
     color: black;
