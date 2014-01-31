@@ -11,12 +11,12 @@ $cardinal-bg: #e9afaf; //Selected Content BG Color, ie. calendar          ***Cus
 //Beige Color Variables
 $beige: #9d9573;
 $beige-60: lighten($beige, 18.5%); //Main Border/HR Color
-$beige-25: lighten($beige, 25%); 
+$beige-25: lighten($beige, 25%);
 
 //Sandstone Color Variables
 $sandstone: #ddcf99;
 $sandstone-50: lighten($sandstone, 9%);
-$sandstone-25: lighten($sandstone, 20%); //Important Heading BG Color 
+$sandstone-25: lighten($sandstone, 20%); //Important Heading BG Color
 
 //Gray Color Variables
 $gray: #3f3c30; //Main Text Color
@@ -38,7 +38,7 @@ $black-80: #585754;
 $sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $body-font-family: $sans-serif;
 
-$serif: Georgia, "Times New Roman", Times, serif
+$serif: Georgia, "Times New Roman", Times, serif;
 
 
 
@@ -171,4 +171,3 @@ $login-banner-image: none;
 $register-banner-image: none;
 
 $video-thumb-url: '../themes/ioc-edx-theme/images/ionis-video-thumb.png';
-
