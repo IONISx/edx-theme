@@ -171,3 +171,10 @@ $login-banner-image: none;
 $register-banner-image: none;
 
 $video-thumb-url: '../themes/ioc-edx-theme/images/ionis-video-thumb.png';
+
+
+// Overrides:
+
+button, input, select, textarea {
+    font-family: $sans-serif;
+}
