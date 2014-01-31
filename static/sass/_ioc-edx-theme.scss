@@ -178,3 +178,7 @@ $video-thumb-url: '../themes/ioc-edx-theme/images/ionis-video-thumb.png';
 button, input, select, textarea {
     font-family: $sans-serif;
 }
+
+p a:link, p a:visited {
+    font-family: $sans-serif;
+}
