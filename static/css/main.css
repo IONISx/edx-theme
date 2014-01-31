@@ -259,11 +259,11 @@ section.dashboard section.my-courses header {
     border-bottom: 1px solid #ddd;
 }
 
-section.dashboard section.my-courses header .empty-dashboard-message {
+section.dashboard section.my-courses .empty-dashboard-message {
     padding: 20px 0;
 }
 
-section.dashboard section.my-courses header .empty-dashboard-message > a {
+section.dashboard section.my-courses .empty-dashboard-message > a {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
