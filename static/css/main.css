@@ -31,22 +31,6 @@ header.global .nav-global li a:active,
   text-shadow: inherit;
 }
 
-a:link,
-a:visited,
-p a:link,
-p a:visited
-{
-  font-family: 'Open Sans', sans-serif;
-  color: #2daae1;
-}
-
-p a:link:hover,
-p a:visited:hover
-{
-  font-family: 'Open Sans', sans-serif;
-  color: #0f70b7;
-}
-
 h2 {
   color: #2daae1;
 }
@@ -133,7 +117,7 @@ header.global ol.nav-global li a {
 .view-login header.global ol.nav-global li a:hover,
 .view-register header.global ol.nav-global li a:hover,
 header.global ol.nav-global li a:hover {
-    color: #eef0f1;
+    color: #eef0f1 !important;
 }
 
 header.global ol.nav-courseware {
