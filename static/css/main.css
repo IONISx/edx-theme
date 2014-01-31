@@ -259,6 +259,21 @@ section.dashboard section.my-courses header {
     border-bottom: 1px solid #ddd;
 }
 
+section.dashboard section.my-courses header .empty-dashboard-message {
+    padding: 20px 0;
+}
+
+section.dashboard section.my-courses header .empty-dashboard-message > a {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    margin: 0;
+    padding: 8px 12px;
+    background-color: #white;
+    border-color: #ddd;
+}
+
 /*********************************************************
 
 TODO: REMOVE THIS ASAP (ugly overrides)
