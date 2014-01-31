@@ -226,6 +226,7 @@ section.content-wrapper .find-courses {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    background: none;
 }
 
 .view-register section.content-wrapper .container > section.content,
