@@ -187,6 +187,11 @@ section.content-wrapper .find-courses {
     background: none;
 }
 
+
+section.content-wrapper .find-courses header.search .inner-wrapper.main-search {
+    display: none;
+}
+
 .view-register section.content-wrapper .container,
 .view-register section.content-wrapper .introduction,
 .view-login section.content-wrapper .container,
