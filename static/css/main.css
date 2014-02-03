@@ -37,7 +37,7 @@ h2 {
 
 p,
 h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .course-preview h2:hover,
@@ -47,7 +47,7 @@ h2 {
 
 p a:link,
 p a:visited {
-    font-family: $sans-serif !important;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
 
 
