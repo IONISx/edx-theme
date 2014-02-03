@@ -179,6 +179,9 @@ button, input, select, textarea {
     font-family: $sans-serif;
 }
 
-p a:link, p a:visited {
-    font-family: $sans-serif;
+p {
+    > a:link,
+    > a:visited {
+        font-family: $sans-serif;
+    }
 }
