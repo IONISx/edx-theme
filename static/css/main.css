@@ -84,23 +84,53 @@ footer > div > p {
    Header
    ========================================================================== */
 
-header.global {
+header.global,
+header.global.slim {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
     height: 100px;
+    padding: 0;
     background-color: #303030;
     border-bottom: 1px solid #f2f1eb;
 }
 
-header.global > nav {
+header.global > nav,
+header.global.slim > nav {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
     height: auto;
+    padding: 15px 10px 0px;
     max-width: 1170px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+header.global > nav h1.logo,
+header.global.slim > nav h1.logo {
+    margin: -2px 39px 0px 0px;
+    padding: 0;
+}
+
+header.global > nav h1.logo img,
+header.global.slim > nav h1.logo img {
+    height: auto;
+}
+
+header.global.slim > nav h2 {
+    padding: 0;
+    color: white;
+    text-shadow: none;
+    margin: 25px 10px 0 10px;
+}
+
+header.global.slim > nav h2 span {
+    color: #eef0f1;
 }
 
 .view-login header.global > nav,
