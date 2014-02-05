@@ -115,6 +115,7 @@ header.global > nav h1.logo,
 header.global.slim > nav h1.logo {
     margin: -2px 39px 0px 0px;
     padding: 0;
+    float: left;
 }
 
 header.global > nav h1.logo img,
@@ -252,24 +253,31 @@ section.content-wrapper .find-courses header.search .inner-wrapper.main-search {
 .view-passwordreset section.content-wrapper .container > section.content {
     width: auto;
     min-width: 700px;
+    margin: 20px 30px 0 0;
 }
 
 .view-login section.content-wrapper .introduction > header,
-.view-register section.content-wrapper .introduction > header {
+.view-register section.content-wrapper .introduction > header,
+.view-passwordreset section.content-wrapper .introduction > header {
     height: auto;
     margin-top: 30px;
+    border-bottom: 1px solid #8a8c8f;
 }
 
 .view-login section.content-wrapper .introduction > header > h1.title,
-.view-register section.content-wrapper .introduction > header > h1.title {
+.view-register section.content-wrapper .introduction > header > h1.title,
+.view-passwordreset section.content-wrapper .introduction > header > h1.title {
     position: static;
     padding: 0;
+    margin: 0 0 30px 0;
 }
 
 .view-login section.content-wrapper .introduction > header > h1.title > span.title-super,
-.view-register section.content-wrapper .introduction > header > h1.title > span.title-super,
 .view-login section.content-wrapper .introduction > header > h1.title > span.title-sub,
-.view-register section.content-wrapper .introduction > header > h1.title > span.title-sub {
+.view-register section.content-wrapper .introduction > header > h1.title > span.title-super,
+.view-register section.content-wrapper .introduction > header > h1.title > span.title-sub,
+.view-passwordreset section.content-wrapper .introduction > header > h1.title > span.title-super,
+.view-passwordreset section.content-wrapper .introduction > header > h1.title > span.title-sub {
     text-transform: none;
 }
 
