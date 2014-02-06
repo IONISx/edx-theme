@@ -1,214 +1,3 @@
-html, body {
-    background-color: #303030;
-}
-
-header.global .nav-global li a:hover,
-header.global .nav-global li a:active,
-.highlighted-courses .courses .course .info .bottom .university:hover,
-.find-courses .courses .course .info .bottom .university:hover,
-{
-  color: #2daae1;
-}
-
-
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses,
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart
-{
-  background: #0f70b7;
-  border: none;
-  box-shadow: inherit;
-  text-shadow: inherit;
-}
-
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses:hover:not(:disabled),
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled),
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled),
-{
-  background: #2daae1 !important;
-  border: none;
-  box-shadow: inherit;
-  text-shadow: inherit;
-}
-
-h2 {
-  color: #2daae1;
-}
-
-p,
-h2 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.course-preview h2:hover,
-.course-preview .info-link:hover {
-  color: #2daae1 !important;
-}
-
-p a:link,
-p a:visited {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-}
-
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
-footer {
-    background-color: #303030;
-    padding: 20px 0 10px;
-    margin: 0;
-}
-
-footer > div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-footer > div > p {
-    margin: 0 0 10px;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #fff;
-}
-
-/* ==========================================================================
-   Header
-   ========================================================================== */
-
-header.global,
-header.global.slim {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-
-    height: 100px;
-    padding: 0;
-    background-color: #303030;
-    border-bottom: 1px solid #f2f1eb;
-}
-
-header.global > nav,
-header.global.slim > nav {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
-    height: auto;
-    padding: 15px 10px 0px;
-    max-width: 1170px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-header.global > nav h1.logo,
-header.global.slim > nav h1.logo {
-    margin: -2px 39px 0px 0px;
-    padding: 0;
-    float: left;
-}
-
-header.global > nav h1.logo img,
-header.global.slim > nav h1.logo img {
-    height: auto;
-}
-
-header.global.slim > nav h2 {
-    padding: 0;
-    color: white;
-    text-shadow: none;
-    margin: 25px 10px 0 10px;
-}
-
-header.global.slim > nav h2 span {
-    color: #eef0f1;
-}
-
-.view-login header.global > nav,
-.view-register header.global > nav {
-    width: auto;
-}
-
-header.global ol.nav-global {
-    margin-top: 24px;
-}
-
-.view-login header.global ol.nav-global li a,
-.view-register header.global ol.nav-global li a,
-header.global ol.nav-global li a {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    color: #fff !important;
-}
-
-.view-login header.global ol.nav-global li a:hover,
-.view-register header.global ol.nav-global li a:hover,
-header.global ol.nav-global li a:hover {
-    color: #eef0f1 !important;
-}
-
-header.global ol.nav-courseware {
-    margin-top: 20px;
-}
-
-.view-login header.global ol.nav-courseware li a.cta-login,
-header.global ol.nav-courseware li a.cta-login {
-    -webkit-transition: none;
-    transition: none;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-
-    display: inline-block;
-    background-color: #eef0f1;
-    color: black;
-    font-size: 14px;
-    padding: 10px 15px;
-}
-
-header.global ol.nav-courseware li a.cta-login:hover {
-    background-color: white;
-}
-
-header.global ol.user {
-    margin-top: 20px;
-}
-
-header.global ol.user ul.dropdown-menu {
-    right: -3px;
-    border: 0 none;
-    padding: 4px 8px;
-    z-index: 10;
-}
-
-header.global ol.user ul.dropdown-menu li > a {
-    border: 0 none;
-    outline: none;
-    color: #303030;
-}
-
-header.global ol.user ul.dropdown-menu li > a:hover {
-    background-color: #eef0f1;
-}
-
-header.global ol.user > li.primary > a {
-    border: 0 none;
-    background-color: #eef0f1;
-}
-
-header.global ol.user > li.primary > a:hover {
-    background-color: #fff;
-}
-
 /* ==========================================================================
    Content
    ========================================================================== */
@@ -218,15 +7,6 @@ section.content-wrapper,
 .view-login .content-wrapper,
 .view-passwordreset .content-wrapper {
     background-color: #eef0f1;
-}
-
-section.content-wrapper .find-courses {
-    background: none;
-}
-
-
-section.content-wrapper .find-courses header.search .inner-wrapper.main-search {
-    display: none;
 }
 
 .view-register section.content-wrapper .container,
@@ -281,6 +61,163 @@ section.content-wrapper .find-courses header.search .inner-wrapper.main-search {
     text-transform: none;
 }
 
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.view-login .wrapper-footer > footer,
+.view-register .wrapper-footer > footer,
+.view-passwordreset .wrapper-footer > footer,
+.wrapper-footer > footer {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: auto;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.wrapper-footer > footer > p {
+    color: #fff;
+    font-size: 14px;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header.global,
+header.global.slim {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    height: 100px;
+    padding: 0;
+    border-bottom: 1px solid #f2f1eb;
+}
+
+header.global > nav,
+header.global.slim > nav {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    height: auto;
+    width: auto;
+    padding: 15px 10px 0px;
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.view-login header.global > nav,
+.view-register header.global > nav {
+    width: auto;
+}
+
+header.global.slim > nav h1.logo:before {
+    display: none;
+}
+
+header.global.slim > nav h2 {
+    padding: 0;
+    color: white;
+    text-shadow: none;
+    margin: 25px 10px 0 10px;
+}
+
+header.global.slim > nav h2 span {
+    color: #eef0f1;
+}
+
+header.global > nav h1.logo,
+header.global.slim > nav h1.logo {
+    margin: -2px 39px 0px 0px;
+    padding: 0;
+    float: left;
+}
+
+header.global > nav h1.logo img,
+header.global.slim > nav h1.logo img {
+    height: auto;
+}
+
+header.global ol.nav-global {
+    margin-top: 24px;
+}
+
+.view-login header.global ol.nav-global li a,
+.view-register header.global ol.nav-global li a,
+header.global ol.nav-global li a {
+    font-weight: normal;
+    color: #eef0f1 !important;
+}
+
+.view-login header.global ol.nav-global li a:hover,
+.view-register header.global ol.nav-global li a:hover,
+header.global ol.nav-global li a:hover {
+    color: #fff !important;
+}
+
+header.global ol.nav-courseware {
+    margin-top: 20px;
+}
+
+.view-login header.global ol.nav-courseware li a.cta-login,
+header.global ol.nav-courseware li a.cta-login {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+
+    display: inline-block;
+    background-color: #eef0f1;
+    color: black;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+header.global ol.nav-courseware li a.cta-login:hover {
+    background-color: #fff;
+}
+
+header.global ol.user {
+    margin-top: 20px;
+}
+
+header.global ol.user ul.dropdown-menu {
+    right: -3px;
+    border: 0 none;
+    padding: 4px 8px;
+    z-index: 10;
+}
+
+header.global ol.user ul.dropdown-menu li > a {
+    border: 0 none;
+    outline: none;
+    color: #303030;
+}
+
+header.global ol.user ul.dropdown-menu li > a:hover {
+    background-color: #eef0f1;
+}
+
+header.global ol.user > li.primary > a {
+    border: 0 none;
+    background-color: #eef0f1;
+}
+
+header.global ol.user > li.primary > a:hover {
+    background-color: #fff;
+}
 
 /* ==========================================================================
    Dashboard
@@ -304,10 +241,6 @@ section.dashboard section.profile-sidebar section.user-info > ul {
     padding: 0 10px 10px
 }
 
-section.dashboard section.my-courses header {
-    border-bottom: 1px solid #ddd;
-}
-
 section.dashboard section.my-courses .empty-dashboard-message {
     padding: 20px 0;
 }
@@ -319,20 +252,6 @@ section.dashboard section.my-courses .empty-dashboard-message > a {
 
     margin: 0;
     padding: 8px 12px;
-    background-color: white;
+    background-color: #fff;
     border-color: #ddd;
-}
-
-/*********************************************************
-
-TODO: REMOVE THIS ASAP (ugly overrides)
-
-*********************************************************/
-
-.highlighted-courses .courses .course .bottom .university, .find-courses .courses .course .bottom .university {
-    display: inline;
-}
-
-header.global.slim h1.logo:before {
-    display: none;
 }

@@ -1,181 +1,103 @@
-//-----------------
-//  Color variables
-//-----------------
-
-$beautiful-blue: #2daae1;
-$darker-blue: #0f70b7;
-
-$cardinal-light: #c83737; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
-$cardinal-bg: #e9afaf; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
-
-//Beige Color Variables
-$beige: #9d9573;
-$beige-60: #ccc; // border colors
-$beige-25: lighten($beige, 25%);
-
-//Sandstone Color Variables
-$sandstone: #ddcf99;
-$sandstone-50: lighten($sandstone, 9%);
-$sandstone-25: lighten($sandstone, 20%); //Important Heading BG Color
-
-//Gray Color Variables
-$gray: #3f3c30; //Main Text Color
-$gray-75: lighten($gray, 18.25%); //Lighter Text Color
-
-$gray-3: #e9e6df; //Block/Course BG Color
-$gray-2: #eee;
-$gray-1: #fbfbf9; //Main BG Color
-
-$black: #2e2d29;
-$black-80: #585754;
-
-
-
-//-----------------
-//  Font Assignment
-//-----------------
+$ioc-black-0: #000;
+$ioc-black-1: #3c3c3c;
+$ioc-black-2: #2e2e2e;
+$ioc-grey-0: #303030;
+$ioc-grey-1: #8a8c8f;
+$ioc-grey-2: #ddd;
+$ioc-grey-3: #eee;
+$ioc-grey-4: #fbfbfb;
+$ioc-grey-5: #eef0f1;
+$ioc-blue: #2daae1;
+$ioc-blue-light: #00b9f2;
+$ioc-blue-dark: #0f70b7;
+$ioc-white: #fff;
+$ioc-pink: #ec008c;
+$ioc-red: #e2001a;
+$ioc-green: #41ad49;
 
 $sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$body-font-family: $sans-serif;
+$monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+$serif: $sans-serif;
 
-$serif: Georgia, "Times New Roman", Times, serif;
+$border-color-1: $ioc-grey-2;
+$border-color-2: $ioc-grey-2;
+$border-color-3: $ioc-grey-2;
+$outer-border-color: $ioc-grey-2;
 
-
-
-//-----------------
-//  Theme Element Assignments
-//-----------------
-
-$body-bg: $gray-1;
-$container-bg: $gray-1;
-$login-register-bg: $gray-1;
-$content-wrapper-bg: $gray-1;
-$header-image: none;
-$header-bg: transparentize(lighten($sandstone, 18.5%), .25);
-$courseware-header-image: none;
-$courseware-header-bg: transparentize(lighten($sandstone, 18.5%), .25);
-$footer-bg: $sandstone-25;
-$courseware-footer-border: 1px solid $beige-60;
-$courseware-footer-shadow: box-shadow(2px 1px 0 rgba(0, 0, 0, .1));
-$courseware-footer-margin: 50px;
-
-$faded-hr-image-1: linear-gradient($beige-60 0%, $beige-60);
-$faded-hr-image-2: linear-gradient($beige-60 0%, $beige-60);
-$faded-hr-image-3: linear-gradient($beige-60 0%, $beige-60);
-$faded-hr-image-4: linear-gradient($beige-60 0%, $beige-60);
-$faded-hr-image-5: linear-gradient($beige-60 0%, $beige-60);
-$faded-hr-image-6: linear-gradient($beige-60 0%, $beige-60);
-
-$base-font-color: $black;
-$lighter-base-font-color: $black-80;
-$very-light-text: $gray-1;
-
-$link-color: $beautiful-blue;
-$link-color-d1: $beautiful-blue;
-$link-hover: $cardinal-light;
-$site-status-color: $cardinal-bg;
-
-$button-color: $darker-blue;
-$button-archive-color: $gray-3;
-
-$shadow-color: $gray;
-
-// actions
-$button-bg-image: none;
-$button-bg-color: $gray-3;
-$button-bg-hover-color: $gray-1;
-
-// actions - primary
-$action-primary-bg: $darker-blue;
-$action-primary-fg: $gray-2;
-$action-primary-shadow: none;
-
-// focused - hover/active pseudo states
-$action-primary-focused-bg: $beautiful-blue;
-$action-primary-focused-fg: $gray-1;
-
-// current or active navigation item
-$action-primary-active-bg: $beautiful-blue;
-$action-primary-active-fg: $gray-1;
-$action-primary-active-shadow: none;
-$action-primary-active-focused-fg: $gray-2;
-$action-primary-active-focused-shadow: none;
-
-// disabled
-$action-primary-disabled-bg: $gray-75;
-$action-prmary-disabled-fg: $gray-1;
-
-
-
-// actions - secondary
-$action-secondary-bg: $sandstone;
-$action-secondary-fg: $gray;
-$action-secondary-shadow: none;
-
-// focused - hover/active pseudo states
-$action-secondary-focused-bg: $sandstone-50;
-$action-secondary-focused-fg: $gray;
-
-// current or active navigation item
-$action-secondary-active-bg: $sandstone-50;
-$action-secondary-active-fg: $gray;
-$action-secondary-active-shadow: none;
-$action-secondary-active-focused-fg: $gray-75;
-$action-secondary-active-focused-shadow: none;
-
-// disabled
-$action-secondary-disabled-bg: $gray-3;
-$action-secondary-disabled-fg: $gray;
-
-//
-
-$border-color-1: $beige-60;
-$border-color-2: $beige-60;
-$border-color-3: $beige-60;
-$outer-border-color: $beige-60;
-
-$sidebar-color: $gray-1;
-
-$dashboard-profile-header-image: none;
-$dashboard-profile-header-color: $sandstone-25;
-$dashboard-profile-color: $gray-3;
-$dot-color: $beige-60;
-
-$course-bg-color: $gray-3;
-$course-bg-image: none;
-$account-content-wrapper-bg: $gray-1;
-
-$course-profile-bg: $gray-1;
-$course-header-bg: transparentize($gray-1, .1);
-
-$sidebar-chapter-bg-top: transparentize($gray-1, .3);
-$sidebar-chapter-bg-bottom: transparentize($gray-1, .9);
-$sidebar-chapter-bg: $gray-2;
-$sidebar-active-image: $gray-3;
-
-$form-bg-color: $gray-1;
-$modal-bg-color: $gray-1;
-
-//TOP HEADER IMAGE MARGIN
-$header_image_margin: 0;
-
-//FOOTER MARGIN
-$footer_margin: ($baseline/4) 0;
-
-//-----------------
-//  CSS BG Images
-//-----------------
 $homepage-bg-image: '../themes/ioc-edx-theme/images/ionis-online.jpg';
-
 $login-banner-image: none;
 $register-banner-image: none;
-
 $video-thumb-url: '../themes/ioc-edx-theme/images/ionis-video-thumb.png';
 
+$baseline: 20px;
 
-// Overrides:
+$link-color: $ioc-blue;
+$link-color-d1: $ioc-blue;
+$link-hover: $ioc-pink;
+$site-status-color: $ioc-pink;
 
-button, input, select, textarea {
-    font-family: $sans-serif;
-}
+$action-primary-bg: $ioc-blue-dark;
+$action-primary-focused-bg: $ioc-blue;
+$action-primary-fg: $ioc-white;
+$action-primary-shadow: transparent;
 
+$header-graphic-super-color: $ioc-blue;
+$header-graphic-sub-color: $ioc-black-1;
+
+$body-bg: $ioc-grey-0;
+$container-bg: $ioc-white;
+$login-register-bg: $ioc-grey-4;
+$content-wrapper-bg: $ioc-grey-4;
+$header-bg: $ioc-grey-0;
+
+$footer-bg: $ioc-grey-0;
+$footer-fg: $ioc-white;
+
+$course-bg-color: $ioc-grey-0;
+
+$shadow-color: $ioc-grey-3;
+
+$header-image: none;
+$header_image_margin: 0;
+$course-bg-image: none;
+
+$base-font-color: $ioc-black-2;
+$lighter-base-font-color: $ioc-black-2;
+$very-light-text: $ioc-grey-4;
+
+$button-color: $ioc-blue-dark;
+$button-archive-color: lighten($ioc-grey-5, 90%);
+$button-bg-image: none;
+$button-bg-color: $ioc-grey-5;
+$button-bg-hover-color: $ioc-white;
+
+$action-primary-bg: $ioc-blue-dark;
+$action-primary-fg: $ioc-grey-4;
+$action-primary-shadow: none;
+
+$action-primary-focused-bg: $ioc-blue;
+$action-primary-focused-fg: $ioc-grey-4;
+
+$action-primary-active-bg: $ioc-blue;
+$action-primary-active-fg: $ioc-grey-4;
+$action-primary-active-shadow: none;
+$action-primary-active-focused-fg: $ioc-grey-4;
+$action-primary-active-focused-shadow: none;
+
+$action-primary-disabled-bg: $ioc-grey-1;
+$action-prmary-disabled-fg: $ioc-grey-4;
+
+$action-secondary-disabled-bg: $ioc-grey-1;
+$action-secondary-disabled-fg: $ioc-grey-2;
+
+$account-content-wrapper-bg: $ioc-grey-5;
+$course-profile-bg: $ioc-grey-5;
+$form-bg-color: $ioc-white;
+$modal-bg-color: $ioc-grey-5;
+
+$course-header-bg: transparentize($ioc-grey-4, .1);
+
+$sidebar-chapter-bg-top: transparentize($ioc-grey-4, .3);
+$sidebar-chapter-bg-bottom: transparentize($ioc-grey-4, .9);
+$sidebar-chapter-bg: $ioc-grey-3;
+$sidebar-active-image: $ioc-grey-1;
