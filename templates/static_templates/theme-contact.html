@@ -1,20 +1,21 @@
-<%! from django.core.urlresolvers import reverse %>
-<%namespace name='static' file='/static_content.html'/>
-
 <%inherit file="/main.html" />
 
-<%block name="title"><title>À propos de IONIS Online Courses</title></%block>
+<%namespace name='static' file='/static_content.html'/>
 
-<section class="container about">
-    <section class="message left" id="contact">
-      <div class="photo">
-        <img src="${static.url('themes/ioc-edx-theme/images/contact-email.png')}" alt="Email Contact" />
-      </div>
-      <article id="ionis-online-courses-contact">
-        <h2>Nous contacter</h2>
-        <p><strong>Vous pouvez nous contacter par email à l'adresse :</strong><br />
-        <a href="mailto:digital.learning@ionis-group.com">digital.learning@ionis-group.com</a></p>
-      </article>
-    </section>
+<%block name="title">
+  <title>IONIS Online Courses | Nous contacter</title>
+</%block>
 
+<section class="static-container contact">
+  <h1>Nous contacter</h1>
+  <hr class="horizontal-divider">
+
+  <div class="inner-wrapper">
+    <article id="ionis-online-courses-contact">
+      <p>
+        Vous pouvez nous contacter par email à l’adresse :
+        <a href="mailto:digital.learning@ionis-group.com">digital.learning@ionis-group.com</a>.
+      </p>
+    </article>
+  </div>
 </section>
