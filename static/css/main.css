@@ -1,4 +1,13 @@
 /* ==========================================================================
+   Global
+   ========================================================================== */
+
+h2 {
+    color: #2daae1;
+}
+
+
+/* ==========================================================================
    Content
    ========================================================================== */
 
@@ -7,6 +16,10 @@ section.content-wrapper,
 .view-login .content-wrapper,
 .view-passwordreset .content-wrapper {
     background-color: #eef0f1;
+}
+
+section.content-wrapper .find-courses header.search .inner-wrapper.main-search {
+    display: none;
 }
 
 .view-register section.content-wrapper .container,
@@ -239,6 +252,11 @@ section.dashboard section.profile-sidebar section.user-info > ul {
     background: none;
     border: 0 none;
     padding: 0 10px 10px
+}
+
+section.dashboard section.my-courses .listing-courses .course-item {
+    border-bottom-width: 2px;
+    border-bottom-color: #eee;
 }
 
 section.dashboard section.my-courses .empty-dashboard-message {

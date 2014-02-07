@@ -7,9 +7,9 @@ $ioc-grey-2: #ddd;
 $ioc-grey-3: #eee;
 $ioc-grey-4: #fbfbfb;
 $ioc-grey-5: #eef0f1;
-$ioc-blue: #2daae1;
-$ioc-blue-light: #00b9f2;
-$ioc-blue-dark: #0f70b7;
+$ioc-blue-0: #00b9f2;
+$ioc-blue-1: #2daae1;
+$ioc-blue-2: #0f70b7;
 $ioc-white: #fff;
 $ioc-pink: #ec008c;
 $ioc-red: #e2001a;
@@ -31,17 +31,17 @@ $video-thumb-url: '../themes/ioc-edx-theme/images/ionis-video-thumb.png';
 
 $baseline: 20px;
 
-$link-color: $ioc-blue;
-$link-color-d1: $ioc-blue;
+$link-color: $ioc-blue-1;
+$link-color-d1: $ioc-blue-1;
 $link-hover: $ioc-pink;
 $site-status-color: $ioc-pink;
 
-$action-primary-bg: $ioc-blue-dark;
-$action-primary-focused-bg: $ioc-blue;
+$action-primary-bg: $ioc-blue-2;
+$action-primary-focused-bg: $ioc-blue-1;
 $action-primary-fg: $ioc-white;
 $action-primary-shadow: transparent;
 
-$header-graphic-super-color: $ioc-blue;
+$header-graphic-super-color: $ioc-blue-1;
 $header-graphic-sub-color: $ioc-black-1;
 
 $body-bg: $ioc-grey-0;
@@ -61,24 +61,24 @@ $header-image: none;
 $header_image_margin: 0;
 $course-bg-image: none;
 
-$base-font-color: $ioc-black-2;
+$base-font-color: $ioc-black-1;
 $lighter-base-font-color: $ioc-black-2;
 $very-light-text: $ioc-grey-4;
 
-$button-color: $ioc-blue-dark;
+$button-color: $ioc-blue-2;
 $button-archive-color: lighten($ioc-grey-5, 90%);
 $button-bg-image: none;
 $button-bg-color: $ioc-grey-5;
 $button-bg-hover-color: $ioc-white;
 
-$action-primary-bg: $ioc-blue-dark;
+$action-primary-bg: $ioc-blue-2;
 $action-primary-fg: $ioc-grey-4;
 $action-primary-shadow: none;
 
-$action-primary-focused-bg: $ioc-blue;
+$action-primary-focused-bg: $ioc-blue-1;
 $action-primary-focused-fg: $ioc-grey-4;
 
-$action-primary-active-bg: $ioc-blue;
+$action-primary-active-bg: $ioc-blue-1;
 $action-primary-active-fg: $ioc-grey-4;
 $action-primary-active-shadow: none;
 $action-primary-active-focused-fg: $ioc-grey-4;
