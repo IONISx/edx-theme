@@ -1,0 +1,8 @@
+{course_title}
+
+{{message_body}}
+----
+Vous êtes destinataire de cet email car vous être inscrit au cours « {course_title} » ({course_url}) sur IONIS Online Courses.
+Si vous souhaitez cesser de recevoir ces emails, vous pouvez vous désinscrire en suivant ce lien {account_settings_url}.
+
+L’équipe IONIS Online Courses
