@@ -273,3 +273,12 @@ section.dashboard section.my-courses .empty-dashboard-message > a {
     background-color: #fff;
     border-color: #ddd;
 }
+
+/* ==========================================================================
+   Home
+   ========================================================================== */
+
+section.home > header {
+    background: none;
+    background-image: url('../images/ionis-online.jpg');
+}
