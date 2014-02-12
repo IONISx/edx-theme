@@ -1,41 +1,29 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html style="font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #eef0f1; -webkit-font-smoothing: antialiased;">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
-   <title>{course_title} | IONIS Online Courses</title>
-   <style>
-     html, body {{ font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #eef0f1; -webkit-font-smoothing: antialiased; }}
-     hr {{ border: 0 none; border-bottom: 1px solid #eeeeee; margin: 10px 0 30px 0; }}
-     .container {{ max-width: 800px; background-color: #ffffff; margin: 10px auto; }}
-     #logo {{ text-align: center; padding: 5px 20px; background-color: #303030; }}
-     #logo img {{ width: 200px; border: 0 none; }}
-     #content {{ padding: 30px 20px; font-size: 14px; }}
-     #content h1 {{ font-size: 20px; font-weight: normal; color: #2daae1; margin: 0; }}
-     #content a {{ color: #2daae1; text-decoration: underline; }}
-     #footer {{ padding: 5px 20px; background-color: #303030; color: #eef0f1; font-size: 12px; }}
-     #footer a {{ color: #eef0f1; text-decoration: none; font-weight: bold; }}
-   </style>
+    <title>{course_title} | IONIS Online Courses</title>
   </head>
-  <body>
-    <div class="container">
-      <div id="logo">
+  <body style="font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #eef0f1; -webkit-font-smoothing: antialiased;" bgcolor="#eef0f1">
+    <div style="max-width: 800px; background-color: #ffffff; margin: 10px auto;">
+      <div style="text-align: center; background-color: #303030; padding: 5px 20px;" align="center">
         <a href="https://courses.ionis-group.com">
-           <img src="https://static.courses.ionis-group.com/emails/logo.png" alt="IONIS Online Courses" />
-        </a>
+          <img src="https://static.courses.ionis-group.com/emails/logo.png" alt="IONIS Online Courses" style="width: 200px; border: 0 none;"></a>
       </div>
-      <div id="content">
-        <h1>{course_title}</h1>
-        <hr>
+      <div style="font-size: 14px; padding: 30px 20px;">
+        <h1 style="font-size: 20px; font-weight: normal; color: #2daae1; margin: 0;">{course_title}</h1>
+        <hr style="border-bottom-color: #eeeeee; margin: 10px 0 30px; border-style: none none solid; border-width: 0 0 1px;">
         <div>
           {{message_body}}
         </div>
       </div>
-      <div id="footer">
+      <div style="background-color: #303030; color: #eef0f1; font-size: 11px; padding: 5px 20px;">
         <p>
           Vous êtes destinataire de cet email car vous être inscrit au cours
-          « <a href="{course_url}">{course_title}</a> » sur
-          <a href="https://courses.ionis-group.com">IONIS Online Courses</a>.<br />
-          Si vous souhaitez cesser de recevoir ces emails, vous pouvez vous désinscrire en suivant <a href="{account_settings_url}">ce lien</a>.
+          « <a href="{course_url}" style="color: #eef0f1; text-decoration: none; font-weight: bold;">{course_title}</a> » sur
+          <a href="https://courses.ionis-group.com" style="color: #eef0f1; text-decoration: none; font-weight: bold;">IONIS Online Courses</a>.<br>
+          Si vous souhaitez cesser de recevoir ces emails, vous pouvez vous désinscrire en suivant <a href="{account_settings_url}" style="color: #eef0f1; text-decoration: none; font-weight: bold;">ce lien</a>.
         </p>
         <p>
           <b>L’équipe IONIS Online Courses</b>
