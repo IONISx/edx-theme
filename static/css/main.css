@@ -282,3 +282,35 @@ section.home > header {
     background: none;
     background-image: url('../images/ionis-online.jpg');
 }
+
+/* ==========================================================================
+   Course about page
+   ========================================================================== */
+
+section.course-info section.details section {
+    overflow: hidden;
+    clear: both;
+}
+
+section.course-info section.details section p.justified {
+    text-align: left;
+}
+
+section.course-info section.details section p.justified {
+    text-align: justify;
+}
+
+section.course-info section.details .inner-wrapper section.course-staff {
+    margin-bottom: 0;
+}
+
+section.course-info section.details .inner-wrapper section.course-staff article.teacher .teacher-image {
+    width: 120px;
+    height: 160px;
+    margin: 5px 17px 0 0;
+}
+
+section.course-info section.details .inner-wrapper section.course-staff article.teacher .teacher-image img {
+    width: 120px;
+    height: 160px;
+}
