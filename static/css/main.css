@@ -255,7 +255,7 @@ section.dashboard section.profile-sidebar section.user-info > ul {
 }
 
 section.dashboard section.my-courses .listing-courses .course-item {
-    border-bottom-width: 2px;
+    border-bottom-width: 1px;
     border-bottom-color: #eee;
 }
 
