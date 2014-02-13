@@ -18,16 +18,16 @@ section.content-wrapper,
     background-color: #eef0f1;
 }
 
-section.content-wrapper .find-courses header.search .inner-wrapper.main-search {
+.content-wrapper .find-courses header.search .inner-wrapper.main-search {
     display: none;
 }
 
-.view-register section.content-wrapper .container,
-.view-register section.content-wrapper .introduction,
-.view-login section.content-wrapper .container,
-.view-login section.content-wrapper .introduction,
-.view-passwordreset section.content-wrapper .container,
-.view-passwordreset section.content-wrapper .introduction {
+.view-register .content-wrapper .container,
+.view-register .content-wrapper .introduction,
+.view-login .content-wrapper .container,
+.view-login .content-wrapper .introduction,
+.view-passwordreset .content-wrapper .container,
+.view-passwordreset .content-wrapper .introduction {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -41,36 +41,36 @@ section.content-wrapper .find-courses header.search .inner-wrapper.main-search {
     background: none;
 }
 
-.view-register section.content-wrapper .container > section.content,
-.view-login section.content-wrapper .container > section.content,
-.view-passwordreset section.content-wrapper .container > section.content {
+.view-register .content-wrapper .container > section.content,
+.view-login .content-wrapper .container > section.content,
+.view-passwordreset .content-wrapper .container > section.content {
     width: auto;
     min-width: 700px;
     margin: 20px 30px 0 0;
 }
 
-.view-login section.content-wrapper .introduction > header,
-.view-register section.content-wrapper .introduction > header,
-.view-passwordreset section.content-wrapper .introduction > header {
+.view-login .content-wrapper .introduction > header,
+.view-register .content-wrapper .introduction > header,
+.view-passwordreset .content-wrapper .introduction > header {
     height: auto;
     margin-top: 30px;
     border-bottom: 1px solid #8a8c8f;
 }
 
-.view-login section.content-wrapper .introduction > header > h1.title,
-.view-register section.content-wrapper .introduction > header > h1.title,
-.view-passwordreset section.content-wrapper .introduction > header > h1.title {
+.view-login .content-wrapper .introduction > header > h1.title,
+.view-register .content-wrapper .introduction > header > h1.title,
+.view-passwordreset .content-wrapper .introduction > header > h1.title {
     position: static;
     padding: 0;
     margin: 0 0 30px 0;
 }
 
-.view-login section.content-wrapper .introduction > header > h1.title > span.title-super,
-.view-login section.content-wrapper .introduction > header > h1.title > span.title-sub,
-.view-register section.content-wrapper .introduction > header > h1.title > span.title-super,
-.view-register section.content-wrapper .introduction > header > h1.title > span.title-sub,
-.view-passwordreset section.content-wrapper .introduction > header > h1.title > span.title-super,
-.view-passwordreset section.content-wrapper .introduction > header > h1.title > span.title-sub {
+.view-login .content-wrapper .introduction > header > h1.title > span.title-super,
+.view-login .content-wrapper .introduction > header > h1.title > span.title-sub,
+.view-register .content-wrapper .introduction > header > h1.title > span.title-super,
+.view-register .content-wrapper .introduction > header > h1.title > span.title-sub,
+.view-passwordreset .content-wrapper .introduction > header > h1.title > span.title-super,
+.view-passwordreset .content-wrapper .introduction > header > h1.title > span.title-sub {
     text-transform: none;
 }
 
