@@ -11,7 +11,7 @@ h2 {
    Content
    ========================================================================== */
 
-section.content-wrapper,
+.content-wrapper,
 .view-register .content-wrapper,
 .view-login .content-wrapper,
 .view-passwordreset .content-wrapper {
