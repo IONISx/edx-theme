@@ -10,4 +10,4 @@ Afin de finaliser votre inscription, rendez-vous sur le lien suivant :
   http://${ site }/activate/${ key }
 % endif
 
-Si vous n’êtes pas à l’origine de cette demaine, vous pouvez ignorer cet email.
+Si vous n’êtes pas à l’origine de cette demande, vous pouvez ignorer cet email.
