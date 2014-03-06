@@ -3,7 +3,7 @@ Bonjour,
 
 Vous avez effectué une demande de changement de l’adresse email associée à votre compte ${settings.PLATFORM_NAME}.
 
-Votre adresse email actuelle est : ${old_email}.
+Votre adresse email actuelle est : ${old_email}
 La nouvelle sera : ${new_email}
 
 Si ces informations sont correctes, confirmez le changement en vous rendant sur le lien suivant :
