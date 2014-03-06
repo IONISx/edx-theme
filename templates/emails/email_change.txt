@@ -1,0 +1,16 @@
+<%inherit file="_base_email.txt" />
+Bonjour,
+
+Vous avez effectué une demande de changement de l’adresse email associée à votre compte ${settings.PLATFORM_NAME}.
+
+Votre adresse email actuelle est : ${old_email}.
+La nouvelle sera : ${new_email}
+
+Si ces informations sont correctes, confirmez le changement en vous rendant sur le lien suivant :
+% if is_secure:
+https://${ site }/email_confirm/${ key }
+% else:
+http://${ site }/email_confirm/${ key }
+% endif
+
+Si vous n’êtes pas à l’origine de cette demande, vous pouvez simplement ignorer ce message, votre adresse email n’a pas été changée.

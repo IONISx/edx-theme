@@ -5,9 +5,9 @@ Nous vous remercions d’avoir créé un compte sur ${settings.PLATFORM_NAME} !
 
 Afin de finaliser votre inscription, rendez-vous sur le lien suivant :
 % if is_secure:
-  https://${ site }/activate/${ key }
+https://${ site }/activate/${ key }
 % else:
-  http://${ site }/activate/${ key }
+http://${ site }/activate/${ key }
 % endif
 
 Si vous n’êtes pas à l’origine de cette demande, vous pouvez ignorer cet email.

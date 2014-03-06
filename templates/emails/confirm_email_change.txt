@@ -1,0 +1,14 @@
+<%inherit file="_base_email.txt" />
+<%! from django.core.urlresolvers import reverse %>
+Bonjour,
+
+Nous vous informons que l’email associé à votre compte ${settings.PLATFORM_NAME} a bien été modifié.
+
+La nouvelle adresse email est : ${new_email}
+
+Si vous n’êtes pas à l’origine de cette demande, contactez-nous à l’aide des informations disponibles sur cette page :
+% if is_secure:
+https://${ site }${reverse('contact')}
+% else:
+http://${ site }${reverse('contact')}
+% endif
