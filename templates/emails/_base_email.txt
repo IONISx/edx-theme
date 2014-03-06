@@ -3,4 +3,4 @@ ${self.body()}
 L’équipe ${settings.PLATFORM_NAME}.
 
 ----
-Ceci est un mail automatique envoyé par ${settings.PLATFORM_NAME}, ne pas y répondre.
+Ceci est un message automatique envoyé par ${settings.PLATFORM_NAME}, ne pas y répondre.
