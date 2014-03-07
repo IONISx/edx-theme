@@ -6,6 +6,12 @@ h2 {
     color: #2daae1;
 }
 
+ul {
+    color: #3c3c3c;
+    font: normal 1em/1.6em "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0.5em 0 1em 0;
+}
+
 
 /* ==========================================================================
    Content
