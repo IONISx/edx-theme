@@ -289,6 +289,10 @@ section.course-info header.course-profile .intro-inner-wrapper .media .hero img 
     height: 193px;
 }
 
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.private {
+    cursor: default;
+}
+
 section.course-info section.details section {
     overflow: hidden;
     clear: both;
