@@ -284,6 +284,20 @@ section.dashboard section.my-courses .empty-dashboard-message > a {
    Course about page
    ========================================================================== */
 
+section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup {
+    padding-bottom: 0;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup > .info {
+    margin: 10px 0 5px 0;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup > .info > .course-id {
+    border-right: 1px solid #ddd;
+    padding-right: 14px;
+    margin-right: 10px;
+}
+
 section.course-info header.course-profile .intro-inner-wrapper .media .hero img {
     width: 343px;
     height: 193px;
