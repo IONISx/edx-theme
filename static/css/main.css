@@ -289,6 +289,13 @@ section.course-info section.details section {
     clear: both;
 }
 
+section.course-info section.details section h3 {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
 section.course-info section.details section p {
     text-align: left;
 }
