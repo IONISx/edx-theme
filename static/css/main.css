@@ -284,6 +284,11 @@ section.dashboard section.my-courses .empty-dashboard-message > a {
    Course about page
    ========================================================================== */
 
+section.course-info header.course-profile .intro-inner-wrapper .media .hero img {
+    width: 343px;
+    height: 193px;
+}
+
 section.course-info section.details section {
     overflow: hidden;
     clear: both;
