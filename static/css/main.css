@@ -290,6 +290,7 @@ section.course-info header.course-profile .intro-inner-wrapper .media .hero img 
 }
 
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.private {
+    width: 100%;
     cursor: default;
 }
 
