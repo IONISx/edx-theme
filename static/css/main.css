@@ -303,19 +303,23 @@ section.course-info header.course-profile .intro-inner-wrapper .media .hero img 
     height: 193px;
 }
 
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
     border: 0 none;
     background: none;
     box-shadow: none;
     text-shadow: none;
     background-color: #0f70b7;
+    padding: 11px 0 10px 0;
 }
 
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled),
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
     background: none;
     background-color: #0f70b7;
 }
 
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled),
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled) {
     box-shadow: none;
     background-color: #2daae1;
