@@ -314,8 +314,9 @@ section.course-info section.course-sidebar {
     margin-left: -400px;
 }
 
-section.course-info .course-sidebar > section {
+section.course-info section.course-sidebar > section.course-summary {
     box-shadow: none;
+    border: 0 none;
 }
 
 .course-info section.details {
