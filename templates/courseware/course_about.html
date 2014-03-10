@@ -221,34 +221,12 @@
             ## TODO: this should probably be an overrideable block,
             ##       or something allowing themes to do whatever they
             ##       want here (and on this whole page, really).
-            % if self.stanford_theme_enabled():
-              <a href="http://twitter.com/intent/tweet?text=I+just+registered+for+${course.number}+${get_course_about_section(course, 'title')}!+(http://class.stanford.edu)" class="share">
-                <img src="${static.url('images/social/twitter-sharing.png')}" alt="Tweet that you've registered for this course">
-              </a>
-              <a href="mailto:?subject=Take%20a%20course%20at%20Stanford%20online!&body=I%20just%20registered%20for%20${course.number}%20${get_course_about_section(course, 'title')}+(http://class.stanford.edu)" class="share">
-                <img src="${static.url('images/social/email-sharing.png')}" alt="Email someone to say you've registered for this course">
-              </a>
-            % else:
-              <% 
-                site_domain = MicrositeConfiguration.get_microsite_configuration_value('site_domain', 'www.edx.org')
-                platform_name = MicrositeConfiguration.get_microsite_configuration_value('platform_name', 'edX')
-                
-                tweet_action = "http://twitter.com/intent/tweet?text=I+just+registered+for+"+course.number+"+"+get_course_about_section(course, 'title')+"+through+"+MicrositeConfiguration.get_microsite_configuration_value('course_about_twitter_account', '@edxonline')+":+http://"+site_domain+reverse('about_course', args=[course.id])
-
-                facebook_link = MicrositeConfiguration.get_microsite_configuration_value('course_about_facebook_link', 'http://www.facebook.com/EdxOnline')
-
-                email_subject = "mailto:?subject=Take%20a%20course%20with%20"+platform_name+"%20online&body=I%20just%20registered%20for%20"+course.number+"%20"+get_course_about_section(course, 'title')+"%20through%20"+platform_name+"%20http://"+site_domain+reverse('about_course', args=[course.id])
+              <%
+                tweet_action = u"http://twitter.com/intent/tweet?text=Je+viens+de+m’inscrire+au+cours+« {course_name} »+sur+IONIS+Online+courses+@IONISx".format(course_name=get_course_about_section(course, 'title'))
               %>
-              <a href="${tweet_action}" class="share">
+              <a href="${tweet_action}" target="_blank" class="share">
                 <img src="${static.url('images/social/twitter-sharing.png')}" alt="Tweet that you've registered for this course">
               </a>
-              <a href="${facebook_link}" class="share">
-                <img src="${static.url('images/social/facebook-sharing.png')}" alt="Post a Facebook message to say you've registered for this course">
-              </a>
-              <a href="${email_subject}" class="share">
-                <img src="${static.url('images/social/email-sharing.png')}" alt="Email someone to say you've registered for this course">
-              </a>
-            % endif
           </div>
           % endif
         </header>
