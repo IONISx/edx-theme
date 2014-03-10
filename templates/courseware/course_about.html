@@ -256,7 +256,6 @@
         </header>
 
         <ol class="important-dates">
-          <li><div class="icon course-number"></div><p>${_("Course Number")}</p><span class="course-number">${course.display_number_with_default | h}</span></li>
           % if not course.start_date_is_still_default:
           <li><div class="icon start"></div><p>${_("Classes Start")}</p><span class="start-date">${course.start_date_text}</span></li>
           % endif
