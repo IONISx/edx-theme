@@ -308,6 +308,21 @@ section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta 
     cursor: default;
 }
 
+section.course-info section.course-sidebar {
+    float: right;
+    width: 356px;
+    margin-left: -400px;
+}
+
+section.course-info .course-sidebar > section {
+    box-shadow: none;
+}
+
+.course-info section.details {
+    margin-right: 400px;
+    width: auto;
+}
+
 section.course-info section.details section {
     overflow: hidden;
     clear: both;
