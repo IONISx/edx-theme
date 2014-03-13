@@ -367,6 +367,18 @@ section.course-info section.details section p.justified {
     text-align: justify;
 }
 
+section.course-info section.details section p.alert {
+    border: 1px solid #c0392b;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #c0392b;
+}
+
+section.course-info section.details section p.alert a {
+    color: #c0392b;
+    text-decoration: underline;
+}
+
 section.course-info section.details .inner-wrapper section.course-staff {
     margin-bottom: 0;
 }
