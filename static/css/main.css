@@ -393,3 +393,12 @@ section.course-info section.details .inner-wrapper section.course-staff article.
     width: 120px;
     height: 160px;
 }
+
+
+/* ==========================================================================
+   Courseware
+   ========================================================================== */
+
+.course-wrapper section.course-content article.video-wrapper section.video-controls .vidtime {
+    color: white;
+}
