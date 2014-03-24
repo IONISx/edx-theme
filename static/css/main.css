@@ -105,6 +105,17 @@ ul {
     font-size: 14px;
 }
 
+.wrapper-footer > footer > p > a,
+.wrapper-footer > footer > p > a:link,
+.wrapper-footer > footer > p > a:visited {
+    color: #fff;
+    border: 0 none;
+}
+
+.wrapper-footer > footer > p > a:hover {
+    text-decoration: underline !important;
+}
+
 
 /* ==========================================================================
    Header
