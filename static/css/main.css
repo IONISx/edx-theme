@@ -405,6 +405,17 @@ section.course-info section.details .inner-wrapper section.course-staff article.
     height: 160px;
 }
 
+/* ==========================================================================
+   Course info
+   ========================================================================== */
+
+.info-wrapper section.updates section article h3 {
+    font-size: 0.875em;
+    color: #2daae1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 30px 0 0 0;
+}
 
 /* ==========================================================================
    Courseware
