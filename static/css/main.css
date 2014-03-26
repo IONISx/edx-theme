@@ -6,10 +6,6 @@ html, body {
     background-color: white;
 }
 
-h1 {
-    font-weight: 700 !important;
-}
-
 h2 {
     color: #3ea5ce;
     /*text-transform: none;*/
