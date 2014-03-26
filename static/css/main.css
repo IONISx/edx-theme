@@ -237,7 +237,7 @@ header.global ol.nav-global li a:hover {
 }
 
 header.global ol.nav-courseware {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .view-login header.global ol.nav-courseware li a.cta-login,
@@ -273,7 +273,7 @@ header.global ol.user {
 }
 
 header.global ol.user ul.dropdown-menu {
-    padding: 4px 8px;
+    padding: 0;
     z-index: 10;
     top: 36px;
     box-shadow: none;
@@ -288,12 +288,11 @@ header.global ol.user ul.dropdown-menu:before {
 }
 
 header.global ol.user ul.dropdown-menu li {
-    border: 0 none;
-    padding: 0 4px 4px 4px;
-}
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
 
-header.global ol.user ul.dropdown-menu li:first-child {
-    padding-top: 4px;
+    border: 0 none;
+    padding: 3px 8px 3px 8px;
 }
 
 header.global ol.user ul.dropdown-menu li > a {
@@ -302,7 +301,12 @@ header.global ol.user ul.dropdown-menu li > a {
     color: #3ea5ce !important;
 }
 
-header.global ol.user ul.dropdown-menu li > a:hover {
+header.global ol.user ul.dropdown-menu li:hover {
+    background-color: #3ea5ce;
+}
+
+header.global ol.user ul.dropdown-menu li:hover > a {
+    color: white !important;
 }
 
 header.global ol.user > li.primary > a {
@@ -324,6 +328,7 @@ header.global ol.user > li.primary > a {
     vertical-align: middle;
     cursor: pointer;
     white-space: nowrap;
+    text-shadow: none;
 }
 
 header.global ol.user > li.primary > a.dropdown {
@@ -331,7 +336,9 @@ header.global ol.user > li.primary > a.dropdown {
 }
 
 header.global ol.user > li.primary > a:hover {
-    background-color: #fff;
+    border-color: transparent;
+    background-color: #3ea5ce;
+    color: #fff;
 }
 
 header.global ol.user > li.primary > a > span.avatar {
@@ -406,6 +413,9 @@ section.course-info header.course-profile .intro-inner-wrapper .table {
 
 section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup {
     padding-bottom: 0;
+    border: 0 none;
+    box-shadow: none;
+    margin-bottom: 30px;
 }
 
 section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup > .info {
