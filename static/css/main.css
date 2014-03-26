@@ -330,7 +330,8 @@ header.global ol.user > li.primary > a.dropdown {
     padding: 10px;
 }
 
-header.global ol.user > li.primary > a:hover {
+header.global ol.user > li.primary > a:hover,
+header.global ol.user > li.primary > a.dropdown.active {
     border-color: transparent;
     background-color: #3ea5ce;
     color: #fff;
