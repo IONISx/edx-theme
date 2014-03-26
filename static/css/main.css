@@ -2,12 +2,21 @@
    Global
    ========================================================================== */
 
+html, body {
+    background-color: white;
+}
+
+h1 {
+    font-weight: 700 !important;
+}
+
 h2 {
-    color: #2daae1;
+    color: #3ea5ce;
+    /*text-transform: none;*/
 }
 
 ul {
-    color: #3c3c3c;
+    color: #000;
     font: normal 1em/1.6em "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0.5em 0 1em 0;
 }
@@ -21,10 +30,18 @@ ul {
 .view-register .content-wrapper,
 .view-login .content-wrapper,
 .view-passwordreset .content-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
     background-color: #eef0f1;
+    min-height: 100vh;
+    margin-top: -177px;
+    padding-top: 177px;
 }
 
-.content-wrapper .find-courses header.search .inner-wrapper.main-search {
+.content-wrapper .home header,
+.content-wrapper .find-courses header.search {
     display: none;
 }
 
@@ -84,6 +101,16 @@ ul {
    Footer
    ========================================================================== */
 
+.view-login .wrapper-footer,
+.view-register .wrapper-footer,
+.view-passwordreset .wrapper-footer,
+.wrapper-footer {
+    background-color: #3ea5ce;
+    box-shadow: none;
+    border: 0 none;
+}
+
+
 .view-login .wrapper-footer > footer,
 .view-register .wrapper-footer > footer,
 .view-passwordreset .wrapper-footer > footer,
@@ -129,7 +156,8 @@ header.global.slim {
 
     height: 100px;
     padding: 0;
-    border-bottom: 1px solid #f2f1eb;
+    border: 0 none;
+    background-color: #3ea5ce;
 }
 
 header.global > nav,
@@ -155,6 +183,10 @@ header.global.slim > nav {
 
 header.global.slim > nav h1.logo:before {
     display: none;
+}
+
+header.global > nav h1.logo img {
+    margin-top: 2px;
 }
 
 header.global.slim > nav h2 {
@@ -233,7 +265,7 @@ header.global ol.user ul.dropdown-menu {
 header.global ol.user ul.dropdown-menu li > a {
     border: 0 none;
     outline: none;
-    color: #303030;
+    color: black;
 }
 
 header.global ol.user ul.dropdown-menu li > a:hover {
@@ -294,6 +326,26 @@ section.dashboard section.my-courses .empty-dashboard-message > a {
 /* ==========================================================================
    Course about page
    ========================================================================== */
+
+section.course-info header.course-profile {
+    background-color: #3ea5ce;
+    border: 0 none;
+    box-shadow: none;
+    height: auto;
+    padding: 80px 0;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper {
+    max-width: 1170px;
+    box-shadow: none;
+    border: 0 none;
+    padding: 0 15px;
+    background: none;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .table {
+    background: #eef0f1;
+}
 
 section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup {
     padding-bottom: 0;

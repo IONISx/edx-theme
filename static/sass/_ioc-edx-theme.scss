@@ -15,6 +15,12 @@ $ioc-pink: #ec008c;
 $ioc-red: #e2001a;
 $ioc-green: #41ad49;
 
+/////
+$_gg_black: #000;
+$_gg_blue: #3ea5ce;
+$_gg_grey: #eef0f1;
+/////
+
 $sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $serif: $sans-serif;
@@ -24,16 +30,16 @@ $border-color-2: $ioc-grey-2;
 $border-color-3: $ioc-grey-2;
 $outer-border-color: $ioc-grey-2;
 
-$homepage-bg-image: url('../themes/ioc-edx-theme/images/ionis-online.jpg');
+$homepage-bg-image: none;
 $login-banner-image: none;
 $register-banner-image: none;
 $video-thumb-url: '../themes/ioc-edx-theme/images/ionis-video-thumb.png';
 
 $baseline: 20px;
 
-$link-color: $ioc-blue-1;
-$link-color-d1: $ioc-blue-1;
-$link-hover: $ioc-pink;
+$link-color: $_gg_blue;
+$link-color-d1: $_gg_blue;
+$link-hover: $_gg_blue;
 $site-status-color: $ioc-pink;
 
 $action-primary-bg: $ioc-blue-2;
@@ -44,7 +50,7 @@ $action-primary-shadow: transparent;
 $header-graphic-super-color: $ioc-blue-1;
 $header-graphic-sub-color: $ioc-black-1;
 
-$body-bg: $ioc-grey-0;
+$body-bg: $_gg_grey;
 $container-bg: $ioc-white;
 $login-register-bg: $ioc-grey-4;
 $content-wrapper-bg: $ioc-grey-4;
@@ -61,8 +67,8 @@ $header-image: none;
 $header_image_margin: 0;
 $course-bg-image: none;
 
-$base-font-color: $ioc-black-1;
-$lighter-base-font-color: $ioc-black-2;
+$base-font-color: $_gg_black;
+$lighter-base-font-color: $_gg_black;
 $very-light-text: $ioc-grey-4;
 
 $button-color: $ioc-blue-2;
