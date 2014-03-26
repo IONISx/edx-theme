@@ -153,11 +153,18 @@ header.global.slim {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 
-    height: 100px;
+    height: auto;
     padding: 0;
     border: 0 none;
     background-color: #3ea5ce;
+}
+
+header.global:hover,
+header.global.slim:hover {
+    background-color: #64b6d7;
 }
 
 header.global > nav,
@@ -166,7 +173,7 @@ header.global.slim > nav {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    height: auto;
+    height: 100px;
     width: auto;
     padding: 15px 10px 0px;
     max-width: 1170px;
@@ -235,50 +242,100 @@ header.global ol.nav-courseware {
 
 .view-login header.global ol.nav-courseware li a.cta-login,
 header.global ol.nav-courseware li a.cta-login {
-    -webkit-transition: none;
-    transition: none;
     -webkit-border-radius: 0;
     border-radius: 0;
 
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
     display: inline-block;
-    background-color: #eef0f1;
-    color: black;
-    font-size: 14px;
-    padding: 10px 15px;
+    border: 1px solid #3ea5ce;
+    color: #3ea5ce;
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 4px;
 }
 
 header.global ol.nav-courseware li a.cta-login:hover {
-    background-color: #fff;
+    border: 1px solid transparent;
+    background-color: #3ea5ce;
+    color: #fff;
 }
 
 header.global ol.user {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 header.global ol.user ul.dropdown-menu {
-    right: -3px;
-    border: 0 none;
     padding: 4px 8px;
     z-index: 10;
+    top: 36px;
+    box-shadow: none;
+    border: 1px solid #3ea5ce;
+    border-top: 0 none;
+    border-top-right-radius: 0;
+    background-color: white;
+}
+
+header.global ol.user ul.dropdown-menu:before {
+    display: none;
+}
+
+header.global ol.user ul.dropdown-menu li {
+    border: 0 none;
+    padding: 0 4px 4px 4px;
+}
+
+header.global ol.user ul.dropdown-menu li:first-child {
+    padding-top: 4px;
 }
 
 header.global ol.user ul.dropdown-menu li > a {
     border: 0 none;
     outline: none;
-    color: black;
+    color: #3ea5ce !important;
 }
 
 header.global ol.user ul.dropdown-menu li > a:hover {
-    background-color: #eef0f1;
 }
 
 header.global ol.user > li.primary > a {
+    box-shadow: none;
+
+    margin: 0;
     border: 0 none;
-    background-color: #eef0f1;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+    display: inline-block;
+    border: 1px solid #3ea5ce;
+    color: #3ea5ce;
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+header.global ol.user > li.primary > a.dropdown {
+    padding: 10px;
 }
 
 header.global ol.user > li.primary > a:hover {
     background-color: #fff;
+}
+
+header.global ol.user > li.primary > a > span.avatar {
+    display: none;
 }
 
 /* ==========================================================================
