@@ -242,8 +242,8 @@ header.global ol.nav-courseware {
 
 .view-login header.global ol.nav-courseware li a.cta-login,
 header.global ol.nav-courseware li a.cta-login {
-    -webkit-border-radius: 0;
-    border-radius: 0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
 
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
@@ -259,7 +259,6 @@ header.global ol.nav-courseware li a.cta-login {
     vertical-align: middle;
     cursor: pointer;
     white-space: nowrap;
-    border-radius: 4px;
 }
 
 header.global ol.nav-courseware li a.cta-login:hover {
@@ -367,9 +366,106 @@ section.dashboard section.profile-sidebar section.user-info > ul {
     padding: 0 10px 10px
 }
 
+section.dashboard section.my-courses > header {
+    border: 0 none;
+}
+
 section.dashboard section.my-courses .listing-courses .course-item {
-    border-bottom-width: 1px;
-    border-bottom-color: #eee;
+    border: 0 none;
+    padding: 0;
+    margin: 0 0 80px;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    height: auto;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover img {
+    width: 200px;
+    height: 112px;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    padding: 2px 0;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status.course-open {
+    background-color: #2ecc71;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status.course-ended {
+    background-color: #c0392b;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status.course-soon {
+    background-color: #bdc3c7;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover .cover-university {
+    padding: 2px 0;
+    background-color: #0f70b7;
+    background-color: white;
+    color: white;
+    color: #3ea5ce;
+    text-align: center;
+    font-weight: bold;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info h4 {
+    font-size: 18px;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info hr {
+    border-color: #ddd;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info .unregister {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #c0392b;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0;
+    float: none;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info .unregister:before {
+    content: "\f00d";
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info p {
+    height: 59px;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info .enter-course {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    background-color: #2ecc71;
+    border: 1px solid transparent;
+    color: white;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info .enter-course:hover {
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    background-color: white;
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
 }
 
 section.dashboard section.my-courses .empty-dashboard-message {
@@ -498,9 +594,11 @@ section.course-info section.details section p.justified {
 }
 
 section.course-info section.details section p.alert {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
     border: 1px solid #c0392b;
     padding: 7px 10px;
-    border-radius: 5px;
     color: #c0392b;
 }
 
