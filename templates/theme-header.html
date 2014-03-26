@@ -11,16 +11,10 @@
 
 ## When unauthenticated, only show the about page link
 <%block name="navigation_global_links">
-  <li class="nav-global-01">
-    <a href="${marketing_link('ABOUT')}">À Propos</a>
-  </li>
 </%block>
 
 ## When authenticated, show both the about page and find courses
 <%block name="navigation_global_links_authenticated">
-  <li class="nav-global-01">
-    <a href="${marketing_link('ABOUT')}">À Propos</a>
-  </li>
   <li class="nav-global-02">
     <a href="${marketing_link('COURSES')}">Nos cours</a>
   </li>
