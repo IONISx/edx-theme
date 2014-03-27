@@ -22,6 +22,7 @@ ul {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
+    max-width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -102,9 +103,22 @@ ul {
     text-transform: none;
 }
 
-.content-wrapper nav.course-material ol.course-tabs {
+.content-wrapper nav.course-material .inner-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    max-width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.content-wrapper nav.course-material .inner-wrapper .course-tabs {
+    margin: 0;
+}
+
+.content-wrapper nav.course-material .inner-wrapper .course-tabs li:last-child {
+    margin: 0;
 }
 
 
