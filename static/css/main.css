@@ -400,7 +400,7 @@ section.dashboard section.profile-sidebar section.user-info > ul {
 
     background: none;
     border: 0 none;
-    padding: 0 10px 10px
+    padding: 0;
 }
 
 section.dashboard section.profile-sidebar section.user-info > ul > li {
