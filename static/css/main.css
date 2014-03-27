@@ -21,6 +21,9 @@ ul {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
@@ -351,12 +354,18 @@ header.global ol.user > li.primary > a > span.avatar {
    Dashboard
    ========================================================================== */
 
+section.dashboard section.profile-sidebar {
+    width: 22%;
+    margin: 0;
+}
+
 section.dashboard section.profile-sidebar header.profile {
     display: none;
 }
 
 section.dashboard section.profile-sidebar section.user-info {
-    border-right: 1px solid #ddd;
+    border: 0 none;
+    padding: 0;
 }
 
 section.dashboard section.profile-sidebar section.user-info > ul {
@@ -367,6 +376,17 @@ section.dashboard section.profile-sidebar section.user-info > ul {
     background: none;
     border: 0 none;
     padding: 0 10px 10px
+}
+
+section.dashboard section.profile-sidebar section.user-info > ul > li {
+    border: 0 none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+section.dashboard section.my-courses {
+    width: 78%;
+    margin: 0;
 }
 
 section.dashboard section.my-courses > header {
@@ -382,7 +402,7 @@ section.dashboard section.my-courses .listing-courses .course-item {
 section.dashboard section.my-courses .listing-courses .course-item .cover {
     -webkit-border-radius: 4px;
     border-radius: 4px;
-
+    background-color: white;
     height: auto;
 }
 
@@ -394,20 +414,20 @@ section.dashboard section.my-courses .listing-courses .course-item .cover img {
 section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status {
     text-align: center;
     font-size: 14px;
-    color: white;
     padding: 2px 0;
+    font-weight: bold;
 }
 
 section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status.course-open {
-    background-color: #2ecc71;
+    color: #2ecc71;
 }
 
 section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status.course-ended {
-    background-color: #c0392b;
+    color: #c0392b;
 }
 
 section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status.course-soon {
-    background-color: #bdc3c7;
+    color: #bdc3c7;
 }
 
 section.dashboard section.my-courses .listing-courses .course-item .cover .cover-university {
