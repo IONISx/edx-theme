@@ -102,6 +102,12 @@ ul {
     text-transform: none;
 }
 
+.content-wrapper nav.course-material ol.course-tabs {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
 /* ==========================================================================
    Footer
    ========================================================================== */
