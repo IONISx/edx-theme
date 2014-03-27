@@ -1,0 +1,1 @@
+Désinscription du cours « ${course.display_name_with_default} » sur ${settings.PLATFORM_NAME}

@@ -1,0 +1,21 @@
+<%inherit file="_base_email.txt" />
+Cher étudiant,
+
+Vous avez été invité à rejoindre le cours « ${course.display_name_with_default} » sur ${site_name} par un membre de l’équipe pédagogique.
+
+% if is_shib_course:
+% if auto_enroll:
+Pour accéder au cours, rendez-vous sur ${course_url} et connectez-vous.
+% else:
+Pour accéder au cours, rendez-vous sur ${course_about_url} et inscrivez-vous.
+% endif
+% else:
+
+Afin de finaliser votre inscription, rendez-vous sur ${registration_url} et remplissez le formulaire d’inscription, en utilisant bien cette adresse email : ${email_address}
+
+% if auto_enroll:
+Une fois inscris, vous verrez le cours « ${course.display_name_with_default} » listé sur la page d’accueil.
+% else:
+Une fois votre inscription terminée, rendez-vous sur ${course_about_url} pour vous inscrire au cours.
+% endif
+% endif

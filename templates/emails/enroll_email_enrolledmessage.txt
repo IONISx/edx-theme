@@ -1,7 +1,7 @@
 <%inherit file="_base_email.txt" />
 Cher ${full_name},
 
-Vous avez été invité à inscrit au cours « ${course.display_name_with_default} » sur ${site_name} par un membre de l’équipe pédagogique.
+Vous avez été inscrit au cours « ${course.display_name_with_default} » sur ${site_name} par un membre de l’équipe pédagogique.
 
 Pour accéder au cours, rendez-vous sur le lien suivant :
 ${course_url}
