@@ -33,15 +33,15 @@
       <img src="${course_image_url(course)}" alt="${course.display_name_with_default | h}" />
       % if course.has_ended():
       <div class="cover-course-status course-ended">
-        Cours terminé
+        Terminé
       </div>
       % elif course.has_started():
       <div class="cover-course-status course-open">
-        Cours ouvert !
+        En cours
       </div>
       % else:
       <div class="cover-course-status course-soon">
-        Ouverture prochaine…
+        À venir…
       </div>
       % endif
     </div>
