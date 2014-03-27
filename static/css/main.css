@@ -355,8 +355,13 @@ header.global ol.user > li.primary > a > span.avatar {
    ========================================================================== */
 
 section.dashboard section.profile-sidebar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
     width: 22%;
     margin: 0;
+    padding-right: 15px;
 }
 
 section.dashboard section.profile-sidebar header.profile {
