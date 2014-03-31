@@ -27,6 +27,54 @@ ul {
     padding-right: 15px;
 }
 
+.squaredThree {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+}
+
+.squaredThree:focus {
+    outline: none;
+}
+
+.squaredThree label {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    border-radius: 4px;
+    background-color: #3ea5ce;
+}
+
+.squaredThree label:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 4px;
+    left: 4px;
+    border: 3px solid #fcfff4;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.squaredThree label:hover::after {
+    opacity: 0.5;
+}
+
+.squaredThree input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+
 
 /* ==========================================================================
    Content
@@ -319,6 +367,10 @@ header.global ol.user ul.dropdown-menu li {
     padding: 3px 8px 3px 8px;
 }
 
+header.global ol.user ul.dropdown-menu li:first-child {
+    display: none;
+}
+
 header.global ol.user ul.dropdown-menu li > a {
     border: 0 none;
     outline: none;
@@ -579,18 +631,23 @@ section.course-info header.course-profile .intro-inner-wrapper .media .hero img 
 
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
-    border: 0 none;
+    border: 1px solid transparent;
     background: none;
     box-shadow: none;
     text-shadow: none;
     background-color: #0f70b7;
+    color: #fff;
     padding: 11px 0 10px 0;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
 }
 
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled),
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
     background: none;
-    background-color: #0f70b7;
+    color: #0f70b7;
+    background-color: #fff;
+    border: 1px solid #0f70b7;
 }
 
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled),
@@ -603,6 +660,12 @@ section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta 
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.private {
     width: 100%;
     cursor: default;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
+    background-color: #0F70B7;
+    color: #fff;
 }
 
 section.course-info section.course-sidebar {
@@ -619,6 +682,14 @@ section.course-info section.course-sidebar > section.course-summary {
 .course-info section.details {
     margin-right: 400px;
     width: auto;
+}
+
+section.course-info section.details nav {
+    display: none;
+}
+
+section.course-info section.details .inner-wrapper {
+    margin-top: 60px;
 }
 
 section.course-info section.details section {
@@ -688,4 +759,129 @@ section.course-info section.details .inner-wrapper section.course-staff article.
 
 .course-wrapper section.course-content article.video-wrapper section.video-controls .vidtime {
     color: white;
+}
+
+/* ==========================================================================
+   Login page
+   ========================================================================== */
+
+.view-login .content-wrapper .introduction > header,
+.view-register .content-wrapper .introduction > header,
+.view-passwordreset .content-wrapper .introduction > header {
+    border-bottom: 1px solid #ddd;
+}
+
+.content-wrapper section.login.container section.content {
+    width: 70%;
+    min-width: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding 0;
+    padding-top: 25px;
+}
+
+.content-wrapper section.login.container aside {
+    width: 30%;
+    padding-left: 33px;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li {
+    position: relative;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input {
+    outline: 0;
+    box-shadow: none;
+    border: 2px solid #ddd;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 50px;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input + span::after {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    position: absolute;
+    z-index: 1;
+    font-size: 26px;
+    top: 13px;
+    right: 15px;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input.valid-input {
+    border: 2px solid #2ecc71;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input.valid-input + span::after {
+    content: "\f058";
+    color: #2ecc71;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input.invalid-input {
+    border: 2px solid #c0392b;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input.invalid-input + span::after {
+    content: "\f057";
+    color: #c0392b;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input:focus + span::after {
+    opacity: 0.2;
+    color: #3ea5ce;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li:first-child > input{
+    margin-bottom: 35px;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input:focus {
+    border: 2px solid #3ea5ce;
+}
+
+section.login #login-form button[type=submit] {
+    width: 20%;
+    background-color: #2ecc71;
+    color: #fff;
+    border: 1px solid transparent;
+    box-shadow: none;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+
+section.login #login-form button[type=submit]:hover {
+    color: #2ecc71;
+    border-color: #2ecc71;
+    background-color: #fff;
+}
+
+section.login #login-form button[type=submit]:focus,
+section.login #login-form button[type=submit]:hover {
+    outline: 0;
+    box-shadow: none;
+}
+
+section.login #login-form .status.message {
+    border: 0 none;
+    box-shadow: none;
+}
+
+section.login #login-form .group-form-secondary {
+    position: relative;
+}
+
+section.login #login-form .customCheckboxLabel {
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    font-style: normal;
+    font-size: 17px;
 }

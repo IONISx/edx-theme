@@ -1,0 +1,149 @@
+<%inherit file="main.html" />
+<%! from microsite_configuration import microsite %>
+<%namespace name='static' file='static_content.html'/>
+
+<%! from django.core.urlresolvers import reverse %>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%block name="pagetitle">${_("Log into your {platform_name} Account").format(platform_name=platform_name)}</%block>
+
+<%block name="bodyclass">view-login</%block>
+
+<%block name="js_extra">
+  <script type="text/javascript" src="${static.url('themes/ioc-edx-theme/js/form_validator.js')}"></script>
+  <script type="text/javascript">
+    $(function() {
+
+      // adding js class for styling with accessibility in mind
+      $('body').addClass('js');
+
+      // show forgot password modal UI if URL contains matching DOM ID
+      if ($.deparam.fragment()['forgot-password-modal'] !== undefined) {
+        $('.pwd-reset').click();
+      }
+
+      // new window/tab opening
+      $('a[rel="external"], a[class="new-vp"]')
+      .click( function() {
+        window.open( $(this).attr('href') );
+        return false;
+      });
+
+      // form field label styling on focus
+      $("form :input").focus(function() {
+        $("label[for='" + this.id + "']").parent().addClass("is-focused");
+      }).blur(function() {
+        $("label").parent().removeClass("is-focused");
+      });
+    });
+
+    (function() {
+      $('#login-form').on('ajax:success', function(event, json, xhr) {
+        if(json.success) {
+          var u=decodeURI(window.location.search);
+          next=u.split("next=")[1];
+          if (next && !isExternal(next)) {
+            location.href=next;
+          }  else if(json.redirect_url){
+            location.href=json.redirect_url;
+          } else {
+            location.href="${reverse('dashboard')}";
+          }
+        } else if(json.hasOwnProperty('redirect')) {
+          var u=decodeURI(window.location.search);
+          if (!isExternal(json.redirect)) { // a paranoid check.  Our server is the one providing json.redirect
+              location.href=json.redirect+u;
+          } // else we just remain on this page, which is fine since this particular path implies a login failure
+            // that has been generated via packet tampering (json.redirect has been messed with).
+        } else {
+          $('.message.submission-error').addClass('is-shown').focus();
+          $('.message.submission-error .message-copy').html(json.value);
+        }
+      });
+      $("#forgot-password-link").click(function() {
+        $("#forgot-password-modal").show();
+        $("#forgot-password-modal .close-modal").focus();
+      });
+
+    })(this);
+  </script>
+</%block>
+
+<section class="introduction">
+  <header>
+    <h1 class="title">
+      <span class="title-super">${_("Please log in")}</span>
+      <span class="title-sub">${_("to access your account and courses")}</span>
+    </h1>
+  </header>
+</section>
+
+<section class="login container">
+  <section role="main" class="content">
+    <form role="form" id="login-form" method="post" data-remote="true" action="/login_ajax" data-validator="true" novalidate>
+
+      <!-- status messages -->
+      <div role="alert" class="status message">
+        <h3 class="message-title">${_("We're Sorry, {platform_name} accounts are unavailable currently").format(platform_name=platform_name)}</h3>
+      </div>
+
+      <div role="alert" class="status message submission-error">
+        <h3 class="message-title">${_("The following errors occurred while logging you in:")} </h3>
+        <ul class="message-copy">
+          <li>${_("Your email or password is incorrect")}</li>
+        </ul>
+      </div>
+
+      <p class="instructions sr">
+        ${_('Please provide the following information to log into your {platform_name} account. Required fields are noted by <strong class="indicator">bold text and an asterisk (*)</strong>.').format(platform_name=platform_name)}
+      </p>
+
+      <div class="group group-form group-form-requiredinformation">
+        <h2 class="sr">${_('Required Information')}</h2>
+
+        <ol class="list-input">
+          <li class="field required text" id="field-email">
+            <input class="" id="email" type="email" name="email" value="" placeholder="Adresse email" data-required="true" aria-required="true" aria-described-by="email-tip" />
+            <span></span>
+          </li>
+          <li class="field required password" id="field-password">
+            <input id="password" type="password" placeholder="Mot de passe" name="password" value="" data-required="true" aria-required="true" />
+            <span></span>
+            <span class="tip tip-input">
+              <a href="#forgot-password-modal" rel="leanModal" class="pwd-reset action action-forgotpw" id="forgot-password-link" role="button" aria-haspopup="true">${_('Forgot password?')}</a>
+            </span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="group group-form group-form-secondary group-form-accountpreferences">
+        <div class="squaredThree">
+          <input class="squaredThree" id="remember-yes" type="checkbox" name="remember" value="true" />
+          <label for="remember-yes"></label>
+        </div>
+        <label class="customCheckboxLabel" for="remember-yes">Remember Me</label>
+      </div>
+
+% if course_id and enrollment_action:
+      <input type="hidden" name="enrollment_action" value="${enrollment_action | h}" />
+      <input type="hidden" name="course_id" value="${course_id | h}" />
+% endif
+
+      <div class="form-actions">
+        <button name="submit" type="submit" id="submit" class="action action-primary action-update">Connexion</button>
+      </div>
+    </form>
+  </section>
+
+  <aside role="complementary">
+
+<%
+  # allow for microsite overrides on the registration sidebars, otherwise default to pre-existing ones
+  sidebar_file = microsite.get_template_path('login-sidebar.html')
+%>
+
+    <%include file="${sidebar_file}" />
+
+  </aside>
+  </section>
+
