@@ -219,12 +219,12 @@
         <header>
           % if microsite.get_value('course_about_show_social_links', True):
           <div class="social-sharing">
-            <div class="sharing-message">${_("Share with friends and family!")}</div>
+            <div class="sharing-message">Partager sur Twitter</div>
             ## TODO: this should probably be an overrideable block,
             ##       or something allowing themes to do whatever they
             ##       want here (and on this whole page, really).
               <%
-                tweet_action = u"http://twitter.com/intent/tweet?text=Je+suis+inscrit+au+cours+« {course_name} »+sur+IONIS+Online+Courses+@IONISx".format(course_name=get_course_about_section(course, 'title'))
+                tweet_action = u"http://twitter.com/intent/tweet?text=Je+suis+inscrit+au+cours+« {course_name} »+sur+@IONISx".format(course_name=get_course_about_section(course, 'title'))
               %>
               <a href="${tweet_action}" target="_blank" class="share">
                 <img src="${static.url('images/social/twitter-sharing.png')}" alt="Tweet that you've registered for this course">
