@@ -28,8 +28,6 @@ ul {
 }
 
 .squaredThree {
-    position: relative;
-    top: 2px;
     display: inline-block;
 }
 
@@ -69,6 +67,11 @@ ul {
 
 .squaredThree label:hover::after {
     opacity: 0.5;
+}
+
+.squaredThree input[type=checkbox] {
+    position: relative;
+    top: 2px;
 }
 
 .squaredThree input[type=checkbox]:checked + label:after {
@@ -884,4 +887,159 @@ section.login #login-form .customCheckboxLabel {
     left: 30px;
     font-style: normal;
     font-size: 17px;
+}
+
+/* ==========================================================================
+   Register page
+   ========================================================================== */
+
+.content-wrapper section.register.container section.content {
+    width: 70%;
+    min-width: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding 0;
+    padding-top: 25px;
+}
+
+.content-wrapper section.register.container aside {
+    width: 30%;
+    padding-left: 33px;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li {
+    position: relative;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input {
+    outline: 0;
+    box-shadow: none;
+    border: 2px solid #ddd;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 50px;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input + span::after {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    position: absolute;
+    z-index: 1;
+    font-size: 26px;
+    top: 13px;
+    right: 15px;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input.valid-input {
+    border: 2px solid #2ecc71;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input.valid-input + span::after {
+    content: "\f058";
+    color: #2ecc71;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input.invalid-input {
+    border: 2px solid #c0392b;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input.invalid-input + span::after {
+    content: "\f057";
+    color: #c0392b;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input:focus + span::after {
+    opacity: 0.2;
+    color: #3ea5ce;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input{
+    margin-bottom: 35px;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li:last-child > input{
+    margin-bottom: 0;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input:focus {
+    border: 2px solid #3ea5ce;
+}
+
+section.register #register-form .group-form-personalinformation2 .list-input > li > textarea {
+    outline: 0;
+    box-shadow: none;
+    border: 2px solid #ddd;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 100px;
+}
+
+section.register #register-form .group-form-personalinformation2 .list-input > li > textarea:focus {
+    border: 2px solid #3ea5ce;
+}
+
+
+section.register #register-form button[type=submit] {
+    width: 20%;
+    background-color: #2ecc71;
+    color: #fff;
+    border: 1px solid transparent;
+    box-shadow: none;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+
+section.register #register-form button[type=submit]:hover {
+    color: #2ecc71;
+    border-color: #2ecc71;
+    background-color: #fff;
+}
+
+section.register #register-form button[type=submit]:focus,
+section.register #register-form button[type=submit]:hover {
+    outline: 0;
+    box-shadow: none;
+}
+
+section.register #register-form .status.message {
+    outline: none;
+    border: 0 none;
+    box-shadow: none;
+}
+
+section.register #register-form .group-form-accountacknowledgements {
+    position: relative;
+}
+
+section.register #register-form .squaredThree {
+    position: relative;
+    top: 2px;
+    display: block;
+}
+
+section.register #register-form #customCheckboxTOS {
+    display: block;
+    position: absolute;
+    left: 30px;
+    font-style: normal;
+    font-size: 17px;
+    top: 0;
+}
+
+section.register #register-form #customCheckboxHonor {
+    display: block;
+    position: absolute;
+    left: 30px;
+    font-style: normal;
+    font-size: 17px;
+    top: 32px;
 }
