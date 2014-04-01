@@ -1,5 +1,4 @@
-<%inherit file="_base_email.txt" />
-Bonjour,
+<%inherit file="_base_email.txt" />Bonjour,
 
 Vous avez effectué une demande de changement de l’adresse email associée à votre compte ${settings.PLATFORM_NAME}.
 

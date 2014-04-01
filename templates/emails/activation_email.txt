@@ -1,5 +1,4 @@
-<%inherit file="_base_email.txt" />
-Bonjour,
+<%inherit file="_base_email.txt" />Bonjour,
 
 Nous vous remercions d’avoir créé un compte sur ${settings.PLATFORM_NAME} !
 

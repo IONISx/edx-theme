@@ -1,4 +1,3 @@
-<%inherit file="_base_email.txt" />
-Cher étudiant,
+<%inherit file="_base_email.txt" />Cher étudiant,
 
 Votre inscription au cours « ${course.display_name_with_default} » sur ${site_name} vient d’être révoquée par un membre de l’équipe pédagogique.

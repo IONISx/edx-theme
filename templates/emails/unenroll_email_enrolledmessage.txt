@@ -1,4 +1,3 @@
-<%inherit file="_base_email.txt" />
-Cher ${full_name},
+<%inherit file="_base_email.txt" />Cher ${full_name},
 
 Vous avez été désinscrit du cours « ${course.display_name_with_default} » sur ${site_name} par un membre de l’équipe pédagogique.

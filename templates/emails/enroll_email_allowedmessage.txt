@@ -1,5 +1,4 @@
-<%inherit file="_base_email.txt" />
-Cher étudiant,
+<%inherit file="_base_email.txt" />Cher étudiant,
 
 Vous avez été invité à rejoindre le cours « ${course.display_name_with_default} » sur ${site_name} par un membre de l’équipe pédagogique.
 

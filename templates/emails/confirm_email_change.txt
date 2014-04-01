@@ -1,6 +1,4 @@
-<%inherit file="_base_email.txt" />
-<%! from django.core.urlresolvers import reverse %>
-Bonjour,
+<%inherit file="_base_email.txt" />Bonjour,
 
 Nous vous informons que l’email associé à votre compte ${settings.PLATFORM_NAME} a bien été modifié.
 
