@@ -755,6 +755,10 @@ section.course-info section.details .inner-wrapper section.course-staff article.
     height: 160px;
 }
 
+section.course-info section.details .inner-wrapper section.faq article.response:last-child {
+    margin-bottom: 10px;
+}
+
 /* ==========================================================================
    Course info
    ========================================================================== */
