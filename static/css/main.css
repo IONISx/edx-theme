@@ -102,12 +102,12 @@ ul {
     display: none;
 }
 
-.content-wrapper .home .courses .course header.course-preview hgroup h2 .course-number,
+.content-wrapper .highlighted-courses .courses .course header.course-preview hgroup h2 .course-number,
 .content-wrapper .find-courses .courses .course header.course-preview hgroup h2 .course-number {
     display: none;
 }
 
-.content-wrapper .home .courses .course .status,
+.content-wrapper .highlighted-courses .courses .course .status,
 .content-wrapper .find-courses .courses .course .status {
     display: none;
 }
