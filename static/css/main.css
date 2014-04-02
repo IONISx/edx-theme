@@ -428,6 +428,7 @@ header.global ol.user > li.primary > a.dropdown.active {
 
 header.global ol.user > li.primary > a > span.avatar {
     display: none;
+    background: none;
 }
 
 /* ==========================================================================
