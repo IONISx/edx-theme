@@ -107,6 +107,11 @@ ul {
     display: none;
 }
 
+.content-wrapper .home .courses .course .status,
+.content-wrapper .find-courses .courses .course .status {
+    display: none;
+}
+
 .view-register .content-wrapper .container,
 .view-register .content-wrapper .introduction,
 .view-login .content-wrapper .container,
