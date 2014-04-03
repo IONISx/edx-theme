@@ -78,7 +78,6 @@ ul {
     opacity: 1;
 }
 
-
 /* ==========================================================================
    Content
    ========================================================================== */
@@ -283,6 +282,7 @@ header.global > nav h1.logo img {
 }
 
 header.global.slim > nav h2 {
+    width: auto;
     padding: 0;
     color: white;
     text-shadow: none;
