@@ -784,6 +784,7 @@ section.course-info section.details .inner-wrapper section.faq article.response:
     box-shadow: none;
     width: auto;
     border-width: 3px;
+    border-color: #ddd;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
