@@ -783,6 +783,10 @@ section.course-info section.details .inner-wrapper section.faq article.response:
     background: none;
     box-shadow: none;
     width: auto;
+    border-width: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ul li.prev a,
@@ -794,6 +798,7 @@ section.course-info section.details .inner-wrapper section.faq article.response:
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    background-position: center 12px;
 }
 
 .course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav .sequence-list-wrapper {
@@ -807,7 +812,7 @@ section.course-info section.details .inner-wrapper section.faq article.response:
     background: none;
     border: 0 none;
     width: auto;
-    height: 46px;
+    height: 44px;
     border-top: 3px solid #ddd;
     border-bottom: 3px solid #ddd;
     -webkit-box-sizing: border-box;
@@ -879,17 +884,23 @@ section.course-info section.details .inner-wrapper section.faq article.response:
 }
 
 .course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-none,
-.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none {
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-0,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-0 {
     background-color: #ddd;
 }
 
 .course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-none:hover,
-.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none:hover  {
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-0:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-0:hover  {
     background-color: #fff;
 }
 
 .course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-none:hover:after,
-.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none:hover:after {
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-0:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-0:hover:after  {
     color: #ddd;
 }
 
