@@ -779,6 +779,174 @@ section.course-info section.details .inner-wrapper section.faq article.response:
     color: white;
 }
 
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ul li {
+    background: none;
+    box-shadow: none;
+    width: auto;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ul li.prev a,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ul li.next a {
+    margin: 0;
+    -moz-transition: none;
+    -webkit-transition: none;
+    transition: none;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav .sequence-list-wrapper {
+    background: none;
+    box-shadow: none;
+    border: 0 none;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a {
+    text-align: center;
+    background: none;
+    border: 0 none;
+    width: auto;
+    height: 46px;
+    border-top: 3px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li:first-child a {
+    border-left: 3px solid #ddd;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li:last-child a {
+    border-right: 3px solid #ddd;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-none {
+    border-color: #3ea5ce;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-some,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-in_progress {
+    border-color: #f39c12;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-done {
+    border-color: #2ecc71;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a:after {
+    content: "\f040";
+    font-family: FontAwesome;
+    width: 14px;
+    height: 14px;
+    color: #fff;
+    display: block;
+    margin: auto;
+    padding-top: 13px;
+    font-size: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.seq_video:after {
+    content: "\f03d";
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.seq_problem:after {
+    content: "\f040";
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-none:after {
+    color: #3ea5ce;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-some:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-in_progress:after {
+    color: #f39c12;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-done:after {
+    color: #2ecc71;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active {
+    background-color: white;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-none,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none {
+    background-color: #ddd;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-none:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none:hover  {
+    background-color: #fff;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-none:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none:hover:after {
+    color: #ddd;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-some,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-in_progress,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-some,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-in_progress {
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-some:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-in_progress:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-some:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-in_progress:hover  {
+    background-color: #fff;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-some:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-in_progress:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-some:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-in_progress:hover:after {
+    color: #f39c12;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-done,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-done {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-done:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-done:hover {
+    background-color: #fff;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-done:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-done:hover:after  {
+    color: #2ecc71;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a > p {
+    display: none;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol {
+    padding: 0;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav .left-shadow {
+    display: none;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav .right-shadow {
+    display: none;
+}
+
 /* ==========================================================================
    Login page
    ========================================================================== */
