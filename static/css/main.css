@@ -775,6 +775,17 @@ section.course-info section.details .inner-wrapper section.faq article.response:
    Courseware
    ========================================================================== */
 
+nav.course-material ol.course-tabs li a {
+    font-weight: 500;
+}
+
+nav.course-material ol.course-tabs li a.active {
+    background: 0 none;
+    background-color: #3ea5ce;
+    box-shadow: none;
+    text-shadow: none;
+}
+
 .course-wrapper section.course-content article.video-wrapper section.video-controls .vidtime {
     color: white;
 }
