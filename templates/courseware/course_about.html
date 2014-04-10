@@ -224,7 +224,10 @@
             ##       or something allowing themes to do whatever they
             ##       want here (and on this whole page, really).
               <%
-                tweet_action = u"http://twitter.com/intent/tweet?text=Je+viens+de+m’inscrire+au+cours+« {course_name} »+sur+@IONISx".format(course_name=get_course_about_section(course, 'title'))
+                course_about_url = "https://edx.courses.ionis-group.com{path}".format(
+                   path=reverse('about_course', args=[course.id])
+                )
+                tweet_action = u"http://twitter.com/intent/tweet?text=Découvrez+le+cours+« {course_name} »+sur+@IONISx !+{course_about_url}".format(course_name=get_course_about_section(course, 'title'), course_about_url=course_about_url)
               %>
               <a href="${tweet_action}" target="_blank" class="share">
                 <img src="${static.url('images/social/twitter-sharing.png')}" alt="Tweet that you've registered for this course">
