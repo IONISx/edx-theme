@@ -11,10 +11,13 @@
   cert_name_short = course.cert_name_short
   if cert_name_short == "":
     cert_name_short = settings.CERT_NAME_SHORT
-  
+
   cert_name_long = course.cert_name_long
   if cert_name_long == "":
     cert_name_long = settings.CERT_NAME_LONG
+
+  course_about_url = "https://edx.courses.ionis-group.com{path}".format(
+                      path=reverse('about_course', args=[course.id]))
 %>
 
 <%namespace name='static' file='../static_content.html'/>
@@ -60,7 +63,7 @@
           % if show_courseware_link:
             <a href="${course_target}">${course.display_name_with_default}</a>
           % else:
-            <span>${course.display_name_with_default}</span>
+            <a href="${course_about_url}">${course.display_name_with_default}</a>
           % endif
         </h4>
       </hgroup>
