@@ -619,6 +619,12 @@ section.course-info header.course-profile .intro-inner-wrapper {
 
 section.course-info header.course-profile .intro-inner-wrapper .table {
     background: #eef0f1;
+    display: block;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro {
+    width: auto;
+    display: block;
 }
 
 section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup {
@@ -638,13 +644,40 @@ section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup >
     margin-right: 10px;
 }
 
+section.course-info header.course-profile .intro-inner-wrapper .media {
+    width: 345px;
+    float: left;
+    display: block;
+    padding: 0;
+}
+
 section.course-info header.course-profile .intro-inner-wrapper .media .hero img {
     width: 343px;
     height: 193px;
 }
 
+section.course-info header.course-profile .intro-inner-wrapper .metadata {
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .metadata > hgroup > h1 {
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: -9px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .metadata .short-description {
+    padding-top: 20px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta {
+    padding-top: 20px;
+}
+
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
-section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
     border: 1px solid transparent;
     background: none;
     box-shadow: none;
@@ -654,10 +687,13 @@ section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta 
     padding: 11px 0 10px 0;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
 }
 
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled),
-section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled),
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled) {
     background: none;
     color: #0f70b7;
     background-color: #fff;
@@ -665,21 +701,26 @@ section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta 
 }
 
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled),
-section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled) {
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled),
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:active:not(:disabled) {
     box-shadow: none;
     background-color: #2daae1;
 }
 
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.disabled {
+    cursor: default;
+    padding: 11px 0 10px 0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-top: 0;
+    border-color: #ddd;
+}
+
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart,
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.private {
     width: 100%;
     cursor: default;
-}
-
-section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
-section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
-    background-color: #0F70B7;
-    color: #fff;
 }
 
 section.course-info section.course-sidebar {
