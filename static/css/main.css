@@ -855,15 +855,8 @@ body.discussion .course-tabs .right .new-post-btn:focus {
 }
 
 body.discussion .course-tabs .right .new-post-icon {
-    color: #3ea5ce;
-    transition: all .1s ease-in;
+    color: inherit;
 }
-
-body.discussion .course-tabs .right .new-post-btn:hover .new-post-icon,
-body.discussion .course-tabs .right .new-post-btn:focus .new-post-icon {
-    color: white;
-}
-
 
 
 /* ==========================================================================
