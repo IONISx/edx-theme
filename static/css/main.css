@@ -856,6 +856,7 @@ body.discussion .course-tabs .right .new-post-btn:focus {
 
 body.discussion .course-tabs .right .new-post-icon {
     color: #3ea5ce;
+    transition: all .1s ease-in;
 }
 
 body.discussion .course-tabs .right .new-post-btn:hover .new-post-icon,
