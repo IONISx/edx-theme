@@ -858,6 +858,17 @@ body.discussion .course-tabs .right .new-post-icon {
     color: inherit;
 }
 
+body.discussion .new-post-article .inner-wrapper {
+    box-sizing: border-box;
+    max-width: 1170px;
+    padding: 0 15px;
+}
+
+body.discussion .new-post-form {
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
 
 /* ==========================================================================
    Courseware
