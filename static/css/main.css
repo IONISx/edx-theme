@@ -693,6 +693,10 @@ section.course-info header.course-profile .intro-inner-wrapper .social-sharing s
     color: #2ecc71;
 }
 
+section.course-info header.course-profile .intro-inner-wrapper .social-sharing span:hover {
+    opacity: 0.5;
+}
+
 section.course-info header.course-profile .intro-inner-wrapper .social-sharing a {
     text-decoration: none;
 }
