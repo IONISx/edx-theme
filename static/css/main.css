@@ -828,6 +828,43 @@ div.info-wrapper section.handouts {
     font-weight: 600;
 }
 
+
+/* ==========================================================================
+   Course forum
+   ========================================================================== */
+
+body.discussion .course-tabs .right .new-post-btn {
+    height: 34px;
+    transition: all .1s ease-in;
+    background: none;
+    margin-right: 0;
+    text-shadow: none;
+    box-shadow: none;
+    background-color: white;
+    border: 1px solid #3ea5ce;
+    color: #3ea5ce;
+    font-weight: 600;
+}
+
+body.discussion .course-tabs .right .new-post-btn:hover,
+body.discussion .course-tabs .right .new-post-btn:focus {
+    background: none;
+    background-color: #3ea5ce;
+    border: 1px solid #3ea5ce;
+    color: white;
+}
+
+body.discussion .course-tabs .right .new-post-icon {
+    color: #3ea5ce;
+}
+
+body.discussion .course-tabs .right .new-post-btn:hover .new-post-icon,
+body.discussion .course-tabs .right .new-post-btn:focus .new-post-icon {
+    color: white;
+}
+
+
+
 /* ==========================================================================
    Courseware
    ========================================================================== */
