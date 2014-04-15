@@ -8,7 +8,8 @@ html, body {
 
 h2 {
     color: #3ea5ce;
-    /*text-transform: none;*/
+    text-transform: none;
+    font-weight: 600;
 }
 
 ul {
@@ -266,6 +267,7 @@ header.global.slim > nav {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+    min-width: 0;
 }
 
 .view-login header.global > nav,
@@ -434,6 +436,12 @@ header.global ol.user > li.primary > a.dropdown.active {
 header.global ol.user > li.primary > a > span.avatar {
     display: none;
     background: none;
+}
+
+@media (max-width : 480px) {
+    header.global.slim ol.left.nav-global {
+        display: none;
+    }
 }
 
 /* ==========================================================================
@@ -615,6 +623,7 @@ section.course-info header.course-profile .intro-inner-wrapper {
     border: 0 none;
     padding: 0 15px;
     background: none;
+    min-width: 0;
 }
 
 section.course-info header.course-profile .intro-inner-wrapper .table {
@@ -777,6 +786,10 @@ section.course-info section.course-sidebar > section.course-summary {
     width: auto;
 }
 
+section.course-info .container {
+    min-width: 0;
+}
+
 section.course-info section.details nav {
     display: none;
 }
@@ -870,6 +883,30 @@ section.course-info section.details .inner-wrapper section.course-staff article.
 
 section.course-info section.details .inner-wrapper section.faq article.response:last-child {
     margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+    section.course-info header.course-profile .intro-inner-wrapper {
+        padding: 0;
+    }
+
+    section.course-info header.course-profile .intro-inner-wrapper .media {
+        float: none;
+    }
+
+    section.course-info header.course-profile .intro-inner-wrapper .metadata {
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+    section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+    section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 10px;
+    }
 }
 
 /* ==========================================================================
@@ -1420,3 +1457,12 @@ section.register #register-form #customCheckboxHonor {
     font-size: 17px;
     top: 32px;
 }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.wrapper-footer footer {
+    min-width: 0;
+}
+
