@@ -1,0 +1,1468 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+html, body {
+    background-color: white;
+}
+
+h2 {
+    color: #3ea5ce;
+    text-transform: none;
+    font-weight: 600;
+}
+
+ul {
+    color: #000;
+    font: normal 1em/1.6em "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0.5em 0 1em 0;
+}
+
+.container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.squaredThree {
+    display: inline-block;
+}
+
+.squaredThree:focus {
+    outline: none;
+}
+
+.squaredThree label {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    border-radius: 4px;
+    background-color: #3ea5ce;
+}
+
+.squaredThree label:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 4px;
+    left: 4px;
+    border: 3px solid #fcfff4;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.squaredThree label:hover::after {
+    opacity: 0.5;
+}
+
+.squaredThree input[type=checkbox] {
+    position: relative;
+    top: 2px;
+}
+
+.squaredThree input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content-wrapper,
+.view-register .content-wrapper,
+.view-login .content-wrapper,
+.view-passwordreset .content-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    background-color: #eef0f1;
+    min-height: 100vh;
+    margin-top: -177px;
+    padding-top: 177px;
+}
+
+.content-wrapper .home header,
+.content-wrapper .find-courses header.search {
+    display: none;
+}
+
+.content-wrapper .highlighted-courses .courses .course header.course-preview hgroup h2 .course-number,
+.content-wrapper .find-courses .courses .course header.course-preview hgroup h2 .course-number {
+    display: none;
+}
+
+.content-wrapper .highlighted-courses .courses .course .status,
+.content-wrapper .find-courses .courses .course .status {
+    display: none;
+}
+
+.view-register .content-wrapper .container,
+.view-register .content-wrapper .introduction,
+.view-login .content-wrapper .container,
+.view-login .content-wrapper .introduction,
+.view-passwordreset .content-wrapper .container,
+.view-passwordreset .content-wrapper .introduction {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: auto;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: none;
+}
+
+.view-register .content-wrapper .container > section.content,
+.view-login .content-wrapper .container > section.content,
+.view-passwordreset .content-wrapper .container > section.content {
+    width: auto;
+    min-width: 700px;
+    margin: 20px 30px 0 0;
+}
+
+.view-login .content-wrapper .introduction > header,
+.view-register .content-wrapper .introduction > header,
+.view-passwordreset .content-wrapper .introduction > header {
+    height: auto;
+    margin-top: 30px;
+    border-bottom: 1px solid #8a8c8f;
+}
+
+.view-login .content-wrapper .introduction > header > h1.title,
+.view-register .content-wrapper .introduction > header > h1.title,
+.view-passwordreset .content-wrapper .introduction > header > h1.title {
+    position: static;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.view-login .content-wrapper .introduction > header > h1.title > span.title-super,
+.view-login .content-wrapper .introduction > header > h1.title > span.title-sub,
+.view-register .content-wrapper .introduction > header > h1.title > span.title-super,
+.view-register .content-wrapper .introduction > header > h1.title > span.title-sub,
+.view-passwordreset .content-wrapper .introduction > header > h1.title > span.title-super,
+.view-passwordreset .content-wrapper .introduction > header > h1.title > span.title-sub {
+    text-transform: none;
+}
+
+.content-wrapper nav.course-material .inner-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content-wrapper nav.course-material .inner-wrapper .course-tabs {
+    margin: 0;
+}
+
+.content-wrapper nav.course-material .inner-wrapper .course-tabs li:last-child {
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.view-login .wrapper-footer,
+.view-register .wrapper-footer,
+.view-passwordreset .wrapper-footer,
+.wrapper-footer {
+    background-color: #3ea5ce;
+    box-shadow: none;
+    border: 0 none;
+}
+
+
+.view-login .wrapper-footer > footer,
+.view-register .wrapper-footer > footer,
+.view-passwordreset .wrapper-footer > footer,
+.wrapper-footer > footer {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: auto;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.wrapper-footer > footer > p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.wrapper-footer > footer > p > a,
+.wrapper-footer > footer > p > a:link,
+.wrapper-footer > footer > p > a:visited {
+    color: #fff;
+    border: 0 none;
+}
+
+.wrapper-footer > footer > p > a:hover {
+    text-decoration: underline !important;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header.global,
+header.global.slim {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+
+    height: auto;
+    padding: 0;
+    border: 0 none;
+    background-color: #3ea5ce;
+}
+
+header.global:hover,
+header.global.slim:hover {
+    background-color: #64b6d7;
+}
+
+header.global > nav,
+header.global.slim > nav {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    height: 100px;
+    width: auto;
+    padding: 15px 10px 0px;
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 0;
+}
+
+.view-login header.global > nav,
+.view-register header.global > nav {
+    width: auto;
+}
+
+header.global.slim > nav h1.logo:before {
+    display: none;
+}
+
+header.global > nav h1.logo img {
+    margin-top: 2px;
+}
+
+header.global.slim > nav h2 {
+    width: auto;
+    padding: 0;
+    color: white;
+    text-shadow: none;
+    margin: 25px 10px 0 10px;
+}
+
+header.global.slim > nav h2 span {
+    color: #eef0f1;
+}
+
+header.global > nav h1.logo,
+header.global.slim > nav h1.logo {
+    margin: -2px 39px 0px 0px;
+    padding: 0;
+    float: left;
+}
+
+header.global > nav h1.logo img,
+header.global.slim > nav h1.logo img {
+    height: auto;
+}
+
+header.global ol.nav-global {
+    margin-top: 24px;
+}
+
+.view-login header.global ol.nav-global li a,
+.view-register header.global ol.nav-global li a,
+header.global ol.nav-global li a {
+    font-weight: normal;
+    color: #eef0f1 !important;
+}
+
+.view-login header.global ol.nav-global li a:hover,
+.view-register header.global ol.nav-global li a:hover,
+header.global ol.nav-global li a:hover {
+    color: #fff !important;
+}
+
+header.global ol.nav-courseware {
+    margin-top: 15px;
+}
+
+.view-login header.global ol.nav-courseware li a.cta-login,
+header.global ol.nav-courseware li a.cta-login {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+    display: inline-block;
+    border: 1px solid #3ea5ce;
+    color: #3ea5ce;
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+header.global ol.nav-courseware li a.cta-login:hover {
+    border: 1px solid transparent;
+    background-color: #3ea5ce;
+    color: #fff;
+}
+
+header.global ol.user {
+    margin-top: 15px;
+}
+
+header.global ol.user ul.dropdown-menu {
+    padding: 0;
+    z-index: 10;
+    top: 36px;
+    box-shadow: none;
+    border: 1px solid #3ea5ce;
+    border-top: 0 none;
+    border-top-right-radius: 0;
+    background-color: white;
+}
+
+header.global ol.user ul.dropdown-menu:before {
+    display: none;
+}
+
+header.global ol.user ul.dropdown-menu li {
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+    border: 0 none;
+    padding: 3px 8px 3px 8px;
+}
+
+header.global ol.user ul.dropdown-menu li:first-child {
+    display: none;
+}
+
+header.global ol.user ul.dropdown-menu li > a {
+    border: 0 none;
+    outline: none;
+    color: #3ea5ce !important;
+}
+
+header.global ol.user ul.dropdown-menu li:hover {
+    background-color: #3ea5ce;
+}
+
+header.global ol.user ul.dropdown-menu li:hover > a {
+    color: white !important;
+}
+
+header.global ol.user > li.primary > a {
+    box-shadow: none;
+
+    margin: 0;
+    border: 0 none;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+    display: inline-block;
+    border: 1px solid #3ea5ce;
+    color: #3ea5ce;
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    text-shadow: none;
+}
+
+header.global ol.user > li.primary > a.dropdown {
+    padding: 10px;
+}
+
+header.global ol.user > li.primary > a:hover,
+header.global ol.user > li.primary > a.dropdown.active {
+    border-color: transparent;
+    background-color: #3ea5ce;
+    color: #fff;
+}
+
+header.global ol.user > li.primary > a > span.avatar {
+    display: none;
+    background: none;
+}
+
+@media (max-width : 480px) {
+    header.global.slim ol.left.nav-global {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Dashboard
+   ========================================================================== */
+
+section.dashboard section.profile-sidebar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 22%;
+    margin: 0;
+    padding-right: 15px;
+}
+
+section.dashboard section.profile-sidebar header.profile {
+    display: none;
+}
+
+section.dashboard section.profile-sidebar section.user-info {
+    border: 0 none;
+    padding: 0;
+}
+
+section.dashboard section.profile-sidebar section.user-info > ul {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    background: none;
+    border: 0 none;
+    padding: 0;
+}
+
+section.dashboard section.profile-sidebar section.user-info > ul > li {
+    border: 0 none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+section.dashboard section.my-courses {
+    width: 78%;
+    margin: 0;
+}
+
+section.dashboard section.my-courses > header {
+    border: 0 none;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item {
+    border: 0 none;
+    padding: 0;
+    margin: 0 0 80px;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: white;
+    height: auto;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover img {
+    width: 200px;
+    height: 112px;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status {
+    text-align: center;
+    font-size: 14px;
+    padding: 2px 0;
+    font-weight: bold;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status.course-open {
+    color: #2ecc71;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status.course-ended {
+    color: #c0392b;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover .cover-course-status.course-soon {
+    color: #bdc3c7;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .cover .cover-university {
+    padding: 2px 0;
+    background-color: #0f70b7;
+    background-color: white;
+    color: white;
+    color: #3ea5ce;
+    text-align: center;
+    font-weight: bold;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info h4 {
+    font-size: 18px;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info hr {
+    border-color: #ddd;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info .unregister {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #c0392b;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0;
+    float: none;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info .unregister:before {
+    content: "\f00d";
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info p {
+    height: 59px;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info .enter-course {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    background-color: #2ecc71;
+    border: 1px solid transparent;
+    color: white;
+}
+
+section.dashboard section.my-courses .listing-courses .course-item .info .enter-course:hover {
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    background-color: white;
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+}
+
+section.dashboard section.my-courses .empty-dashboard-message {
+    padding: 20px 0;
+}
+
+section.dashboard section.my-courses .empty-dashboard-message > a {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    margin: 0;
+    padding: 8px 12px;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+/* ==========================================================================
+   Course about page
+   ========================================================================== */
+
+section.course-info header.course-profile {
+    background-color: #3ea5ce;
+    border: 0 none;
+    box-shadow: none;
+    height: auto;
+    padding: 80px 0;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper {
+    max-width: 1170px;
+    box-shadow: none;
+    border: 0 none;
+    padding: 0 15px;
+    background: none;
+    min-width: 0;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .table {
+    background: #eef0f1;
+    display: block;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro {
+    width: auto;
+    display: block;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup {
+    padding-bottom: 0;
+    border: 0 none;
+    box-shadow: none;
+    margin-bottom: 30px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup > .info {
+    margin: 10px 0 5px 0;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro > hgroup > .info > .course-id {
+    border-right: 1px solid #ddd;
+    padding-right: 14px;
+    margin-right: 10px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .media {
+    width: 345px;
+    float: left;
+    display: block;
+    padding: 0;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .media .hero img {
+    width: 343px;
+    height: 193px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .metadata,
+section.course-info header.course-profile .intro-inner-wrapper .main-cta {
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .metadata > hgroup > h1 {
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: -9px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .metadata .short-description {
+    padding-top: 20px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .cleaner {
+    clear: both;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .social-sharing {
+    width: 100px;
+    float: left;
+    display: block;
+    margin-top: 23px;
+    padding-right: 5px;
+    border-right: 1px solid #ddd;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .social-sharing span {
+    font-family: FontAwesome;
+    font-size: 42px;
+    color: #2ecc71;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .social-sharing span:hover {
+    opacity: 0.5;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .social-sharing a {
+    text-decoration: none;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .social-sharing .facebook {
+    margin-left: 10px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta {
+    padding-top: 20px;
+    width: auto;
+    margin: 0;
+    float: none;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
+    border: 1px solid transparent;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    background-color: #0f70b7;
+    color: #fff;
+    padding: 11px 0 10px 0;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled),
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled),
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled) {
+    background: none;
+    color: #0f70b7;
+    background-color: #fff;
+    border: 1px solid #0f70b7;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled),
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled),
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:active:not(:disabled) {
+    box-shadow: none;
+    background-color: #2daae1;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.disabled {
+    cursor: default;
+    padding: 11px 0 10px 0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-top: 0;
+    border-color: #ddd;
+    margin-right: 20px;
+}
+
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart,
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.private {
+    width: 100%;
+    cursor: default;
+}
+
+section.course-info section.course-sidebar {
+    float: right;
+    width: 356px;
+    margin-left: -400px;
+}
+
+section.course-info section.course-sidebar > section.course-summary {
+    box-shadow: none;
+    border: 0 none;
+}
+
+.course-info section.details {
+    margin-right: 400px;
+    width: auto;
+}
+
+section.course-info .container {
+    min-width: 0;
+}
+
+section.course-info section.details nav {
+    display: none;
+}
+
+section.course-info section.details .inner-wrapper {
+    margin-top: 60px;
+}
+
+section.course-info section.details section {
+    overflow: hidden;
+    clear: both;
+}
+
+section.course-info section.details section h3 {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+section.course-info section.details section p {
+    text-align: left;
+}
+
+section.course-info section.details section p.justified {
+    text-align: justify;
+}
+
+section.course-info section.details section p.alert {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    border: 1px solid #c0392b;
+    padding: 7px 10px;
+    color: #c0392b;
+}
+
+section.course-info section.details section p.alert a {
+    color: #c0392b;
+    text-decoration: underline;
+}
+
+section.course-info section.details {
+    margin-right: 0;
+}
+
+section.course-info section.details .inner-wrapper .course-summary {
+    width: 100%;
+    margin-bottom: 60px;
+    border: 1px solid #ddd;
+}
+
+section.course-info section.details .inner-wrapper .course-summary thead {
+    background-color: #3ea5ce;
+}
+
+section.course-info section.details .inner-wrapper .course-summary tbody {
+    background-color: #fff;
+}
+
+section.course-info section.details .inner-wrapper .course-summary th,
+section.course-info section.details .inner-wrapper .course-summary td {
+    padding: 20px;
+    color: white;
+}
+
+section.course-info section.details .inner-wrapper .course-summary th span {
+    font-family: FontAwesome;
+    color: inherit;
+}
+
+section.course-info section.details .inner-wrapper .course-summary td {
+    text-align: center;
+    color: #000;
+}
+
+section.course-info section.details .inner-wrapper section.course-staff {
+    margin-bottom: 0;
+}
+
+section.course-info section.details .inner-wrapper section.course-staff article.teacher .teacher-image {
+    width: 120px;
+    height: 160px;
+    margin: 3px 17px 0 0;
+}
+
+section.course-info section.details .inner-wrapper section.course-staff article.teacher .teacher-image img {
+    width: 120px;
+    height: 160px;
+}
+
+section.course-info section.details .inner-wrapper section.faq article.response:last-child {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+    section.course-info header.course-profile .intro-inner-wrapper {
+        padding: 0;
+    }
+
+    section.course-info header.course-profile .intro-inner-wrapper .media {
+        float: none;
+    }
+
+    section.course-info header.course-profile .intro-inner-wrapper .metadata {
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+    section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+    section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 10px;
+    }
+}
+
+/* ==========================================================================
+   Course info
+   ========================================================================== */
+
+div.info-wrapper section.updates section article h3 {
+    font-size: 0.875em;
+    color: #2daae1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 30px 0 0 0;
+}
+
+div.info-wrapper section.handouts {
+    display: none;
+}
+
+
+/* ==========================================================================
+   Course static pages
+   ========================================================================== */
+
+.xmodule_display.xmodule_StaticTabModule h1 {
+    margin: 0 0 1em 0;
+    padding: 0 0 .5em 0;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+
+/* ==========================================================================
+   Course forum
+   ========================================================================== */
+
+body.discussion .course-tabs .right .new-post-btn {
+    height: 34px;
+    transition: all .1s ease-in;
+    background: none;
+    margin-right: 0;
+    text-shadow: none;
+    box-shadow: none;
+    background-color: white;
+    border: 1px solid #3ea5ce;
+    color: #3ea5ce;
+    font-weight: 600;
+}
+
+body.discussion .course-tabs .right .new-post-btn:hover,
+body.discussion .course-tabs .right .new-post-btn:focus {
+    background: none;
+    background-color: #3ea5ce;
+    border: 1px solid #3ea5ce;
+    color: white;
+}
+
+body.discussion .course-tabs .right .new-post-icon {
+    color: inherit;
+}
+
+body.discussion .new-post-article .inner-wrapper {
+    box-sizing: border-box;
+    max-width: 1170px;
+    padding: 0 15px;
+}
+
+body.discussion .new-post-form {
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   Courseware
+   ========================================================================== */
+
+nav.course-material ol.course-tabs li a {
+    font-weight: 600;
+}
+
+nav.course-material ol.course-tabs li a.active {
+    background: 0 none;
+    background-color: #3ea5ce;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.course-wrapper section.course-content article.video-wrapper section.video-controls .vidtime {
+    color: white;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ul li {
+    background: none;
+    box-shadow: none;
+    width: auto;
+    border-width: 3px;
+    border-color: #ddd;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ul li.prev a,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ul li.next a {
+    margin: 0;
+    -moz-transition: none;
+    -webkit-transition: none;
+    transition: none;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-position: center 12px;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav .sequence-list-wrapper {
+    background: none;
+    box-shadow: none;
+    border: 0 none;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a {
+    text-align: center;
+    background: none;
+    border: 0 none;
+    width: auto;
+    height: 44px;
+    border-top: 3px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li:first-child a {
+    border-left: 3px solid #ddd;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li:last-child a {
+    border-right: 3px solid #ddd;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-none {
+    border-color: #3ea5ce;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-some,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-in_progress {
+    border-color: #f39c12;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-done {
+    border-color: #2ecc71;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a:after {
+    content: "\f040";
+    font-family: FontAwesome;
+    width: 14px;
+    height: 14px;
+    color: #fff;
+    display: block;
+    margin: auto;
+    padding-top: 13px;
+    font-size: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.seq_video:after {
+    content: "\f03d";
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.seq_problem:after {
+    content: "\f040";
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-none:after {
+    color: #3ea5ce;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-some:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-in_progress:after {
+    color: #f39c12;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active.progress-done:after {
+    color: #2ecc71;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.active {
+    background-color: white;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-none,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-0,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-0 {
+    background-color: #ddd;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-none:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-0:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-0:hover  {
+    background-color: #fff;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-none:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-none:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-0:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-0:hover:after  {
+    color: #ddd;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-some,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-in_progress,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-some,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-in_progress {
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-some:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-in_progress:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-some:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-in_progress:hover  {
+    background-color: #fff;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-some:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-in_progress:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-some:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-in_progress:hover:after {
+    color: #f39c12;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-done,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-done {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-done:hover,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-done:hover {
+    background-color: #fff;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.inactive.progress-done:hover:after,
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a.visited.progress-done:hover:after  {
+    color: #2ecc71;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol li a > p {
+    display: none;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav ol {
+    padding: 0;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav .left-shadow {
+    display: none;
+}
+
+.course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav .right-shadow {
+    display: none;
+}
+
+/* ==========================================================================
+   Login page
+   ========================================================================== */
+
+.view-login .content-wrapper .introduction > header,
+.view-register .content-wrapper .introduction > header,
+.view-passwordreset .content-wrapper .introduction > header {
+    border-bottom: 1px solid #ddd;
+}
+
+.content-wrapper section.login.container section.content {
+    width: 70%;
+    min-width: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding 0;
+    padding-top: 25px;
+}
+
+.content-wrapper section.login.container aside {
+    width: 30%;
+    padding-left: 33px;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li {
+    position: relative;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input {
+    outline: 0;
+    box-shadow: none;
+    border: 2px solid #ddd;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 50px;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input + span::after {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    position: absolute;
+    z-index: 1;
+    font-size: 26px;
+    top: 13px;
+    right: 15px;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input.valid-input {
+    border: 2px solid #2ecc71;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input.valid-input + span::after {
+    content: "\f058";
+    color: #2ecc71;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input.invalid-input {
+    border: 2px solid #c0392b;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input.invalid-input + span::after {
+    content: "\f057";
+    color: #c0392b;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input:focus + span::after {
+    opacity: 0.2;
+    color: #3ea5ce;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li:first-child > input{
+    margin-bottom: 35px;
+}
+
+section.login #login-form .group-form-requiredinformation .list-input > li > input:focus {
+    border: 2px solid #3ea5ce;
+}
+
+section.login #login-form button[type=submit] {
+    width: 20%;
+    background-color: #2ecc71;
+    color: #fff;
+    border: 1px solid transparent;
+    box-shadow: none;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+
+section.login #login-form button[type=submit]:hover {
+    color: #2ecc71;
+    border-color: #2ecc71;
+    background-color: #fff;
+}
+
+section.login #login-form button[type=submit]:focus,
+section.login #login-form button[type=submit]:hover {
+    outline: 0;
+    box-shadow: none;
+}
+
+section.login #login-form .status.message {
+    border: 0 none;
+    box-shadow: none;
+}
+
+section.login #login-form .group-form-secondary {
+    position: relative;
+}
+
+section.login #login-form .customCheckboxLabel {
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    font-style: normal;
+    font-size: 17px;
+}
+
+/* ==========================================================================
+   Register page
+   ========================================================================== */
+
+.content-wrapper section.register.container section.content {
+    width: 70%;
+    min-width: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding 0;
+    padding-top: 25px;
+}
+
+.content-wrapper section.register.container aside {
+    width: 30%;
+    padding-left: 33px;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li {
+    position: relative;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input {
+    outline: 0;
+    box-shadow: none;
+    border: 2px solid #ddd;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 50px;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input + span::after {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    position: absolute;
+    z-index: 1;
+    font-size: 26px;
+    top: 13px;
+    right: 15px;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input.valid-input {
+    border: 2px solid #2ecc71;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input.valid-input + span::after {
+    content: "\f058";
+    color: #2ecc71;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input.invalid-input {
+    border: 2px solid #c0392b;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input.invalid-input + span::after {
+    content: "\f057";
+    color: #c0392b;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input:focus + span::after {
+    opacity: 0.2;
+    color: #3ea5ce;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input{
+    margin-bottom: 35px;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li:last-child > input{
+    margin-bottom: 0;
+}
+
+section.register #register-form .group-form-requiredinformation .list-input > li > input:focus {
+    border: 2px solid #3ea5ce;
+}
+
+section.register #register-form .group-form-personalinformation2 .list-input > li > textarea {
+    outline: 0;
+    box-shadow: none;
+    border: 2px solid #ddd;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 100px;
+}
+
+section.register #register-form .group-form-personalinformation2 .list-input > li > textarea:focus {
+    border: 2px solid #3ea5ce;
+}
+
+
+section.register #register-form button[type=submit] {
+    width: 20%;
+    background-color: #2ecc71;
+    color: #fff;
+    border: 1px solid transparent;
+    box-shadow: none;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+
+section.register #register-form button[type=submit]:hover {
+    color: #2ecc71;
+    border-color: #2ecc71;
+    background-color: #fff;
+}
+
+section.register #register-form button[type=submit]:focus,
+section.register #register-form button[type=submit]:hover {
+    outline: 0;
+    box-shadow: none;
+}
+
+section.register #register-form .status.message {
+    outline: none;
+    border: 0 none;
+    box-shadow: none;
+}
+
+section.register #register-form .group-form-accountacknowledgements {
+    position: relative;
+}
+
+section.register #register-form .squaredThree {
+    position: relative;
+    top: 2px;
+    display: block;
+}
+
+section.register #register-form #customCheckboxTOS {
+    display: block;
+    position: absolute;
+    left: 30px;
+    font-style: normal;
+    font-size: 17px;
+    top: 0;
+}
+
+section.register #register-form #customCheckboxHonor {
+    display: block;
+    position: absolute;
+    left: 30px;
+    font-style: normal;
+    font-size: 17px;
+    top: 32px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.wrapper-footer footer {
+    min-width: 0;
+}
+

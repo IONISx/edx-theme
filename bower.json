@@ -1,0 +1,10 @@
+{
+  "name": "edx-theme",
+  "private": true,
+  "homepage": "https://github.com/IONISx/edx-theme",
+  "description": "Open edX theme for IONISx",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}
