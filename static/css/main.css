@@ -753,10 +753,10 @@ section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta 
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled),
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:active:not(:disabled) {
     box-shadow: none;
-    background-color: #2daae1;
 }
 
-section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.disabled {
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.disabled,
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.add-to-cart {
     cursor: default;
     padding: 11px 0 10px 0;
     -webkit-border-radius: 4px;
@@ -768,7 +768,8 @@ section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta 
 
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
 section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart,
-section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.private {
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register.private,
+section.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.add-to-cart {
     width: 100%;
     cursor: default;
 }
@@ -1414,7 +1415,6 @@ section.register #register-form .group-form-personalinformation2 .list-input > l
     border: 2px solid #3ea5ce;
 }
 
-
 section.register #register-form button[type=submit] {
     width: 20%;
     background-color: #2ecc71;
@@ -1471,4 +1471,108 @@ section.register #register-form #customCheckboxHonor {
     font-style: normal;
     font-size: 17px;
     top: 32px;
+}
+
+/* ==========================================================================
+   Receipt page
+   ========================================================================== */
+
+body.purchase-receipt section.cart-list .content-main h1 {
+    color: #2ecc71;
+}
+
+body.purchase-receipt section.cart-list table.order-receipt th.total {
+    padding-left: 58px;
+}
+
+body.purchase-receipt section.cart-list table.order-receipt td.total {
+    padding-left: 60px;
+}
+
+body.purchase-receipt section.cart-list .content-main h2.billed_to {
+    padding-top: 50px;
+}
+
+/* ==========================================================================
+   Shopping cart
+   ========================================================================== */
+
+header.global ol.user > li.primary:last-child > a.shopping-cart {
+    border-color: #3ea5ce;
+    padding: 10px 20px;
+}
+
+header.global ol.user > li.primary:last-child > a.shopping-cart:hover {
+    border-color: #3ea5ce;
+}
+
+.cart-list {
+    padding: 30px;
+}
+
+.cart-list > h2 {
+    font-size: 19px;
+    color: #3ea5ce;
+}
+
+.cart-list .cart-table {
+    margin-top: 25px;
+}
+
+.cart-list .cart-table .cart-headings th {
+    border: 0 none;
+    padding: 0;
+}
+
+.cart-list .cart-table .cart-items td {
+    padding: 0;
+    padding-top: 10px;
+    position: relative;
+}
+
+.cart-list .cart-table .remove_line_item {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: #c0392b;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0;
+    float: none;
+}
+
+.cart-list .cart-table .remove_line_item:before {
+    content: "\f00d";
+}
+
+.cart-list form input[type="submit"] {
+    border: 1px solid transparent;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    transition: all .1s ease-in;
+    border-radius: 4px;
+    -webkit-font-smoothing: auto;
+    margin-top: 50px;
+}
+
+.cart-list form input[type="submit"]:hover {
+    background: none;
+    color: #2ecc71;
+    background-color: #fff;
+    border: 1px solid #2ecc71;
+}
+
+.cart-list form input[type="submit"]:active {
+    box-shadow: none;
+}
+
+.cart-list form input[type="submit"]:focus {
+    outline: 0;
 }

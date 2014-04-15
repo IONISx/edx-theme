@@ -1,0 +1,77 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%! from django.core.urlresolvers import reverse %>
+<%! from django.conf import settings %>
+
+<%inherit file="../main.html" />
+<%block name="bodyclass">purchase-receipt</%block>
+
+<%block name="pagetitle">${_("Receipt page for order")} ${order.id}</%block>
+
+<%block name="content">
+
+<div class="container">
+  <section class="notification">
+    <h2>Thank you for your Purchase!</h2>
+    <p>Please print this receipt page for your records.  You should also have received a receipt in your email.</p>
+    % for inst in instructions:
+      <p>${inst}</p>
+    % endfor
+  </section>
+
+  <section class="wrapper cart-list">
+    <div class="wrapper-content-main">
+      <article class="content-main">
+        <h1>${_("Purchase's Electronic Receipt")}</h1>
+        <hr />
+
+        <table class="order-receipt">
+          <tbody>
+          <tr>
+            <td colspan="2"><h3 class="order-number">${_("Order #")}${order.id}</h3></td>
+            <td></td>
+            <td colspan="2"><h3 class="order-date">${order.purchase_time.date().isoformat()}</h3></td>
+          </tr>
+          <tr>
+            <td colspan="5"><h2 class="items-ordered">${_("Items ordered:")}</h2></td>
+          </tr>
+          <tr>
+            <th class="desc">${_("Description")}</th>
+            <th class="pri">${_("Price")}</th>
+            <th class="curr">${_("Currency")}</th>
+            <th class="total">${_("Total")}</th>
+          </tr>
+          <% total = False %>
+          % for item in order_items:
+            <tr class="order-item">
+              <td>${item.line_desc}</td>
+              <td>${"{0:0.2f}".format(item.line_cost)}</td>
+              <td>${item.currency.upper()}</td>
+              % if total == False:
+                <% total = True %>
+                <td class="total">${"{0:0.2f}".format(order.total_cost)}</td>
+              % endif
+            </tr>
+          % endfor
+          </tbody>
+        </table>
+
+        % if any_refunds:
+          <p>
+            ${_("Note: items with strikethough like ")}<del>this</del>${_(" have been refunded.")}
+          </p>
+        % endif
+
+        <h2 class="billed_to">${_("Billed To:")}</h2>
+        <p>
+        ${user.profile.name}
+        <br />
+        ${user.email}
+        <br />
+        % if user.profile.mailing_address:
+          ${user.profile.mailing_address}
+        % endif
+        </p>
+    </div>
+  </section>
+</div>
+</%block>
