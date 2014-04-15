@@ -1,0 +1,53 @@
+.content-wrapper {
+    .home {
+        header {
+            display: none;
+        }
+
+        .courses .course {
+            box-shadow: none;
+            background: none;
+            border-radius: 0;
+            background-color: @white;
+            border: 1px solid @white;
+
+            &:hover {
+                box-shadow: none;
+                border-color: @gg-blue;
+            }
+
+            .inner-wrapper {
+                border: 0 none;
+
+                .course-preview {
+                    box-shadow: none;
+                    border-bottom: 1px solid @gg-border-grey;
+
+                    hgroup {
+                        width: 100%;
+
+                        h2 {
+                            font-family: @font-family-sans-serif;
+                            font-size: 14px;
+                            font-weight: 600;
+                            text-shadow: none;
+                            color: @black;
+                        }
+                    }
+
+                    .info-link {
+                        display: none;
+                    }
+
+                    .course-number {
+                        display: none;
+                    }
+                }
+            }
+
+            .status {
+                display: none;
+            }
+        }
+    }
+}

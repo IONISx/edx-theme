@@ -1,0 +1,175 @@
+header.global, header.global.slim,
+.view-login header.global, .view-login header.global.slim,
+.view-register header.global, .view-register header.global.slim {
+    .square(auto);
+    .navbar();
+    .navbar-default();
+
+    padding: 0;
+    border: 0 none;
+    background-color: @gg-blue;
+    margin-bottom: 0;
+    transition: all .2s ease-in;
+    box-shadow: none;
+    border-radius: 0 !important;
+
+    &:hover {
+        background-color: fadeout(@gg-blue, 20%);
+    }
+
+    > nav {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        h1.logo {
+            .navbar-header();
+
+            margin: 0 30px 0 0;
+            padding: 0;
+
+            &:before {
+                display: none;
+            }
+
+            a {
+                .navbar-brand();
+                max-height: 70px;
+
+                img {
+                    .img-responsive();
+                }
+            }
+        }
+
+        h2 {
+            .square(auto);
+
+            padding: 0;
+            margin: 25px 0 0 0;
+            text-shadow: none;
+            color: @gg-grey;
+        }
+
+        ol.nav-global {
+            margin: 24px 0 0 0;
+
+            > li > a {
+                padding: 0;
+                font-weight: 500;
+                color: @gg-grey;
+
+                &:hover {
+                    color: @white;
+                }
+            }
+        }
+
+        ol.nav-courseware {
+            margin: 15px 0 0 0;
+
+            > li > a.cta-login {
+                .btn();
+                .button-variant(@gg-blue; @white; @gg-blue);
+
+                transition: all .1s ease-in;
+                box-shadow: none;
+                padding: 8px 20px;
+                font-size: 17px;
+                font-weight: 400;
+
+                &:hover, &:active, &:focus {
+                    background-color: @gg-blue;
+                    border-color: transparent;
+                    color: @white;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        ol.user {
+            margin: 15px 0 0 0;
+
+            > li.primary > a {
+                .btn();
+                .button-variant(@gg-blue; @white; @gg-blue);
+
+                margin: 0;
+                border-radius: 0;
+                outline: none;
+                transition: all .1s ease-in;
+                box-shadow: none;
+                text-shadow: none;
+                font-size: 17px;
+                padding: 8px 20px;
+                font-weight: 400;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+
+                &:hover, &:active, &:focus, &.dropdown.active {
+                    background-color: @gg-blue;
+                    border-color: transparent;
+                    color: @white;
+                    box-shadow: none;
+                }
+
+                &.dropdown {
+                    padding: 8px 10px;
+                    border-left: none;
+                    border-radius: 0;
+                    border-top-right-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                }
+
+                > span.avatar {
+                    display: none;
+                    background: none;
+                }
+            }
+
+            ul.dropdown-menu {
+                padding: 0;
+                z-index: 10;
+                top: 36px;
+                left: initial;
+                right: 0;
+                box-shadow: none;
+                border: 1px solid @gg-blue;
+                border-top: 0 none;
+                border-top-right-radius: 0;
+                background-color: @white;
+
+                &:before {
+                    display: none;
+                }
+
+                > li {
+                    transition: all .1s ease-in;
+                    border: 0 none;
+                    padding: 3px 8px;
+
+                    &:first-child {
+                        display: none;
+                    }
+
+                    &:hover {
+                        background-color: @gg-blue;
+
+                        > a {
+                            color: @white;
+                        }
+                    }
+
+                    > a {
+                        border: 0 none;
+                        outline: none;
+                        color: @gg-blue;
+
+                        &:hover, &:focus {
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
