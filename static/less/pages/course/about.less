@@ -1,0 +1,102 @@
+section.course-info {
+
+    header.course-profile {
+        .square(auto);
+
+        background-color: @gg-blue;
+        border: 0 none;
+        box-shadow: none;
+        padding: 80px 0;
+
+        .intro-inner-wrapper {
+            box-shadow: none;
+            border: 0 none;
+            background: none;
+
+            .table {
+                background-color: @gg-grey;
+                display: block;
+                border-radius: 4px;
+
+                .intro {
+                    .square(auto);
+                    display: block;
+
+                    > hgroup {
+                        padding-bottom: 0;
+                        border: 0 none;
+                        box-shadow: none;
+                        margin-bottom: 30px;
+
+                        > .info {
+                            margin: 10px 0 5px 0;
+                        }
+                    }
+
+                    .media {
+                        .pull-left();
+
+                        width: 345px;
+                        padding: 0;
+
+                        .hero img {
+                            .size(343px, 193px);
+                        }
+                    }
+
+                    .metadata {
+                        overflow: hidden;
+                        padding-left: 20px;
+
+                        hgroup > h1 {
+                            text-align: left;
+                            margin-bottom: 0;
+                            margin-top: -7px;
+                        }
+
+                        .short-description {
+                            padding-top: 20px;
+                        }
+                    }
+
+                    .cleaner {
+                        .clearfix();
+                    }
+
+                    .social-sharing {
+                        .pull-left();
+
+                        width: 100px;
+                        display: block;
+                        margin-top: 23px;
+                        padding-right: 5px;
+                        border-right: 1px solid @gg-border-grey;
+
+                        a {
+                            text-decoration: none;
+
+                            span {
+                                font-family: 'FontAwesome';
+                                font-size: 42px;
+                                transition: all .1s ease-in;
+                                color: @gg-emerald;
+                            }
+
+                            &:hover {
+                                span {
+                                    color: fadeout(@gg-emerald, 50%);
+                                }
+                            }
+                        }
+                    }
+
+                    .main-cta {
+                        overflow: hidden;
+                        padding-left: 20px;
+                    }
+                }
+            }
+
+        }
+    }
+}
