@@ -85,6 +85,7 @@ section.course-info {
                             span {
                                 font-family: 'FontAwesome';
                                 font-size: 42px;
+                                line-height: 42px;
                                 transition: all .1s ease-in;
                                 color: @gg-emerald;
                             }
@@ -114,11 +115,12 @@ section.course-info {
                                 .btn();
                                 .button-variant(@white, @gg-alt-blue, @gg-alt-blue);
 
-                                padding: 10px 0;
+                                padding: 7px 0;
                                 box-shadow: none;
                                 overflow: hidden;
                                 text-shadow: none;
                                 text-overflow: ellipsis;
+                                transition: all .1s ease-in;
 
                                 &:hover:not(:disabled), &:active:not(:disabled), &:focus:not(:disabled) {
                                     background: none;
@@ -140,7 +142,7 @@ section.course-info {
 
                             span.register.disabled, span.add-to-cart {
                                 margin: 0 20px 0 0;
-                                padding: 10px 0;
+                                padding: 7px 0;
                                 border: 1px solid @gg-border-grey;
                                 border-radius: 4px;
                                 background-color: @white;
@@ -163,8 +165,11 @@ section.course-info {
             margin: 60px 0 0 0;
 
             table.course-summary {
-                margin: 0 0 60px 0;
+                .table-rounded(4px);
+
                 border: 1px solid @gg-border-grey;
+                table-layout: fixed;
+                margin: 0 0 60px 0;
                 width: 100%;
 
                 thead {
@@ -184,7 +189,7 @@ section.course-info {
                     background-color: @white;
                 }
 
-                td, th {
+                th, td {
                     padding: 20px;
                     text-align: center;
                 }
@@ -205,11 +210,19 @@ section.course-info {
                 }
 
                 &.course-staff {
-                    article.teacher {
+                    .teacher {
                         margin: 0 0 30px 0;
 
                         &:last-child {
                             margin: 0;
+                        }
+
+                        h3 {
+                            font: inherit;
+                            color: inherit;
+                            // 15px for beautiful wrap
+                            margin: 0 0 15px 0;
+                            font-weight: @headings-font-weight;
                         }
 
                         .teacher-image {
@@ -227,6 +240,20 @@ section.course-info {
                 }
 
                 &.faq {
+                    .response {
+                        h3 {
+                            font: inherit;
+                            color: inherit;
+                            font-weight: @headings-font-weight;
+
+                            &:before {
+                                font-family: 'FontAwesome';
+                                content: '\f054';
+                                margin-right: 0.5em;
+                                color: @gg-blue;
+                            }
+                        }
+                    }
                 }
             }
         }
