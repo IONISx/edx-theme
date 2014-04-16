@@ -1,13 +1,49 @@
-a, a:link, p a, p a:link {
+body {
+    font-family: @font-family-base;
+    font-size: @font-size-base;
+    color: @black;
+}
+
+h1 {
+    color: inherit;
+    font-weight: 500;
+}
+
+h2 {
+    color: @gg-blue;
+    text-transform: none;
+}
+
+h3 {
+    color: inherit;
+}
+
+p {
+    color: inherit;
+    font: inherit;
+
+    &.justified {
+        .text-justify();
+    }
+}
+
+a, a:link, a:visited,
+p a, p a:link, p a:visited {
+    font: inherit;
+    color: @gg-blue;
+
     &:hover {
         border: 0 none;
     }
 }
 
-p {
-    font-family: @font-family-sans-serif;
-    color: @black;
+label {
+    color: inherit;
+    font: inherit;
 }
+
+
+// Ugly things go here for now :
 
 body,
 .view-login,
@@ -18,18 +54,36 @@ body,
     }
 
     // section.introduction,
+    .static-container,
     nav.course-material .inner-wrapper {
         .square(auto);
         .container();
 
-        min-width: initial;
-        max-width: initial;
+        min-width: 0;
+        max-width: none;
     }
 
     .content-wrapper {
         background: none;
         min-height: 100vh;
-        margin-top: -177px;
-        padding-top: 177px;
+        margin-top: -181px;
+        padding-top: 181px;
     }
+}
+
+
+.static-container ol li,
+.static-container ul li {
+    font: inherit;
+    color: inherit;
+}
+
+.static-container
+.inner-wrapper {
+    .square(auto);
+}
+
+
+.instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .label {
+    display: table-cell;
 }
