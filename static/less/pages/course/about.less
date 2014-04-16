@@ -10,6 +10,8 @@ section.course-info {
         padding: 80px 0;
 
         .intro-inner-wrapper {
+            .edx-container();
+
             box-shadow: none;
             border: 0 none;
             background: none;
@@ -149,6 +151,84 @@ section.course-info {
                 }
             }
 
+        }
+    }
+
+    .details {
+        .square(auto);
+
+        margin: 0;
+
+        .inner-wrapper {
+            margin: 60px 0 0 0;
+
+            table.course-summary {
+                margin: 0 0 60px 0;
+                border: 1px solid @gg-border-grey;
+                width: 100%;
+
+                thead {
+                    background-color: @gg-blue;
+                    color: @white;
+
+                    th {
+                        font-weight: 600;
+                    }
+
+                    span {
+                        color: inherit;
+                    }
+                }
+
+                tbody {
+                    background-color: @white;
+                }
+
+                td, th {
+                    padding: 20px;
+                    text-align: center;
+                }
+            }
+
+            section {
+                .clearfix();
+
+                margin: 0 0 30px 0;
+
+                &.about {
+                }
+
+                &.planning {
+                }
+
+                &.prerequisites {
+                }
+
+                &.course-staff {
+                    article.teacher {
+                        margin: 0 0 30px 0;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+
+                        .teacher-image {
+                            .square(auto);
+
+                            margin: 3px 17px 0 0;
+
+                            img {
+                                min-height: 0;
+                                width: 120px;
+                                height: 160px;
+                            }
+                        }
+                    }
+                }
+
+                &.faq {
+                }
+            }
         }
     }
 }

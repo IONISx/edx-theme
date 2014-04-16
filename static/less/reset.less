@@ -13,13 +13,12 @@ body,
 .view-login,
 .view-register,
 .view-passwordreset {
-    header.global > nav,
-    .container,
-    section.home > section.container,
-    section.introduction,
-    section.course-info header.course-profile .intro-inner-wrapper,
-    nav.course-material .inner-wrapper,
-    .wrapper-footer footer {
+    .container {
+        .edx-container();
+    }
+
+    // section.introduction,
+    nav.course-material .inner-wrapper {
         .square(auto);
         .container();
 
