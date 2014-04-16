@@ -1548,6 +1548,10 @@ header.global ol.user > li.primary:last-child > a.shopping-cart:hover {
     position: relative;
 }
 
+.cart-list .cart-table .cart-headings th.total {
+    width: 100px;
+}
+
 .cart-list .cart-table .remove_line_item {
     font-family: FontAwesome;
     position: absolute;
