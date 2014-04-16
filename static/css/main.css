@@ -953,6 +953,10 @@ div.info-wrapper section.handouts {
     font-weight: 600;
 }
 
+.xmodule_display.xmodule_HtmlModule h2 {
+    color: #3ea5ce;
+}
+
 
 /* ==========================================================================
    Course forum
