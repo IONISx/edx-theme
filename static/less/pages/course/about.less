@@ -6,6 +6,7 @@ section.course-info {
         background-color: @gg-blue;
         border: 0 none;
         box-shadow: none;
+        margin: 0;
         padding: 80px 0;
 
         .intro-inner-wrapper {
@@ -39,8 +40,12 @@ section.course-info {
                         width: 345px;
                         padding: 0;
 
-                        .hero img {
-                            .size(343px, 193px);
+                        .hero {
+                            border: 0 none;
+
+                            img {
+                                .size(343px, 193px);
+                            }
                         }
                     }
 
@@ -66,14 +71,14 @@ section.course-info {
                     .social-sharing {
                         .pull-left();
 
-                        width: 100px;
                         display: block;
-                        margin-top: 23px;
-                        padding-right: 5px;
+                        margin: 20px 0 0 0;
+                        padding-right: 10px;
                         border-right: 1px solid @gg-border-grey;
 
                         a {
                             text-decoration: none;
+                            margin-right: 10px;
 
                             span {
                                 font-family: 'FontAwesome';
@@ -91,8 +96,55 @@ section.course-info {
                     }
 
                     .main-cta {
+                        .square(auto);
+
                         overflow: hidden;
-                        padding-left: 20px;
+                        float: none;
+                        margin: 20px 0 0 0;
+                        padding: 0 0 0 20px;
+
+                        a {
+                            display: block;
+                            margin: 0;
+                            padding: 0;
+
+                            strong, &.register, &.add-to-cart {
+                                .btn();
+                                .button-variant(@white, @gg-alt-blue, @gg-alt-blue);
+
+                                padding: 10px 0;
+                                box-shadow: none;
+                                overflow: hidden;
+                                text-shadow: none;
+                                text-overflow: ellipsis;
+
+                                &:hover:not(:disabled), &:active:not(:disabled), &:focus:not(:disabled) {
+                                    background: none;
+                                    background-color: @white;
+                                    border-color: @gg-alt-blue;
+                                    color: @gg-alt-blue;
+                                    box-shadow: none;
+                                }
+                            }
+
+                            &.register, &.add-to-cart, span.register.disabled.private, span.add-to-cart {
+                                width: 100%;
+                            }
+
+                            span.register.disabled.private {
+                                color: @gg-pomegranate;
+                                border-color: @gg-pomegranate;
+                            }
+
+                            span.register.disabled, span.add-to-cart {
+                                margin: 0 20px 0 0;
+                                padding: 10px 0;
+                                border: 1px solid @gg-border-grey;
+                                border-radius: 4px;
+                                background-color: @white;
+                                line-height: @line-height-base;
+                            }
+                        }
                     }
                 }
             }
