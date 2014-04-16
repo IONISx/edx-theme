@@ -955,6 +955,8 @@ div.info-wrapper section.handouts {
 
 .xmodule_display.xmodule_HtmlModule h2 {
     color: #3ea5ce;
+    text-transform: none;
+    font-weight: 600;
 }
 
 
