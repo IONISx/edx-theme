@@ -7,12 +7,16 @@ body,
         box-shadow: none;
         background-color: @gg-blue;
 
-        > footer > p {
-            color: @white;
-            margin: 0;
+        > footer {
+            .edx-container();
 
-            > a, > a:link, > a:visited {
+            > p {
                 color: @white;
+                margin: 0;
+
+                > a, > a:link, > a:visited {
+                    color: @white;
+                }
             }
         }
     }
