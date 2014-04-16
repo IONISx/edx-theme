@@ -1494,6 +1494,24 @@ body.purchase-receipt section.cart-list .content-main h2.billed_to {
 }
 
 /* ==========================================================================
+   Shopping cart error page
+   ========================================================================== */
+
+section.billing-error > h1 {
+    color: #c0392b;
+    margin-top: 25px;
+}
+
+section.billing-error .error-msg-wrapper {
+    background-color: #fff;
+    padding: 20px;
+}
+
+section.billing-error .error-msg-wrapper .exception-msg {
+    color: #c0392b;
+}
+
+/* ==========================================================================
    Shopping cart
    ========================================================================== */
 
