@@ -1,12 +1,19 @@
-.content-wrapper {
-    .find-courses {
-        background: none;
+.find-courses {
+    margin-top: @layout-top-spacing;
+    background: none;
 
-        header.search {
-            display: none;
-        }
+    header {
+        display: none;
+    }
 
-        .courses .course {
+    .container {
+        .edx-container();
+    }
+
+    .courses {
+        padding: 0;
+
+        .course {
             box-shadow: none;
             background: none;
             border-radius: 0;

@@ -1,4 +1,12 @@
-@import 'homepage.less';
-@import 'courses.less';
+.content-wrapper {
+    .square(auto);
+
+    padding: 0 0 @layout-bottom-spacing 0;
+    margin: 0;
+
+    @import 'homepage.less';
+    @import 'courses.less';
+    @import 'dashboard.less';
+}
 
 @import 'course/main.less';

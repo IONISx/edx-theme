@@ -1,0 +1,186 @@
+.dashboard {
+    margin-top: @layout-top-spacing;
+
+    .profile-sidebar {
+        .pull-left();
+        .hidden-sm();
+        .hidden-xs();
+
+        width: 250px;
+        padding: 0;
+        margin: 0;
+
+        .profile {
+            display: none;
+        }
+
+        .user-info {
+            padding: 0;
+
+            ul {
+                box-shadow: none;
+                background: none;
+                border: 0 none;
+                padding: 0 20px 0 0;
+
+                > li {
+                    border: 0 none;
+                    padding: 0;
+                    margin: 0 0 20px 0;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    > span {
+                        font: inherit;
+                        color: inherit;
+                        font-size: 0.9em;
+                        margin: 0;
+
+                        &.data {
+                            margin-left: 20px;
+                            font-weight: @headings-font-weight;
+                        }
+
+                        > .icon {
+                            .size(10px, auto);
+                            .text-right();
+
+                            font: inherit;
+                            color: @gg-blue;
+                            margin: 0 10px 0 0;
+                            float: none;
+                            display: inline-block;
+                            opacity: 1;
+                            transition: none;
+
+                            &.name-icon {
+                                background: none;
+
+                                &:before {
+                                    content: '\f007';
+                                    font-family: 'FontAwesome';
+                                }
+                            }
+
+                            &.email-icon {
+                                background: none;
+
+                                &:before {
+                                    content: '\f0e0';
+                                    font-family: 'FontAwesome';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .my-courses {
+        .square(auto);
+
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        float: none;
+
+        header {
+            border: 0 none;
+            margin: 0 0 30px 0;
+
+            h2 {
+                margin: 0;
+            }
+        }
+
+        .listing-courses .course-item {
+            border: 0 none;
+            padding: 0;
+            margin: 0 0 30px 0;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            .cover {
+                .square(auto);
+                .pull-left();
+
+                border-radius: 4px;
+                background-color: @white;
+                transition: none;
+                max-height: none;
+
+                img {
+                    .size(200px, 112px);
+                }
+
+                div {
+                    .text-center();
+
+                    font-weight: @headings-font-weight;
+                    font-size: 0.9em;
+
+                    &.cover-university {
+                        color: @gg-blue;
+                        font-weight: @headings-font-weight;
+                        font-size: 0.9em;
+                    }
+
+                    &.cover-course-status {
+
+                        &.course-soon {
+                            color: @gg-disabled-grey;
+                        }
+
+                        &.course-open {
+                            color: @gg-emerald;
+                        }
+
+                        &.course-ended {
+                            color: @gg-pomegranate;
+                        }
+                    }
+                }
+            }
+
+            .info {
+                .square(auto);
+
+                padding: 0 0 0 1em;
+                margin: 0;
+                overflow: hidden;
+
+                h4 {
+                    margin: 0 1em 0 0;
+                }
+
+                hr {
+                    display: none;
+                }
+
+                .unregister {
+                    text-decoration: none;
+                    line-height: inherit;
+                    position: absolute;
+                    font: inherit;
+                    float: none;
+                    padding: 0;
+                    margin: 0;
+                    right: 0;
+                    top: -2px;
+
+                    &:before {
+                        font-family: 'FontAwesome';
+                        font-size: 1.2em;
+                        color: @gg-pomegranate;
+                        content: '\f00d';
+                    }
+                }
+            }
+        }
+    }
+}
