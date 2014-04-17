@@ -1532,10 +1532,16 @@ section.billing-error .error-msg-wrapper .exception-msg {
 header.global ol.user > li.primary:last-child > a.shopping-cart {
     border-color: #3ea5ce;
     padding: 10px 20px;
+    letter-spacing: normal;
+    text-transform: capitalize;
 }
 
 header.global ol.user > li.primary:last-child > a.shopping-cart:hover {
     border-color: #3ea5ce;
+}
+
+header.global ol.user > li.primary:last-child > a.shopping-cart .icon-shopping-cart {
+    font-size: 15px;
 }
 
 .cart-list {
