@@ -195,8 +195,8 @@
                   reg_element_id = "reg_then_add_to_cart"
               %>
                 <a href="${reg_href}" class="add-to-cart" id="${reg_element_id}">
-                  ${_("Add {course.display_number_with_default} to Cart ({currency_symbol}{cost})")\
-                    .format(course=course, currency_symbol=settings.PAID_COURSE_REGISTRATION_CURRENCY[1], cost=registration_price)}
+                  ${u"Acheter le cours ({cost}{currency_symbol})"\
+                    .format(currency_symbol=settings.PAID_COURSE_REGISTRATION_CURRENCY[1], cost=registration_price)}
                 </a>
                 <div id="register_error"></div>
               % elif is_course_full:
