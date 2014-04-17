@@ -5,14 +5,14 @@
 <%inherit file="../main.html" />
 <%block name="bodyclass">purchase-receipt</%block>
 
-<%block name="pagetitle">${_("Receipt page for order")} ${order.id}</%block>
+<%block name="pagetitle">Facture de la commande ${order.id}</%block>
 
 <%block name="content">
 
 <div class="container">
   <section class="notification">
-    <h2>Thank you for your Purchase!</h2>
-    <p>Please print this receipt page for your records.  You should also have received a receipt in your email.</p>
+    <h2>Merci pour votre achat !</h2>
+    <p>Vous pouvez imprimer cette page pour garder une facture. Vous devriez également recevoir un mail avec la facture.</p>
     % for inst in instructions:
       <p>${inst}</p>
     % endfor
@@ -21,7 +21,7 @@
   <section class="wrapper cart-list">
     <div class="wrapper-content-main">
       <article class="content-main">
-        <h1>${_("Purchase's Electronic Receipt")}</h1>
+        <h1>Facture électronique</h1>
         <hr />
 
         <table class="order-receipt">
