@@ -1,14 +1,19 @@
-.content-wrapper {
-    .home {
-        header {
-            display: none;
-        }
+.home {
+    margin-top: @layout-top-spacing;
+    background: none;
 
-        .container {
-            .edx-container();
-        }
+    header {
+        display: none;
+    }
 
-        .courses .course {
+    .container {
+        .edx-container();
+    }
+
+    .courses {
+        padding: 0;
+
+        .course {
             box-shadow: none;
             background: none;
             border-radius: 0;
@@ -26,6 +31,8 @@
                 .course-preview {
                     box-shadow: none;
                     border-bottom: 1px solid @gg-border-grey;
+                    background: none;
+                    background-color: fadeout(@white, 10%);
 
                     hgroup {
                         width: 100%;
