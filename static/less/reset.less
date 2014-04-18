@@ -2,6 +2,7 @@ body {
     font-family: @font-family-base;
     font-size: @font-size-base;
     color: @black;
+    -webkit-font-smoothing: auto;
 }
 
 h1 {
@@ -36,9 +37,11 @@ a, a:link, a:visited,
 p a, p a:link, p a:visited {
     font: inherit;
     color: @gg-blue;
+    outline: none;
 
-    &:hover {
+    &:hover, &:focus, &:active {
         border: 0 none;
+        outline: none;
     }
 }
 
@@ -76,8 +79,8 @@ body,
     .content-wrapper {
         background: none;
         min-height: 100vh;
-        margin-top: -181px;
-        padding-top: 181px;
+        margin-top: -@layout-header-height - @layout-footer-height;
+        padding-top: @layout-header-height + @layout-footer-height;
     }
 }
 
