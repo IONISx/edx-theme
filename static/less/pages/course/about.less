@@ -112,23 +112,9 @@ section.course-info {
                             padding: 0;
 
                             strong, &.register, &.add-to-cart {
-                                .btn();
-                                .button-variant(@white, @gg-alt-blue, @gg-alt-blue);
+                                .edx-btn(@white, @gg-alt-blue);
 
                                 padding: 7px 0;
-                                box-shadow: none;
-                                overflow: hidden;
-                                text-shadow: none;
-                                text-overflow: ellipsis;
-                                transition: all .1s ease-in;
-
-                                &:hover:not(:disabled), &:active:not(:disabled), &:focus:not(:disabled) {
-                                    background: none;
-                                    background-color: @white;
-                                    border-color: @gg-alt-blue;
-                                    color: @gg-alt-blue;
-                                    box-shadow: none;
-                                }
                             }
 
                             &.register, &.add-to-cart, span.register.disabled.private, span.add-to-cart {
@@ -141,6 +127,7 @@ section.course-info {
                             }
 
                             span.register.disabled, span.add-to-cart {
+                                cursor: default;
                                 margin: 0 20px 0 0;
                                 padding: 7px 0;
                                 border: 1px solid @gg-border-grey;
