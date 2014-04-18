@@ -106,7 +106,7 @@
             }
 
             .cover {
-                .square(auto);
+                .size(200px, auto);
                 .pull-left();
 
                 border-radius: 4px;
@@ -150,12 +150,12 @@
             .info {
                 .square(auto);
 
-                padding: 0 0 0 1em;
+                padding: 0 0 2em 1em;
                 margin: 0;
                 overflow: hidden;
 
                 h4 {
-                    margin: 0 1em 0 0;
+                    margin: 0 1em 0.5em 0;
                 }
 
                 hr {
@@ -171,7 +171,7 @@
                     padding: 0;
                     margin: 0;
                     right: 0;
-                    top: -2px;
+                    top: -4px;
 
                     &:before {
                         font-family: 'FontAwesome';
@@ -179,6 +179,19 @@
                         color: @gg-pomegranate;
                         content: '\f00d';
                     }
+                }
+
+                p {
+                    font-size: 0.9em;
+                    margin: 0 0 1em 0;
+                }
+
+                .enter-course {
+                    .edx-btn(@white, @gg-emerald);
+
+                    font-size: 0.9em;
+                    position: absolute;
+                    bottom: 0;
                 }
             }
         }
