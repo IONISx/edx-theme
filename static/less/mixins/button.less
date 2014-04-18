@@ -1,0 +1,33 @@
+.edx-btn(@fg-color, @bg-color) {
+    font: inherit;
+    background: none;
+
+    .btn();
+    .button-variant(@fg-color, @bg-color, @fg-color);
+
+    text-shadow: none;
+    text-overflow: ellipsis;
+    transition: all .1s ease-in;
+    box-shadow: none;
+    margin: 0;
+    padding: 0.5em 1.2em;
+    outline: none;
+    overflow: hidden;
+
+    &:hover, &:active, &:focus {
+        .edx-btn-hover(@fg-color, @bg-color);
+    }
+}
+
+.edx-btn-hover(@fg-color, @bg-color) {
+    background: none;
+    background-color: @fg-color;
+    color: @bg-color;
+    border-color: @bg-color;
+    box-shadow: none;
+    outline: none;
+
+    & when (@bg-color = @white) {
+        border-color: @fg-color;
+    }
+}
