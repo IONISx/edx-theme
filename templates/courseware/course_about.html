@@ -158,7 +158,7 @@
         <div class="social-sharing">
           % if microsite.get_value('course_about_show_social_links', True):
             <%
-              course_about_url = "https://edx.courses.ionis-group.com{path}".format(path=reverse('about_course', args=[course.id]))
+              course_about_url = "https://courses.ionisx.com{path}".format(path=reverse('about_course', args=[course.id]))
               tweet_action = u"http://twitter.com/intent/tweet?text=Découvrez+le+cours+« {course_name} »+sur+@IONISx !+{course_about_url}".format(course_name=get_course_about_section(course, 'title'), course_about_url=course_about_url)
             %>
             <a href="${tweet_action}" target="_blank">
