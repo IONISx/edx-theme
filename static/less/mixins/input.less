@@ -1,0 +1,51 @@
+.ionisx-input {
+    -webkit-font-smoothing: auto;
+    -webkit-appearance: none;
+    background: none;
+    background-color: @white;
+    font: inherit;
+    color: inherit;
+    box-shadow: none;
+    border-radius: @default-border-radius;
+    border: 2px solid @gg-border-grey;
+    outline: none;
+    padding: 0.6em 1em;
+    transition: all .1s ease-in;
+
+    & + span:after {
+        display: inline-block;
+        font-family: 'FontAwesome';
+        font-size: 1.5em;
+        position: absolute;
+        z-index: 10;
+        top: 0.2em;
+        right: 0.5em;
+    }
+
+    &.valid-input {
+        border-color: @gg-emerald;
+
+        & + span:after {
+            color: @gg-emerald;
+            content: '\f058';
+        }
+    }
+
+    &.invalid-input {
+        border-color: @gg-pomegranate;
+
+        & + span:after {
+            color: @gg-pomegranate;
+            content: '\f057';
+        }
+    }
+
+    &:focus, &:active {
+        border-color: @gg-blue;
+        box-shadow: none;
+
+        & + span:after {
+            color: @gg-blue;
+        }
+    }
+}
