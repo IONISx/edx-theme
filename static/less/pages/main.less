@@ -1,12 +1,79 @@
-.content-wrapper {
-    .square(auto);
+body,
+.view-login,
+.view-register,
+.view-passwordreset {
+    // .container {
+    //     .edx-container();
+    // }
 
-    padding: 0 0 @layout-bottom-spacing 0;
-    margin: 0;
+    // .static-container,
+    // nav.course-material .inner-wrapper {
+    //     .square(auto);
+    //     .container();
+
+    //     min-width: 0;
+    //     max-width: none;
+    // }
+
+    .content-wrapper {
+        .square(auto);
+
+        margin: 0;
+        padding: 0;
+        background: none;
+        min-height: 100vh;
+        margin-top: -@layout-header-height - @layout-footer-height;
+        padding-top: @layout-header-height + @layout-footer-height;
+        padding-bottom: @layout-bottom-spacing;
+    }
+}
+
+
+.content-wrapper {
+    .introduction {
+        .edx-container();
+
+        margin-top: @layout-top-spacing;
+        background: none;
+
+        header {
+            .square(auto);
+
+            background: none;
+            border: 0 none;
+
+            h1.title {
+                font: inherit;
+                color: inherit;
+                position: static;
+                padding: 0;
+                margin: 0;
+
+                .title-super {
+                    display: block;
+                    font: inherit;
+                    font-size: @font-size-h1;
+                    color: @gg-blue;
+                    text-transform: none;
+                }
+
+                .title-sub {
+                    display: block;
+                    font: inherit;
+                    color: inherit;
+                    font-weight: 300;
+                    text-transform: none;
+                    margin: 0;
+                }
+            }
+        }
+    }
 
     @import 'homepage.less';
     @import 'courses.less';
     @import 'dashboard.less';
-}
 
-@import 'course/main.less';
+    @import 'register.less';
+
+    @import 'course/main.less';
+}
