@@ -4,7 +4,7 @@
     margin-top: @layout-top-spacing;
     background: none;
 
-    @_aside-size: 250px;
+    @_aside-size: 300px;
 
     .content {
         .size(100%, auto);
@@ -17,7 +17,45 @@
             float: left;
         }
 
+        a {
+            font: inherit;
+            color: @gg-blue;
+        }
+
         form {
+            .status {
+                .ionisx-alert();
+            }
+
+            .list-input {
+                color: inherit;
+                font: inherit;
+
+                 > li {
+                     position: relative;
+                 }
+            }
+
+            label {
+                font: inherit;
+                color: inherit;
+            }
+
+            .field.is-focused label {
+                color: @gg-blue;
+            }
+
+            input[type=text],
+            input[type=email],
+            input[type=password],
+            textarea {
+                .ionisx-input();
+            }
+
+            .group-form-accountacknowledgements {
+                position: relative;
+            }
+
             .form-actions {
                 button[type=submit] {
                     .ionisx-btn(@white, @gg-alt-blue);
@@ -35,14 +73,16 @@
         margin: 0;
         float: right;
 
+        p {
+            font: inherit;
+            color: inherit;
+
+            font-size: 0.9em;
+        }
+
         a {
             font: inherit;
             color: @gg-blue;
-
-            &:hover {
-                font: inherit;
-                text-decoration: underline;
-            }
         }
     }
 }
