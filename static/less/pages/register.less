@@ -70,7 +70,16 @@
 
             .form-actions {
                 button[type=submit] {
-                    .ionisx-btn(@white, @gg-alt-blue);
+                    .ionisx-btn(@white, @gg-emerald);
+
+                    @media (min-width: @screen-md-min) {
+                        .square(auto);
+
+                        padding-left: 2.5em;
+                        padding-right: 2.5em;
+                    }
+
+                    font-weight: @headings-font-weight;
                 }
             }
         }
