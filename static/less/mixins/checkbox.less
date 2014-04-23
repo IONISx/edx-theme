@@ -1,0 +1,51 @@
+.ionisx-checkbox {
+    position: relative;
+    margin: 0 0 0 1px;
+
+    display: block;
+    float: left;
+
+    & + label {
+        display: block;
+        margin: 0 0 0.5em 0;
+        padding: 0 0 0 2em;
+    }
+
+    &:focus, &:active {
+        outline: none;
+    }
+
+    label {
+        .square(1.4em);
+
+        margin: 0;
+        cursor: pointer;
+        position: absolute;
+        border: 1px solid @white;
+        border-radius: @default-border-radius;
+        background-color: @gg-blue;
+        text-align: center;
+        top: 2px;
+        left: -1px;
+
+        &:after {
+            font-family: 'FontAwesome';
+            background: transparent;
+            color: transparent;
+            content: '\f00c';
+            position: absolute;
+            top: -2px;
+            left: 2px;
+        }
+
+        &:hover {
+            &:after {
+                color: fadeout(@black, 60%);
+            }
+        }
+    }
+
+    input[type=checkbox]:checked + label:after {
+        color: @white;
+    }
+}
