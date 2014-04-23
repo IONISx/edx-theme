@@ -1,0 +1,133 @@
+.ionisx-modal {
+    .modal();
+
+    font: inherit;
+    color: inherit;
+    border: 0 none;
+    background: none;
+    box-shadow: none;
+    bottom: auto;
+    margin: 0 auto;
+    padding: 0;
+    width: 500px;
+
+    // Ugly things go here:
+
+    top: 1.5 * @layout-header-height !important;
+    position: fixed !important;
+    left: 0 !important;
+    margin-left: auto !important;
+
+    .inner-wrapper {
+        background: none;
+        background-color: @gg-grey;
+        border: 1px solid fadeout(@black, 20%);
+        border-radius: @default-border-radius;
+        padding: 40px;
+
+        .close-modal {
+            font: inherit;
+            outline: none;
+            color: fadeout(@black, 20%);
+            box-shadow: none;
+            text-shadow: none;
+            padding: 0;
+            right: 8px;
+            top: 0;
+
+            &:hover, &:active, &:focus {
+                background: none;
+                color: @black;
+            }
+        }
+
+        header {
+            margin: 0 0 2em 0;
+            padding: 0;
+            text-align: center;
+
+            &:before {
+                background: none;
+            }
+
+            h2 {
+                margin: 0;
+            }
+
+            hr {
+                display: none;
+            }
+        }
+
+        form {
+            margin: 0;
+            padding: 0;
+
+            .input-group {
+                .square(auto);
+
+                display: block;
+                box-shadow: none;
+                border: 0 none;
+                padding: 0;
+                margin: 0 0 1em 0;
+            }
+
+            label {
+                font: inherit;
+                color: inherit;
+                -webkit-font-smoothing: inherit;
+            }
+
+            input, textarea {
+                font: inherit;
+                border-radius: @default-border-radius;
+                border: 1px solid @gg-border-grey;
+                outline: none;
+            }
+
+            input[type=text],
+            input[type=email],
+            input[type=password] {
+                .ionisx-input();
+            }
+
+            textarea {
+                .size(100%, auto);
+
+                .ionisx-input();
+            }
+
+            .submit,
+            .form-actions {
+                padding: 0;
+                margin: 2em 0 0 0;
+
+                input[type=submit] {
+                    .ionisx-btn(@white, @gg-alt-blue);
+                }
+            }
+        }
+    }
+}
+
+.ionisx-container-modal {
+    .ionisx-container();
+}
+
+.ionisx-video-modal {
+    .inner-wrapper {
+        .square(auto);
+
+        position: relative;
+        padding: 0 0 56.25% 0;
+
+        iframe {
+            .square(100%);
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}

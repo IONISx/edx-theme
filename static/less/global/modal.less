@@ -1,100 +1,68 @@
 .modal, .leanModal_box {
-    font: inherit;
-    color: inherit;
-    border: 0 none;
-    background: none;
-    box-shadow: none;
-    bottom: auto;
-    margin: 0 auto;
-    padding: 0;
-    width: 500px;
-
-    // Ugly required things go here:
-    top: 1.5 * @layout-header-height !important;
-    position: fixed !important;
-    left: 0 !important;
-    margin-left: auto !important;
+    .ionisx-modal();
 
     &.video-modal {
-        .ionisx-container();
-
-        .inner-wrapper {
-            .square(auto);
-
-            position: relative;
-            padding: 0 0 56.25% 0;
-
-            iframe {
-                .square(100%);
-
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-        }
+        .ionisx-container-modal();
+        .ionisx-video-modal();
     }
+}
 
-    .inner-wrapper {
-        background: none;
-        background-color: @gg-grey;
-        border: 1px solid fadeout(@black, 20%);
-        border-radius: @default-border-radius;
+
+#forgot-password-modal {
+    .ionisx-modal();
+
+    #password-reset {
         padding: 0;
 
-        .close-modal {
-            font: inherit;
-            outline: none;
-            color: fadeout(@black, 20%);
-            box-shadow: none;
-            text-shadow: none;
+        header {
+            margin: 0 0 2em 0;
             padding: 0;
-            right: 8px;
-            top: 0;
 
-            &:hover, &:active, &:focus {
-                background: none;
-                color: @black;
+            h2 {
+                margin: 0;
+                font: inherit;
+                font-size: @font-size-h2;
+                font-weight: @headings-font-weight;
+                text-transform: none;
+                text-align: center;
+                color: @gg-blue;
             }
         }
 
-        header {
-            margin: 0.5em 0 1.5em 0;
-            padding: 0;
+        .instructions {
+            padding: 0 0 1em 0;
 
-            &:before {
-                background: none;
-            }
-
-            hr {
-                display: none;
+            p {
+                margin: 0 0 1em 0;
             }
         }
 
         form {
-            .input-group {
-                .square(auto);
+            fieldset {
+                legend {
+                    display: none;
+                }
 
-                display: block;
-                box-shadow: none;
-                border: 0 none;
-                padding: 0;
-                margin: 0 0 1em 0;
+                label {
+                    font: inherit;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                .field.is-focused {
+                    label, .tip {
+                        color: inherit;
+                    }
+                }
+
+                input[type=email] {
+                    .ionisx-input();
+                }
             }
 
-            label {
-                font: inherit;
-                color: inherit;
-                -webkit-font-smoothing: inherit;
-            }
-
-            input, textarea {
-                font: inherit;
-                border-radius: @default-border-radius;
-                border: 1px solid @gg-border-grey;
-                outline: none;
-            }
-
-            input[type=submit] {
+            button[type=submit] {
                 .ionisx-btn(@white, @gg-alt-blue);
             }
         }
