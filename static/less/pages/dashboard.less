@@ -101,23 +101,38 @@
         .listing-courses .course-item {
             border: 0 none;
             padding: 0;
-            margin: 0 0 30px 0;
+            margin: 0 0 50px 0;
+
+            @media (max-width: @screen-sm-max) {
+                background-color: @white;
+                border-radius: @default-border-radius;
+                border: 1px solid @gg-border-grey;
+                padding: 10px;
+                margin: 0 0 30px 0;
+            }
 
             &:last-child {
                 margin: 0;
             }
 
             .cover {
-                .size(200px, auto);
-                .pull-left();
+                .size(100%, auto);
 
                 border-radius: @default-border-radius;
                 background-color: @white;
                 transition: none;
                 max-height: none;
+                text-align: center;
+
+                @media (min-width: @screen-md-min) {
+                    .size(200px, auto);
+                    .pull-left();
+                }
 
                 img {
-                    .size(200px, 112px);
+                    @media (min-width: @screen-md-min) {
+                        .size(200px, 112px);
+                    }
                 }
 
                 div {
@@ -150,11 +165,17 @@
             }
 
             .info {
-                .square(auto);
+                .size(100%, auto);
 
-                padding: 0 0 2em 1em;
+                padding: 0;
                 margin: 0;
-                overflow: hidden;
+
+                @media (min-width: @screen-md-min) {
+                    .square(auto);
+
+                    overflow: hidden;
+                    padding: 0 0 2em 1em;
+                }
 
                 h4 {
                     margin: 0 1em 0.5em 0;
@@ -190,10 +211,16 @@
 
                 .enter-course {
                     .ionisx-btn(@white, @gg-emerald);
+                    .size(100%, auto);
 
                     font-size: 0.9em;
-                    position: absolute;
-                    bottom: 0;
+
+                    @media (min-width: @screen-md-min) {
+                        .square(auto);
+
+                        position: absolute;
+                        bottom: 0;
+                    }
                 }
             }
         }
