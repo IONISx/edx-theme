@@ -101,14 +101,19 @@
         .listing-courses .course-item {
             border: 0 none;
             padding: 0;
-            margin: 0 0 50px 0;
+            margin: 0 0 30px 0;
+            transition: all .1s ease-in;
+            background-color: @white;
+            border: 1px solid @gg-border-grey;
+            border-radius: @default-border-radius;
+            padding: 20px;
 
             @media (max-width: @screen-sm-max) {
-                background-color: @white;
-                border-radius: @default-border-radius;
-                border: 1px solid @gg-border-grey;
-                padding: 10px;
-                margin: 0 0 30px 0;
+                padding: 30px 20px;
+            }
+
+            &:hover {
+                border-color: @gg-blue;
             }
 
             &:last-child {
@@ -116,17 +121,21 @@
             }
 
             .cover {
-                .size(100%, auto);
+                .size(200px, auto);
 
-                border-radius: @default-border-radius;
-                background-color: @white;
+                background-color: @gg-grey;
                 transition: none;
                 max-height: none;
                 text-align: center;
+                border: 1px solid @gg-grey;
+                border-radius: @default-border-radius;
+                float: left;
 
-                @media (min-width: @screen-md-min) {
-                    .size(200px, auto);
-                    .pull-left();
+                @media (max-width: @screen-sm-max) {
+                    .size(100%, auto);
+
+                    float: none;
+                    margin-bottom: 20px;
                 }
 
                 img {
@@ -193,8 +202,12 @@
                     float: none;
                     padding: 0;
                     margin: 0;
-                    right: 0;
-                    top: -4px;
+                    right: -10px;
+                    top: -19px;
+
+                    @media (max-width: @screen-sm-max) {
+                        top: -29px;
+                    }
 
                     &:before {
                         font-family: 'FontAwesome';
