@@ -222,17 +222,10 @@
           % if settings.REGISTRATION_EXTRA_FIELDS['honor_code'] != 'hidden':
             <div class="squaredThree" id="field-honorcode">
               <input id="honorcode-yes" type="checkbox" name="honor_code" value="true" />
-              <%
-                ## TODO: provide a better way to override these links
-                if self.stanford_theme_enabled():
-                  honor_code_path = marketing_link('TOS') + "#honor"
-                else:
-                  honor_code_path = marketing_link('HONOR')
-              %>
               <label for="honorcode-yes"></label>
             </div>
             <label id="customCheckboxHonor" for="honorcode-yes">${_('I agree to the {link_start}Honor Code{link_end}').format(
-                link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=honor_code_path),
+                link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=marketing_link('HONOR')),
                 link_end='</a>')}</label>
           % endif
       </div>
@@ -243,7 +236,7 @@
 % endif
 
       <div class="form-actions">
-        <button name="submit" type="submit" id="submit" class="action action-primary action-update">S'inscrire</button>
+        <button name="submit" type="submit" id="submit" class="action action-primary action-update">Inscription</button>
       </div>
     </form>
   </section>
