@@ -12,52 +12,66 @@
 
     .courses {
         padding: 0;
+        text-align: center;
 
-        .course {
-            box-shadow: none;
-            background: none;
-            border-radius: 0;
-            background-color: @white;
-            border: 1px solid @white;
+        .courses-listing-item {
+            width: 367px;
+            float: none;
+            margin: 0 15px 0 0;
+            padding: 0;
+            display: inline-block;
 
-            &:hover {
-                box-shadow: none;
-                border-color: @gg-blue;
+            &:last-child {
+                margin: 0;
             }
 
-            .inner-wrapper {
-                border: 0 none;
 
-                .course-preview {
+            .course {
+                box-shadow: none;
+                background: none;
+                border-radius: 0;
+                background-color: @white;
+                border: 1px solid @white;
+
+                &:hover {
                     box-shadow: none;
-                    border-bottom: 1px solid @gg-border-grey;
-                    background: none;
-                    background-color: fadeout(@white, 10%);
+                    border-color: @gg-blue;
+                }
 
-                    hgroup {
-                        width: 100%;
+                .inner-wrapper {
+                    border: 0 none;
 
-                        h2 {
-                            font-family: @font-family-sans-serif;
-                            font-size: 14px;
-                            font-weight: 600;
-                            text-shadow: none;
-                            color: @black;
+                    .course-preview {
+                        box-shadow: none;
+                        border-bottom: 1px solid @gg-border-grey;
+                        background: none;
+                        background-color: fadeout(@white, 10%);
+
+                        hgroup {
+                            width: 100%;
+
+                            h2 {
+                                font-family: @font-family-sans-serif;
+                                font-size: 14px;
+                                font-weight: 600;
+                                text-shadow: none;
+                                color: @black;
+                            }
+                        }
+
+                        .info-link {
+                            display: none;
+                        }
+
+                        .course-number {
+                            display: none;
                         }
                     }
-
-                    .info-link {
-                        display: none;
-                    }
-
-                    .course-number {
-                        display: none;
-                    }
                 }
-            }
 
-            .status {
-                display: none;
+                .status {
+                    display: none;
+                }
             }
         }
     }
