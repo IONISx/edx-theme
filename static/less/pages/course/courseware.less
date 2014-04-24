@@ -1,0 +1,185 @@
+.course-wrapper {
+    display: table;
+    table-layout: fixed;
+
+    .course-index {
+        .size(270px, auto);
+
+        display: table-cell;
+        font: inherit;
+        left: -1px;
+        top: -1px;
+        background: none;
+        border-radius: 0;
+        border: 0 none;
+        transition: none;
+        box-sizing: border-box;
+        background-color: @white;
+        border-right: 1px solid @gg-border-grey;
+    }
+
+    .course-content {
+        font: inherit;
+        display: table-cell;
+        padding: 30px;
+        margin: 0 0 0 270px;
+
+        @import 'xblock.less';
+
+        .sequence-nav {
+            margin: 0 0 2em 0;
+            border: 0 none;
+
+            ul {
+                li {
+                    .size(auto, 44px);
+
+                    background: none;
+                    box-shadow: none;
+                    border: 3px solid @gg-border-grey;
+
+                    &.prev {
+                        left: 0;
+                        border-right: 0 none;
+                    }
+
+                    &.next {
+                        right: 0;
+                        border-left: 0 none;
+                    }
+
+                    a {
+                        margin: 0;
+                        transition: none;
+                        overflow: hidden;
+                        background-position: center 12px;
+                    }
+                }
+            }
+
+            .sequence-list-wrapper {
+                background: none;
+                box-shadow: none;
+                border: 0 none;
+                margin: 0 43px;
+                padding: 0;
+
+                .left-shadow, .right-shadow {
+                    display: none;
+                }
+
+                ol {
+                    padding: 0;
+
+                    li {
+                        &:first-child a {
+                            border-left: 3px solid @gg-border-grey;
+                        }
+
+                        &:last-child a {
+                            border-right: 3px solid @gg-border-grey;
+                        }
+
+                        a {
+                            .size(auto, 44px);
+
+                            text-align: center;
+                            background: none;
+                            border: 0 none;
+                            box-shadow: none;
+                            border-top: 3px solid @gg-border-grey;
+                            border-bottom: 3px solid @gg-border-grey;
+
+                            &.active {
+                                border-color: @gg-blue;
+                                color: @gg-blue;
+
+                                &.progress-none {
+                                    border-color: @gg-blue;
+                                    color: @gg-blue;
+                                }
+
+                                &.progress-some {
+                                    border-color: @gg-orange;
+                                    color: @gg-orange;
+                                }
+
+                                &.progress-in_progress {
+                                    border-color: @gg-orange;
+                                    color: @gg-orange;
+                                }
+
+                                &.progress-done {
+                                    border-color: @gg-emerald;
+                                    color: @gg-emerald;
+                                }
+                            }
+
+                            &.inactive, &.visited {
+                                &.progress-none, &.progress-0 {
+                                    background-color: @gg-border-grey;
+
+                                    &:hover {
+                                        background: @white;
+                                        color: @gg-border-grey;
+                                    }
+                                }
+
+                                &.progress-some, &.progress-in_progress {
+                                    background-color: @gg-orange;
+                                    border-color: @gg-orange;
+
+                                    &:hover {
+                                        background-color: @white;
+                                        color: @gg-orange;
+                                    }
+                                }
+
+                                &.progress-done {
+                                    background-color: @gg-emerald;
+                                    border-color: @gg-emerald;
+
+                                    &:hover {
+                                        background-color: @white;
+                                        color: @gg-emerald;
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+
+                            &:after {
+                                font: inherit;
+                                color: inherit;
+                                content: '\f040';
+                                font-family: 'FontAwesome';
+                                font-size: 1.2em;
+                                display: block;
+                                margin: 0.2em auto 0;
+                                padding: 0
+                            }
+
+                            &.seq_video:after {
+                                content: '\f03d';
+                            }
+
+                            &.seq_problem:after {
+                                content: '\f040';
+                            }
+
+                            > p {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        h2 {
+            margin-top: 0
+        }
+    }
+ }

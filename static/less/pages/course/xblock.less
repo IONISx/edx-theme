@@ -1,0 +1,71 @@
+.xblock {
+    &.xmodule_VerticalModule {
+        .vert-mod {
+            .vert {
+                border: 0 none;
+                margin: 0 0 2em 0;
+                padding: 0 0 2em 0;
+                position: relative;
+                border-bottom: 1px solid @gg-border-grey;
+
+                &:after {
+                    content: '\f078';
+                    font-family: 'FontAwesome';
+                    color: @gg-border-grey;
+                    display: block;
+                    margin: 2em 0 0 0;
+                    text-align: center;
+                    position: absolute;
+                    bottom: -0.8em;
+                    left: 50%;
+                    background: @white;
+                }
+
+                &:last-child {
+                    border: 0 none;
+                    padding: 0;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &.xmodule_VideoModule {
+        .video {
+            background: none;
+            background-color: @white;
+        }
+
+        * {
+            box-sizing: content-box;
+        }
+    }
+
+    &.xmodule_DiscussionModule {
+        .discussion-module {
+            border: 1px solid @gg-border-grey;
+            border-radius: @default-border-radius;
+        }
+
+        .new-post-btn {
+            .ionisx-btn(@white, @gg-blue);
+
+            font-size: 0.9em;
+
+            span.icon {
+                .square(auto);
+
+                font: inherit;
+                font-family: 'FontAwesome';
+                color: inherit;
+                display: inline;
+                float: none;
+                margin: 0;
+                padding: 0 0.5em 0 0;
+            }
+        }
+    }
+}

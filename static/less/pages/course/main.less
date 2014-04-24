@@ -1,3 +1,78 @@
 @import 'about.less';
 
-@import 'info.less';
+.course-material {
+    .ionisx-container();
+
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: @layout-top-spacing / 2;
+
+    .inner-wrapper {
+        .square(auto);
+
+        margin: 0;
+        max-width: none;
+
+        .course-tabs {
+            border-radius: 0;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin: 0 0.5em 0 0;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                a {
+                    font: inherit;
+                    color: inherit;
+                    font-size: 0.9em;
+                    font-weight: @headings-font-weight;
+                    border-radius: @default-border-radius;
+                    padding: 8px 12px;
+
+                    &:hover {
+                        background-color: @white;
+                    }
+
+                    &.active {
+                        box-shadow: none;
+                        text-shadow: none;
+                        background: none;
+                        background-color: @gg-blue;
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+
+    .ionisx-container();
+
+    margin-top: @layout-top-spacing / 2;
+
+    > div {
+        .square(auto);
+        .clearfix();
+
+        display: block;
+        box-shadow: none;
+        background: none;
+        background-color: @white;
+        border: 1px solid @gg-border-grey;
+        border-radius: @default-border-radius;
+        overflow: hidden;
+    }
+
+    @import 'courseware.less';
+    @import 'info.less';
+    @import 'wiki.less';
+}
