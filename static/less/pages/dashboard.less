@@ -112,6 +112,16 @@
                 padding: 30px 20px;
             }
 
+            @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+                @_margin-right: 10px;
+
+                // (container-width - container-padding - margin) / 2 - border-width
+                width: floor((@container-sm - 2 * 15px - @_margin-right) / 2) - 3px;
+                margin-right: @_margin-right;
+                display: inline-block;
+                vertical-align: top;
+            }
+
             &:hover {
                 border-color: @gg-blue;
             }
