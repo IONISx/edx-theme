@@ -32,8 +32,8 @@
     %>
 
     <div class="cover">
-      <div class="cover-university">${get_course_about_section(course, 'university')}</div>
       <img src="${course_image_url(course)}" alt="${course.display_name_with_default | h}" />
+      <div class="cover-university">${get_course_about_section(course, 'university')}</div>
       % if course.has_ended():
       <div class="cover-course-status course-ended">
         Terminé
