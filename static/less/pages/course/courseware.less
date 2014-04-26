@@ -269,5 +269,32 @@
         h2 {
             margin-top: 0
         }
+
+        .sequence-bottom {
+            margin: 2em 0;
+            text-align: center;
+
+            ul {
+                li {
+                    .size(50px, 44px);
+
+                    background: none;
+                    box-shadow: none;
+                    border: 3px solid @gg-border-grey;
+
+                    &.prev {
+                        border-right-width: 1px;
+                    }
+
+                    &.next {
+                        border-left-width: 1px;
+                    }
+
+                    a, a:hover {
+                        background-position: center 0.85em;
+                    }
+                }
+            }
+        }
     }
  }
