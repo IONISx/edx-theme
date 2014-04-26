@@ -23,7 +23,12 @@
                 background: none;
                 box-shadow: none;
                 background-color: @gg-border-grey;
+                border-bottom: 1px solid @gg-grey;
                 padding: 0;
+
+                &:last-child {
+                    border: 0 none;
+                }
 
                 &.is-open {
                     font-weight: @headings-font-weight;
@@ -31,7 +36,7 @@
 
                 h3 {
                     font: inherit;
-                    padding: 0.5em 1em;
+                    padding: 0.8em 1em;
 
                     .ui-accordion-header-icon {
                         left: 0.8em;
