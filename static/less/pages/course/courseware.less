@@ -16,6 +16,88 @@
         box-sizing: border-box;
         background-color: @white;
         border-right: 1px solid @gg-border-grey;
+
+        #accordion {
+            .chapter {
+                border-radius: 0;
+                background: none;
+                box-shadow: none;
+                background-color: @gg-border-grey;
+                padding: 0;
+
+                &.is-open {
+                    font-weight: @headings-font-weight;
+                }
+
+                h3 {
+                    font: inherit;
+                    padding: 0.5em 1em;
+
+                    .ui-accordion-header-icon {
+                        left: 0.8em;
+                    }
+
+                    a {
+                        font: inherit;
+                        color: @black;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                ul {
+                    font: inherit;
+                    font-weight: 500;
+                    background: none;
+                    background-color: @white;
+                    padding: 1.5em 1em;
+
+                    li {
+                        margin: 0 0 0.8em 0;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+
+                        a {
+                            font: inherit;
+                            color: @gg-blue;
+                            background: none;
+                            padding: 0.5em;
+                            border-radius: @default-border-radius;
+                            border: 1px solid transparent;
+                            box-shadow: none;
+
+                            &:hover {
+                                border-color: @gg-border-grey;
+                            }
+
+                            p {
+                                font: inherit;
+                                color: inherit;
+
+                                &.subtitle {
+                                    color: @black;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+
+                        &.active {
+                            font: inherit;
+
+                            a {
+                                border-color: @gg-blue;
+                                background-color: @gg-blue;
+                                color: @white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .course-content {
