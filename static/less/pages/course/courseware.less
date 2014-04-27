@@ -18,6 +18,9 @@
         border-right: 1px solid @gg-border-grey;
 
         #accordion {
+            font: inherit;
+            font-size: 0.9em;
+
             .chapter {
                 border-radius: 0;
                 background: none;
@@ -85,8 +88,18 @@
 
                                 &.subtitle {
                                     color: @black;
-                                    font-weight: 300;
                                 }
+                            }
+                        }
+
+                        &.graded {
+                            a:after {
+                                content: '\f017';
+                                font-family: 'FontAwesome';
+                                font-size: 1.2em;
+                                position: absolute;
+                                right: 0.5em;
+                                bottom: 0.25em;
                             }
                         }
 
@@ -124,6 +137,7 @@
                     background: none;
                     box-shadow: none;
                     border: 3px solid @gg-border-grey;
+                    overflow: hidden;
 
                     &.prev {
                         left: 0;
@@ -140,6 +154,10 @@
                         transition: none;
                         overflow: hidden;
                         background-position: center 12px;
+
+                        &.disabled {
+                            background-color: @gg-border-grey;
+                        }
                     }
                 }
             }
@@ -159,6 +177,8 @@
                     padding: 0;
 
                     li {
+                        min-width: 0;
+
                         &:first-child a {
                             border-left: 3px solid @gg-border-grey;
                         }
@@ -178,9 +198,18 @@
                             border-top: 3px solid @gg-border-grey;
                             border-bottom: 3px solid @gg-border-grey;
 
+                            @media (max-width: @screen-sm-max) {
+                                display: none;
+                            }
+
                             &.active {
                                 border-color: @gg-blue;
                                 color: @gg-blue;
+
+                                @media (max-width: @screen-sm-max) {
+                                    display: block;
+                                    border: 3px solid @gg-blue;
+                                }
 
                                 &.progress-none {
                                     border-color: @gg-blue;
@@ -281,6 +310,7 @@
                     background: none;
                     box-shadow: none;
                     border: 3px solid @gg-border-grey;
+                    overflow: hidden;
 
                     &.prev {
                         border-right-width: 1px;
@@ -292,6 +322,10 @@
 
                     a, a:hover {
                         background-position: center 0.85em;
+
+                        &.disabled {
+                            background-color: @gg-border-grey;
+                        }
                     }
                 }
             }
