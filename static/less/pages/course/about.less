@@ -77,7 +77,6 @@ section.course-info {
                         display: block;
                         margin: 20px 0 0 0;
                         padding-right: 10px;
-                        border-right: 1px solid @gg-border-grey;
 
                         a {
                             text-decoration: none;
@@ -85,7 +84,7 @@ section.course-info {
 
                             span {
                                 font-size: 42px;
-                                line-height: 42px;
+                                line-height: 44px;
                                 transition: all .1s ease-in;
                                 color: @gg-emerald;
                             }
@@ -105,6 +104,7 @@ section.course-info {
                         float: none;
                         margin: 20px 0 0 0;
                         padding: 0 0 0 20px;
+                        border-left: 1px solid @gg-border-grey;
 
                         a {
                             display: block;
@@ -113,27 +113,21 @@ section.course-info {
 
                             strong, &.register, &.add-to-cart {
                                 .ionisx-btn(@white, @gg-alt-blue);
-
-                                padding: 7px 0;
                             }
 
                             &.register, &.add-to-cart, span.register.disabled.private, span.add-to-cart {
                                 width: 100%;
                             }
 
-                            span.register.disabled.private {
-                                color: @gg-pomegranate;
-                                border-color: @gg-pomegranate;
+                            span.register.disabled, span.add-to-cart {
+                                .ionisx-btn-disabled();
+
+                                margin: 0 20px 0 0;
                             }
 
-                            span.register.disabled, span.add-to-cart {
-                                cursor: default;
-                                margin: 0 20px 0 0;
-                                padding: 7px 0;
-                                border: 1px solid @gg-border-grey;
-                                border-radius: @default-border-radius;
-                                background-color: @white;
-                                line-height: @line-height-base;
+                            span.register.disabled.private {
+                                .ionisx-btn-disabled(@gg-pomegranate);
+                                .size(100%, auto);
                             }
                         }
                     }
