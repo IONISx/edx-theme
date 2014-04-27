@@ -37,6 +37,22 @@
         .video {
             background: none;
             background-color: @white;
+
+            .video-player {
+                .square(auto);
+
+                min-height: 0;
+                position: relative;
+                padding: 0 0 56.25% 0;
+
+                iframe {
+                    .square(100%) !important;
+
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
         }
 
         * {
