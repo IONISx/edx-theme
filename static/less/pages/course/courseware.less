@@ -2,14 +2,14 @@
     .size(100%, auto);
 
     padding: 0;
-    position: relative;
 
     .course-index {
-        .size(250px, auto);
+        .square(100%);
+        .make-md-column(3);
+        .make-lg-column(3);
 
-        position: absolute;
+        padding: 0;
         display: block;
-        float: left;
         font: inherit;
         background: none;
         border-radius: 0;
@@ -17,9 +17,10 @@
         transition: none;
         box-sizing: border-box;
         border-right: 1px solid @gg-border-grey;
-        top: 0;
-        bottom: 0;
-        left: 0;
+
+        @media (max-width: @screen-sm-max) {
+            border: 0 none;
+        }
 
         #accordion {
             font: inherit;
@@ -121,12 +122,14 @@
     }
 
     .course-content {
-        .square(auto);
+        .square(100%);
+        .make-md-column(9);
+        .make-lg-column(9);
 
         font: inherit;
         display: block;
         overflow: hidden;
-        margin: 0 0 0 270px;
+        margin: 0;
         padding: 30px;
 
         @import 'xblock.less';
