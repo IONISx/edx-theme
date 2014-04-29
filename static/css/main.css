@@ -1208,6 +1208,23 @@ nav.course-material ol.course-tabs li a.active {
     display: none;
 }
 
+.xmodule_display.xmodule_CapaModule div.problem p.inline-text,
+.xmodule_display.xmodule_CapaModule div.problem p.inline-text + span,
+.xmodule_display.xmodule_CapaModule div.problem p.inline-text + span > form {
+    display: inline;
+}
+
+.xmodule_display.xmodule_CapaModule div.problem p.inline-text + span {
+    margin-left: 5px;
+    margin-right: -10px;
+}
+
+.xmodule_display.xmodule_CapaModule div.problem p.inline-text + span > form span.status,
+.xmodule_display.xmodule_CapaModule div.problem div span.unanswered,
+.xmodule_display.xmodule_CapaModule div.problem div span.ui-icon-bullet {
+    display: none;
+}
+
 /* ==========================================================================
    Login page
    ========================================================================== */
