@@ -8,7 +8,6 @@
     border: 1px solid @gg-border-grey;
     background-color: @white;
     margin: 0;
-    padding: 0;
 
     .updates {
         .square(auto);
@@ -16,7 +15,7 @@
         display: block;
         font: inherit;
         margin: 0;
-        padding: 1em 2em;
+        padding: 0;
 
         h1 {
             font: inherit;
@@ -25,7 +24,41 @@
             color: @gg-blue;
             border: 0 none;
             padding: 0;
-            margin: 0.5em 0 0 0;
+            margin: 0 0 1.5em 0;
+        }
+
+        > section {
+            margin: 0;
+            padding: 0;
+
+            > article {
+                margin: 0 0 1em 0;
+                padding: 10px;
+                border: 1px solid @gg-border-grey;
+                border-radius: @default-border-radius;
+
+                &:nth-child(odd) {
+                    background-color: @gg-grey;
+                }
+
+                > h2 {
+                    font: inherit;
+                    font-weight: @headings-font-weight;
+                    color: inherit;
+                    background: none;
+                    margin: 0 0 1em 0;
+                    padding: 0;
+                    border-bottom: 1px solid @gg-border-grey;
+
+                    &:before {
+                        content: '\f073';
+                        font-family: 'FontAwesome';
+                        font-weight: 500;
+                        color: @gg-emerald;
+                        margin: 0 0.4em 0 0;
+                    }
+                }
+            }
         }
     }
 

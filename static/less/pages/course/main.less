@@ -64,15 +64,25 @@
         .clearfix();
 
         display: block;
+        padding: 30px;
         box-shadow: none;
         background: none;
         background-color: @white;
         border: 1px solid @gg-border-grey;
         border-radius: @default-border-radius;
         overflow: hidden;
+
+        .wrap-instructor-info {
+            float: right;
+            margin: 0;
+        }
     }
 
     @import 'courseware.less';
     @import 'info.less';
     @import 'wiki.less';
+    @import 'progression.less';
+    @import 'instructor.less';
 }
+
+@import 'book.less';
