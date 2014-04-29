@@ -13,13 +13,17 @@
     .courses {
         padding: 0;
         text-align: center;
+        margin-left: -15px;
+        margin-right: -15px;
 
         .courses-listing-item {
-            width: 367px;
-            float: none;
-            margin: 0 15px 0 0;
-            padding: 0;
-            display: inline-block;
+            .make-xs-column(12);
+            .make-sm-column(6);
+            .make-md-column(6);
+            .make-lg-column(4);
+
+            margin: 0;
+            display: block;
             text-align: left;
 
             &:last-child {
