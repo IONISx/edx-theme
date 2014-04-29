@@ -953,11 +953,19 @@ div.info-wrapper section.handouts {
     font-weight: 600;
 }
 
+.xmodule_display.xmodule_HtmlModule h2 {
+    color: #3ea5ce;
+    text-transform: none;
+    font-weight: 600;
+}
+
 
 /* ==========================================================================
    Course forum
    ========================================================================== */
 
+.discussion-module .new-post-btn,
+.discussion-user-threads .new-post-btn,
 body.discussion .course-tabs .right .new-post-btn {
     height: 34px;
     transition: all .1s ease-in;
@@ -971,6 +979,10 @@ body.discussion .course-tabs .right .new-post-btn {
     font-weight: 600;
 }
 
+.discussion-module .new-post-btn:hover,
+.discussion-module .new-post-btn:focus,
+.discussion-user-threads .new-post-btn:hover,
+.discussion-user-threads .new-post-btn:focus,
 body.discussion .course-tabs .right .new-post-btn:hover,
 body.discussion .course-tabs .right .new-post-btn:focus {
     background: none;
@@ -979,6 +991,8 @@ body.discussion .course-tabs .right .new-post-btn:focus {
     color: white;
 }
 
+.discussion-module .new-post-icon,
+.discussion-user-threads .new-post-icon,
 body.discussion .course-tabs .right .new-post-icon {
     color: inherit;
 }
@@ -1191,6 +1205,23 @@ nav.course-material ol.course-tabs li a.active {
 }
 
 .course-wrapper section.course-content .xmodule_display.xmodule_SequenceModule nav.sequence-nav .right-shadow {
+    display: none;
+}
+
+.xmodule_display.xmodule_CapaModule div.problem p.inline-text,
+.xmodule_display.xmodule_CapaModule div.problem p.inline-text + span,
+.xmodule_display.xmodule_CapaModule div.problem p.inline-text + span > form {
+    display: inline;
+}
+
+.xmodule_display.xmodule_CapaModule div.problem p.inline-text + span {
+    margin-left: 5px;
+    margin-right: -10px;
+}
+
+.xmodule_display.xmodule_CapaModule div.problem p.inline-text + span > form span.status,
+.xmodule_display.xmodule_CapaModule div.problem div span.unanswered,
+.xmodule_display.xmodule_CapaModule div.problem div span.ui-icon-bullet {
     display: none;
 }
 
@@ -1494,16 +1525,40 @@ body.purchase-receipt section.cart-list .content-main h2.billed_to {
 }
 
 /* ==========================================================================
+   Shopping cart error page
+   ========================================================================== */
+
+section.billing-error > h1 {
+    color: #c0392b;
+    margin-top: 25px;
+}
+
+section.billing-error .error-msg-wrapper {
+    background-color: #fff;
+    padding: 20px;
+}
+
+section.billing-error .error-msg-wrapper .exception-msg {
+    color: #c0392b;
+}
+
+/* ==========================================================================
    Shopping cart
    ========================================================================== */
 
 header.global ol.user > li.primary:last-child > a.shopping-cart {
     border-color: #3ea5ce;
     padding: 10px 20px;
+    letter-spacing: normal;
+    text-transform: capitalize;
 }
 
 header.global ol.user > li.primary:last-child > a.shopping-cart:hover {
     border-color: #3ea5ce;
+}
+
+header.global ol.user > li.primary:last-child > a.shopping-cart .icon-shopping-cart {
+    font-size: 15px;
 }
 
 .cart-list {
@@ -1528,6 +1583,10 @@ header.global ol.user > li.primary:last-child > a.shopping-cart:hover {
     padding: 0;
     padding-top: 10px;
     position: relative;
+}
+
+.cart-list .cart-table .cart-headings th.total {
+    width: 100px;
 }
 
 .cart-list .cart-table .remove_line_item {
