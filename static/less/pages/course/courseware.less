@@ -1,21 +1,25 @@
 .course-wrapper {
-    display: table;
-    table-layout: fixed;
+    .size(100%, auto);
+
+    padding: 0;
+    position: relative;
 
     .course-index {
-        .size(270px, auto);
+        .size(250px, auto);
 
-        display: table-cell;
+        position: absolute;
+        display: block;
+        float: left;
         font: inherit;
-        left: -1px;
-        top: -1px;
         background: none;
         border-radius: 0;
         border: 0 none;
         transition: none;
         box-sizing: border-box;
-        background-color: @white;
         border-right: 1px solid @gg-border-grey;
+        top: 0;
+        bottom: 0;
+        left: 0;
 
         #accordion {
             font: inherit;
@@ -23,10 +27,8 @@
 
             .chapter {
                 border-radius: 0;
-                background: none;
                 box-shadow: none;
-                background-color: @gg-border-grey;
-                border-bottom: 1px solid @gg-grey;
+                border-bottom: 1px solid @gg-border-grey;
                 padding: 0;
 
                 &:last-child {
@@ -119,10 +121,13 @@
     }
 
     .course-content {
+        .square(auto);
+
         font: inherit;
-        display: table-cell;
-        padding: 30px;
+        display: block;
+        overflow: hidden;
         margin: 0 0 0 270px;
+        padding: 30px;
 
         @import 'xblock.less';
 

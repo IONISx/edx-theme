@@ -37,6 +37,12 @@ p {
     }
 }
 
+ul {
+    font: inherit;
+    color: inherit;
+    list-style-position: inside;
+}
+
 a, a:link, a:visited,
 p a, p a:link, p a:visited {
     font: inherit;
@@ -86,23 +92,7 @@ textarea {
     color: @gg-disabled-grey;
 }
 
-
-// Ugly things go here for now :
-
-
-
-.static-container ol li,
-.static-container ul li {
-    font: inherit;
-    color: inherit;
-}
-
-.static-container
-.inner-wrapper {
-    .square(auto);
-}
-
-
-.instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .label {
-    display: table-cell;
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
