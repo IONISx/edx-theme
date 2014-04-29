@@ -47,6 +47,10 @@ header.global, header.global.slim {
             margin: 25px 0 0 0;
             text-shadow: none;
             color: @gg-grey;
+
+            @media (max-width: @screen-sm-max) {
+                display: none;
+            }
         }
 
         ol.nav-global {
