@@ -127,34 +127,35 @@
     <div class="intro-inner-wrapper">
       <div class="table">
       <section class="intro">
-        % if get_course_about_section(course, "video"):
+        <div class="row top-row">
+          % if get_course_about_section(course, "video"):
           <a href="#video-modal" class="media" rel="leanModal">
             <div class="hero">
               <img src="${course_image_url(course)}" alt="" />
               <div class="play-intro"></div>
             </div>
           </a>
-        %else:
+          %else:
           <div class="media">
             <div class="hero">
               <img src="${course_image_url(course)}" alt="" />
             </div>
           </div>
-        % endif
-        <div class="metadata">
-          <hgroup>
-            <h1>
-              ${get_course_about_section(course, "title")}
-            </h1>
-            <div class="info">
-              <span class="university">${get_course_about_section(course, "university")}</span>
+          % endif
+          <div class="metadata">
+            <hgroup>
+              <h1>
+                ${get_course_about_section(course, "title")}
+              </h1>
+              <div class="info">
+                <span class="university">${get_course_about_section(course, "university")}</span>
+              </div>
+            </hgroup>
+            <div class="short-description">
+              <p>${get_course_about_section(course, 'short_description')}</p>
             </div>
-          </hgroup>
-          <div class="short-description">
-            <p>${get_course_about_section(course, 'short_description')}</p>
           </div>
         </div>
-        <div class="cleaner"></div>
         <div class="social-sharing">
           % if microsite.get_value('course_about_show_social_links', True):
             <%

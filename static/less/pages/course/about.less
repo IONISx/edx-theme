@@ -26,49 +26,64 @@ section.course-info {
                     .square(auto);
                     display: block;
 
-                    > hgroup {
-                        padding-bottom: 0;
-                        border: 0 none;
-                        box-shadow: none;
-                        margin-bottom: 30px;
+                    .row.top-row {
+                        .media {
+                            .size(100%, auto);
+                            .make-md-column(4);
+                            .make-lg-column(4);
 
-                        > .info {
-                            margin: 10px 0 5px 0;
-                        }
-                    }
+                            padding: 0;
+                            display: block;
 
-                    .media {
-                        .pull-left();
+                            .hero {
+                                .square(auto);
 
-                        width: 345px;
-                        padding: 0;
+                                border: 0 none;
+                                padding: 0 0 56.25% 0;
+                                position: relative;
 
-                        .hero {
-                            border: 0 none;
+                                img {
+                                    .square(100%);
 
-                            img {
-                                .size(343px, 193px);
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                }
                             }
                         }
-                    }
 
-                    .metadata {
-                        overflow: hidden;
-                        padding-left: 20px;
+                        .metadata {
+                            .size(100%, auto);
 
-                        hgroup > h1 {
-                            text-align: left;
-                            margin-bottom: 0;
-                            margin-top: -7px;
+                            .make-md-column(8);
+                            .make-lg-column(8);
+
+                            margin: -8px 0 0 0;
+
+                            @media (max-width: @screen-sm-max) {
+                                padding: 0;
+                                margin: 0;
+                            }
+
+                            hgroup {
+                                color: inherit;
+
+                                h1 {
+                                    font: inherit;
+                                    font-size: 1.6em;
+                                    line-height: 1.4em;
+                                    font-weight: @headings-font-weight;
+                                    color: inherit;
+                                    letter-spacing: normal;
+                                    text-align: left;
+                                    margin: 0;
+                                }
+                            }
+
+                            .short-description {
+                                padding-top: 20px;
+                            }
                         }
-
-                        .short-description {
-                            padding-top: 20px;
-                        }
-                    }
-
-                    .cleaner {
-                        .clearfix();
                     }
 
                     .social-sharing {
@@ -114,6 +129,12 @@ section.course-info {
                             strong, &.register, &.add-to-cart {
                                 .ionisx-btn(@white, @gg-alt-blue);
                                 .size(49%, auto);
+
+                                @media (max-width: @screen-xs-max) {
+                                    .size(100%, auto);
+
+                                    display: block;
+                                }
                             }
 
                             &.register, &.add-to-cart, span.register.disabled.private, span.add-to-cart {
@@ -125,6 +146,12 @@ section.course-info {
                                 .size(49%, auto);
 
                                 margin: 0 2% 0 0;
+
+                                @media (max-width: @screen-xs-max) {
+                                    .size(100%, auto);
+
+                                    margin: 0 0 0.8em 0;
+                                }
                             }
 
                             span.register.disabled.private {
