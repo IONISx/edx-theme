@@ -90,7 +90,7 @@
             .ionisx-btn(@white, @gg-alt-blue);
 
             font-size: 0.9em;
-            display: inline !important;
+            display: inline;
 
             span {
                 font: inherit;
@@ -101,6 +101,17 @@
         .submission_feedback {
             font: inherit;
             color: @gg-disabled-grey;
+        }
+
+        .action {
+            .show {
+                // Ugly hack because ugly !important.
+                display: inline !important;
+            }
+
+            .save {
+                display: none;
+            }
         }
     }
 }
