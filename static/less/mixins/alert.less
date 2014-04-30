@@ -11,22 +11,35 @@
     }
 
     ul {
-        margin: 0;
-        font: inherit;
-        font-weight: 300;
-        list-style: inherit;
-        list-style-position: inside;
+        .ionisx-alert-body();
+    }
+}
+
+.ionisx-alert-body {
+    margin: 0;
+    font: inherit;
+    font-weight: 300;
+    list-style: inherit;
+    list-style-position: inside;
+
+    li {
+        background: none;
+        padding: 0;
+    }
+}
+
+.ionisx-alert-error {
+    background-color: @gg-pomegranate;
+
+    h3 {
+        color: @white;
     }
 
-    &.submission-error {
-        background-color: @gg-pomegranate;
-
-        h3 {
-            color: @white;
-        }
-
-        ul {
-            color: @gg-grey;
-        }
+    ul {
+        .ionisx-alert-error-body();
     }
+}
+
+.ionisx-alert-error-body {
+    color: @gg-grey;
 }
