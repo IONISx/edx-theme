@@ -20,6 +20,10 @@
         border-color: @bg-color;
     }
 
+    & when (@fg-color = @black) {
+        border-color: @bg-color;
+    }
+
     &:hover, &:active, &:focus {
         .ionisx-btn-hover(@fg-color, @bg-color);
     }
@@ -34,6 +38,10 @@
     outline: none;
 
     & when (@bg-color = @white) {
+        border-color: @fg-color;
+    }
+
+    & when (@bg-color = @black) {
         border-color: @fg-color;
     }
 }
