@@ -64,6 +64,84 @@
         .discussion-module {
             border: 1px solid @gg-border-grey;
             border-radius: @default-border-radius;
+
+            .discussion {
+                .new-post-article {
+                    margin: 0;
+
+                    > .inner-wrapper {
+                        .square(auto);
+                        min-width: 0;
+                        max-width: none;
+
+                        .new-post-form-errors {
+                            .ionisx-alert-body();
+                            .ionisx-alert-error-body();
+
+                            margin-bottom: 1em;
+
+                            li {
+                                .ionisx-alert();
+                                .ionisx-alert-error();
+
+                                border-radius: @default-border-radius;
+                            }
+                        }
+
+                        > .new-post-form {
+                            .square(auto);
+
+                            border: 1px solid @gg-border-grey;
+                            border-radius: @default-border-radius;
+                            margin: 0;
+                            background: none;
+                            box-shadow: none;
+                            padding: 30px;
+                            color: @white;
+                            background-color: fadeout(@black, 20%);
+
+                            input[type=text],
+                            input[type=email],
+                            input[type=password],
+                            textarea {
+                                .ionisx-input();
+
+                                color: @black;
+                            }
+
+                            .wmd-panel {
+                                .square(auto);
+                                min-width: 0;
+
+                                textarea {
+                                    border-bottom-left-radius: 0;
+                                    border-bottom-right-radius: 0;
+                                }
+
+                                .wmd-preview-container {
+                                    .square(auto);
+
+                                    box-shadow: none;
+                                    border: 0 none;
+                                }
+                            }
+
+                            input[type=submit] {
+                                .ionisx-btn(@white, @gg-emerald);
+
+                                font-size: 0.9em;
+                            }
+
+                            .new-post-cancel {
+                                .ionisx-btn(@black, @gg-grey);
+
+                                font-size: 0.9em;
+                                margin-left: 1em;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .new-post-btn {
