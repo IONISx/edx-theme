@@ -1,0 +1,106 @@
+> article.new-post-article {
+    .ionisx-container();
+
+    overflow: visible !important;
+    margin-top: @layout-top-spacing / 2;
+
+    > .inner-wrapper {
+        .square(auto);
+
+        min-width: 0;
+        max-width: none;
+
+        > .new-post-form {
+            .square(auto);
+
+            border: 1px solid @gg-border-grey;
+            border-radius: @default-border-radius;
+            margin: 0;
+            background: none;
+            box-shadow: none;
+            padding: 30px;
+            color: @white;
+            background-color: fadeout(@black, 20%);
+
+            > .left-column {
+                padding: 0;
+
+                .make-xs-column(12);
+                .make-sm-column(12);
+                .make-md-column(4);
+                .make-lg-column(4);
+
+                padding-left: 0;
+
+                @media (max-width: @screen-sm-max) {
+                    padding: 0;
+                }
+            }
+
+            > .right-column {
+                padding: 0;
+
+                .make-xs-column(12);
+                .make-sm-column(12);
+                .make-md-column(8);
+                .make-lg-column(8);
+
+                padding-right: 0;
+
+                @media (max-width: @screen-sm-max) {
+                    padding: 0;
+                    margin-top: 1em;
+                }
+
+                ul.new-post-form-errors {
+                    .ionisx-alert();
+                    .ionisx-alert-body();
+                    .ionisx-alert-error();
+                    .ionisx-alert-error-body();
+
+                    margin-bottom: 1em;
+                }
+
+                input[type=text],
+                input[type=email],
+                input[type=password],
+                textarea {
+                    .ionisx-input();
+
+                    color: @black;
+                }
+
+                .wmd-panel {
+                    .square(auto);
+                    min-width: 0;
+
+                    textarea {
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+
+                    .wmd-preview-container {
+                        .square(auto);
+
+                        box-shadow: none;
+                        border: 0 none;
+                    }
+                }
+
+                input[type=submit] {
+                    .ionisx-btn(@white, @gg-emerald);
+
+                    font-size: 0.9em;
+                }
+
+                .new-post-cancel {
+                    .ionisx-btn(@black, @gg-grey);
+
+                    font-size: 0.9em;
+                    margin-left: 1em;
+                }
+            }
+
+        }
+    }
+}
