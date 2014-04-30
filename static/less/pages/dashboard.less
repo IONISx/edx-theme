@@ -4,12 +4,12 @@
     margin-top: @layout-top-spacing;
 
     .profile-sidebar {
-        .pull-left();
-        .hidden-sm();
         .hidden-xs();
+        .hidden-sm();
+        .make-md-column(3);
+        .make-lg-column(3);
 
-        width: 250px;
-        padding: 0;
+        padding-left: 0;
         margin: 0;
 
         .profile {
@@ -83,6 +83,8 @@
 
     .my-courses {
         .square(auto);
+        .make-md-column(9);
+        .make-lg-column(9);
 
         overflow: hidden;
         margin: 0;
@@ -115,151 +117,157 @@
             }
         }
 
-        .listing-courses .course-item {
-            border: 0 none;
-            padding: 0;
-            margin: 0 0 30px 0;
-            transition: all .1s ease-in;
-            background-color: @white;
-            border: 1px solid @gg-border-grey;
-            border-radius: @default-border-radius;
-            padding: 20px;
-
-            @media (max-width: @screen-sm-max) {
-                padding: 30px 20px;
-            }
-
-            @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-                @_margin-right: 10px;
-
-                // (container-width - container-padding - margin) / 2 - border-width
-                width: floor((@container-sm - 2 * 15px - @_margin-right) / 2) - 3px;
-                margin-right: @_margin-right;
-                display: inline-block;
-                vertical-align: top;
-            }
-
-            &:hover {
-                border-color: @gg-blue;
-            }
-
-            &:last-child {
-                margin: 0;
-            }
-
-            .cover {
-                .size(200px, auto);
-
-                background-color: @gg-grey;
-                transition: none;
-                max-height: none;
-                text-align: center;
-                border: 1px solid @gg-grey;
+        .listing-courses {
+            .course-item {
+                border: 0 none;
+                padding: 0;
+                margin: 0 0 30px 0;
+                transition: all .1s ease-in;
+                background-color: @white;
+                border: 1px solid @gg-border-grey;
                 border-radius: @default-border-radius;
-                float: left;
+                padding: 20px;
 
                 @media (max-width: @screen-sm-max) {
-                    .size(100%, auto);
-
-                    float: none;
-                    margin-bottom: 20px;
+                    padding: 30px 20px;
                 }
 
-                img {
-                    @media (min-width: @screen-md-min) {
-                        .size(200px, 112px);
+                @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+                    @_margin-right: 10px;
+
+                    // (container-width - container-padding - margin) / 2 - some pixels :)
+                    width: floor((@container-sm - 2 * 15px - @_margin-right) / 2) - 3px;
+                    margin-right: @_margin-right;
+                    display: inline-block;
+                    vertical-align: top;
+
+                    &:nth-child(even) {
+                        margin: 0;
                     }
                 }
 
-                div {
-                    .text-center();
-
-                    font-weight: @headings-font-weight;
-                    font-size: 0.9em;
-
-                    &.cover-university {
-                        color: @gg-blue;
-                        font-weight: @headings-font-weight;
-                        font-size: 0.9em;
-                    }
-
-                    &.cover-course-status {
-
-                        &.course-soon {
-                            color: @gg-disabled-grey;
-                        }
-
-                        &.course-open {
-                            color: @gg-emerald;
-                        }
-
-                        &.course-ended {
-                            color: @gg-pomegranate;
-                        }
-                    }
-                }
-            }
-
-            .info {
-                .size(100%, auto);
-
-                padding: 0;
-                margin: 0;
-
-                @media (min-width: @screen-md-min) {
-                    .square(auto);
-
-                    overflow: hidden;
-                    padding: 0 0 2em 1em;
+                &:hover {
+                    border-color: @gg-blue;
                 }
 
-                h4 {
-                    margin: 0 1em 0.5em 0;
-                }
-
-                hr {
-                    display: none;
-                }
-
-                .unregister {
-                    text-decoration: none;
-                    line-height: inherit;
-                    position: absolute;
-                    font: inherit;
-                    float: none;
-                    padding: 0;
+                &:last-child {
                     margin: 0;
-                    right: -10px;
-                    top: -19px;
+                }
+
+                .cover {
+                    .size(200px, auto);
+
+                    background-color: @gg-grey;
+                    transition: none;
+                    max-height: none;
+                    text-align: center;
+                    border: 1px solid @gg-grey;
+                    border-radius: @default-border-radius;
+                    float: left;
 
                     @media (max-width: @screen-sm-max) {
-                        top: -29px;
+                        .size(100%, auto);
+
+                        float: none;
+                        margin-bottom: 20px;
                     }
 
-                    &:before {
-                        font-family: 'FontAwesome';
-                        font-size: 1.2em;
-                        color: @gg-pomegranate;
-                        content: '\f00d';
+                    img {
+                        @media (min-width: @screen-md-min) {
+                            .size(200px, 112px);
+                        }
+                    }
+
+                    div {
+                        .text-center();
+
+                        font-weight: @headings-font-weight;
+                        font-size: 0.9em;
+
+                        &.cover-university {
+                            color: @gg-blue;
+                            font-weight: @headings-font-weight;
+                            font-size: 0.9em;
+                        }
+
+                        &.cover-course-status {
+
+                            &.course-soon {
+                                color: @gg-disabled-grey;
+                            }
+
+                            &.course-open {
+                                color: @gg-emerald;
+                            }
+
+                            &.course-ended {
+                                color: @gg-pomegranate;
+                            }
+                        }
                     }
                 }
 
-                p {
-                    font-size: 0.9em;
-                    margin: 0 0 1em 0;
-                }
-
-                .enter-course {
-                    .ionisx-btn(@white, @gg-emerald);
+                .info {
                     .size(100%, auto);
 
-                    font-size: 0.9em;
+                    padding: 0;
+                    margin: 0;
 
                     @media (min-width: @screen-md-min) {
                         .square(auto);
 
+                        overflow: hidden;
+                        padding: 0 0 2em 1em;
+                    }
+
+                    h4 {
+                        margin: 0 1em 0.5em 0;
+                    }
+
+                    hr {
+                        display: none;
+                    }
+
+                    .unregister {
+                        text-decoration: none;
+                        line-height: inherit;
                         position: absolute;
-                        bottom: 0;
+                        font: inherit;
+                        float: none;
+                        padding: 0;
+                        margin: 0;
+                        right: -10px;
+                        top: -19px;
+
+                        @media (max-width: @screen-sm-max) {
+                            top: -29px;
+                        }
+
+                        &:before {
+                            font-family: 'FontAwesome';
+                            font-size: 1.2em;
+                            color: @gg-pomegranate;
+                            content: '\f00d';
+                        }
+                    }
+
+                    p {
+                        font-size: 0.9em;
+                        margin: 0 0 1em 0;
+                    }
+
+                    .enter-course {
+                        .ionisx-btn(@white, @gg-emerald);
+                        .size(100%, auto);
+
+                        font-size: 0.9em;
+
+                        @media (min-width: @screen-md-min) {
+                            .square(auto);
+
+                            position: absolute;
+                            bottom: 0;
+                        }
                     }
                 }
             }
