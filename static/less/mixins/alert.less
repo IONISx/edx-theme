@@ -30,16 +30,18 @@
 
 .ionisx-alert-error {
     background-color: @gg-pomegranate;
+    color: @gg-grey;
 
     h3 {
         color: @white;
     }
 
     ul {
-        .ionisx-alert-error-body();
+        color: inherit;
     }
-}
 
-.ionisx-alert-error-body {
-    color: @gg-grey;
+    a {
+        color: @white;
+        text-decoration: underline;
+    }
 }
