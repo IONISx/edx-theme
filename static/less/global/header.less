@@ -31,11 +31,18 @@ header.global, header.global.slim {
             }
 
             a {
-                .navbar-brand();
-                max-height: 70px;
+                .size(273px, 48px);
 
-                img {
-                    .img-responsive();
+                text-indent: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                background-image: url(../images/logo-white.png);
+                background-size: contain;
+
+                @media (max-width: @screen-xs-max) {
+                    .size(70px, 48px);
+
+                    background-image: url(../images/logo-x-white.png);
                 }
             }
         }
@@ -43,8 +50,11 @@ header.global, header.global.slim {
         h2 {
             .square(auto);
 
+            font: inherit;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 0.9em 0 0 0;
             padding: 0;
-            margin: 25px 0 0 0;
             text-shadow: none;
             color: @gg-grey;
 
@@ -54,7 +64,7 @@ header.global, header.global.slim {
         }
 
         ol.nav-global {
-            margin: 24px 0 0 0;
+            margin: 0.6em 0 0 0;
 
             > li > a {
                 padding: 0;
@@ -72,7 +82,7 @@ header.global, header.global.slim {
         }
 
         ol.nav-courseware {
-            margin: 15px 0 0 0;
+            margin: 0;
 
             > li > a.cta-login {
                 .ionisx-btn(@gg-blue, @white);
@@ -80,7 +90,7 @@ header.global, header.global.slim {
         }
 
         ol.user {
-            margin: 15px 0 0 0;
+            margin: 0;
 
             > li.primary > a {
                 .ionisx-btn(@gg-blue, @white);
@@ -88,6 +98,10 @@ header.global, header.global.slim {
                 border-radius: 0;
                 border-top-left-radius: 4px;
                 border-bottom-left-radius: 4px;
+
+                &.user-link {
+                    max-width: 120px;
+                }
 
                 &.dropdown.active {
                     .ionisx-btn-hover(@gg-blue, @white);
