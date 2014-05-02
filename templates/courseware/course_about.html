@@ -225,13 +225,14 @@
                 % if not course.start_date_is_still_default:
                   <th class="course-start">
                     <span class="icon-calendar"></span>
-                    ${_("Classes Start")}</th>
+                    ${_("Classes Start")}
+                  </th>
                 % endif
                   </th>
                 % if get_course_about_section(course, "end_date") or course.end:
                   <th class="course-end">
                     <span class="icon-calendar"></span>
-                    ${_("Classes End")}</p>
+                    ${_("Classes End")}
                   </th>
                 % endif
                 % if get_course_about_section(course, "effort"):
