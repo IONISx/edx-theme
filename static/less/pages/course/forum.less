@@ -104,3 +104,416 @@
         }
     }
 }
+
+> .discussion {
+    > .discussion-body {
+        padding: 0;
+        border: 0 none;
+        background: none;
+        border-radius: 0;
+
+        > .sidebar {
+            border: 1px solid @gg-border-grey;
+            border-radius: @default-border-radius;
+            box-shadow: none;
+            display: block;
+            height: auto !important;
+
+            @media (max-width: @screen-sm-max) {
+                .square(auto) !important;
+
+                margin-bottom: 1em;
+                float: none;
+            }
+
+            .browse-topic-drop-btn {
+                text-decoration: none;
+            }
+
+            .post-list-wrapper {
+                height: auto !important;
+
+                .post-list {
+                    border-bottom-left-radius: @default-border-radius;
+                    border-bottom-right-radius: @default-border-radius;
+                    background: none;
+                    background-color: @white;
+                    padding: 0 0 3em 0;
+                    margin: 0;
+
+                    li {
+                        padding: 0;
+                        margin: 0;
+
+                        a {
+                            background: none;
+                            box-shadow: none;
+                            color: @black;
+                            border-bottom: 1px solid @gg-border-grey;
+                            margin: 0;
+                            padding: 0 1em 0 1.9em;
+
+                            &:before {
+                                font-family: 'FontAwesome';
+                                content: '\f006';
+                                position: absolute;
+                                left: 0.5em;
+                                top: 0.65em;
+                                color: @gg-blue;
+                            }
+
+                            span {
+                                color: inherit;
+                                font: inherit;
+
+                                &.votes-count {
+                                    .square(auto);
+
+                                    font-size: 0.9em;
+                                    padding: 2px 4px;
+                                    background: none;
+                                }
+
+                                &.comments-count {
+                                    .square(auto);
+
+                                    font-size: 0.9em;
+                                    padding: 2px 4px;
+                                    background: none;
+
+                                    &:before {
+                                        font-family: 'FontAwesome';
+                                        content: '\f086';
+                                    }
+
+                                    &:after {
+                                        background: none;
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            &.read {
+                                background: none;
+                            }
+
+                            &.active {
+                                background: @gg-blue;
+                                color: @white;
+
+                                &:before {
+                                    color: @white;
+                                }
+                            }
+
+                            &.followed {
+                                &:before {
+                                    content: '\f005';
+                                }
+
+                                &:after {
+                                    display: none;
+                                    background: none;
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            a {
+                                border: 0 none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        > .discussion-column {
+            border: 1px solid @gg-border-grey;
+            border-radius: @default-border-radius;
+            box-shadow: none;
+            background: none;
+            background-color: @white;
+            display: block;
+
+            @media (max-width: @screen-sm-max) {
+                .square(auto);
+
+                float: none;
+            }
+
+            > .discussion-article {
+                &.blank-slate {
+                    padding: 30px;
+
+                    .home-header {
+                        border-bottom: 1px solid @gg-border-grey;
+                        margin: 0 0 1em 0;
+
+                        .label {
+                            display: none;
+                        }
+
+                        h1 {
+                            font: inherit;
+                            font-size: @font-size-h2;
+                            font-weight: @headings-font-weight;
+                            color: @gg-blue;
+                            border: 0 none;
+                            padding: 0;
+                            margin: 0 0 0.5em 0;
+                        }
+                    }
+                }
+
+                input[type=text],
+                input[type=email],
+                input[type=password],
+                textarea {
+                    .ionisx-input();
+
+                    color: @black;
+                }
+
+                .wmd-panel {
+                    .square(auto);
+                    min-width: 0;
+
+                    textarea {
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+
+                    .wmd-preview-container {
+                        .square(auto);
+
+                        box-shadow: none;
+                        border: 0 none;
+                    }
+                }
+
+                input[type=submit],
+                .discussion-submit-post,
+                .discussion-submit-comment {
+                    .ionisx-btn(@white, @gg-emerald);
+
+                    font-size: 0.9em;
+                    margin-top: 1em;
+                }
+
+                .post-cancel {
+                    .ionisx-btn(@black, @gg-grey);
+
+                    font-size: 0.9em;
+                    margin-left: 1em;
+                    margin-top: 1em;
+                }
+
+                .moderator-actions {
+                    a {
+                        &.action-edit {
+                            .ionisx-btn(@white, @gg-alt-blue);
+
+                            font-size: 0.8em;
+                            padding: 0.2em 1.2em;
+                        }
+
+                        &.action-delete {
+                            .ionisx-btn(@white, @gg-pomegranate);
+
+                            font-size: 0.8em;
+                            padding: 0.2em 1.2em;
+                        }
+
+                        &.action-openclose {
+                            .ionisx-btn(@black, @gg-border-grey);
+
+                            font-size: 0.8em;
+                            padding: 0.2em 1.2em;
+                        }
+
+                        span {
+                            display: none;
+                            background: none;
+                        }
+                    }
+                }
+
+
+                .discussion-post {
+                    padding: 30px;
+                    box-shadow: none;
+                    border-bottom: 1px solid @gg-border-grey;
+
+                    h1 {
+                        font: inherit;
+                        font-size: @font-size-h2;
+                        font-weight: @headings-font-weight;
+                        color: @gg-blue;
+                        border: 0 none;
+                        padding: 0;
+                        margin: 0 0 0.5em 0;
+                    }
+
+                    header {
+                        h1 {
+                            font: inherit;
+                            font-size: @font-size-h2;
+                            font-weight: @headings-font-weight;
+                            color: @gg-blue;
+                            border: 0 none;
+                            padding: 0;
+                            margin: 0 0 0.5em 0;
+                        }
+
+                        p.posted-details {
+                            font: inherit;
+
+                            a.username {
+                                font-weight: 500;
+                                display: inline;
+
+                                &:before {
+                                    font-family: 'FontAwesome';
+                                    content: '\f007';
+                                    margin-right: 4px;
+                                }
+
+                                &:hover {
+                                    text-decoration: none;
+                                    color: fadeout(@gg-blue, 10%);
+                                }
+                            }
+
+                            .timeago {
+                                font: inherit;
+                                font-size: 0.8em;
+                                color: @gg-disabled-grey;
+                            }
+                        }
+                    }
+                }
+
+                .response-count {
+                    margin: 0;
+                    padding: 30px;
+                    border-bottom: 1px solid @gg-border-grey;
+                }
+
+                .add-response {
+                    margin: 0;
+                    padding: 30px 30px 0;
+
+                    button {
+                        .ionisx-btn(@white, @gg-alt-blue);
+
+                        width: 100%;
+                    }
+                }
+
+                ol.responses {
+                    margin: 0;
+                    padding: 30px;
+
+                    > li {
+                        .square(auto);
+
+                        display: block;
+                        margin: 0 0 1em 0;
+                        box-shadow: none;
+                        border: 1px solid @gg-border-grey;
+                        border-radius: @default-border-radius;
+                        transition: none;
+                        padding: 1em;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+
+                        .discussion-response {
+                            &.staff {
+                                .staff-banner {
+                                    .square(auto);
+
+                                    display: inline;
+                                    float: left;
+                                    font: inherit;
+                                    text-transform: none;
+                                    position: static;
+                                    background: none;
+                                    background-color: @gg-orange;
+                                    color: @white;
+                                    margin: 0 0.6em 0 0;
+                                    padding: 2px 8px;
+                                    border-radius: @default-border-radius;
+                                }
+                            }
+
+                            header {
+                                .posted-by {
+                                    font-weight: 500;
+                                    display: inline;
+
+                                    &:before {
+                                        font-family: 'FontAwesome';
+                                        content: '\f007';
+                                        margin-right: 4px;
+                                    }
+
+                                    &:hover {
+                                        text-decoration: none;
+                                        color: fadeout(@gg-blue, 10%);
+                                    }
+                                }
+
+                                .posted-details {
+                                    display: inline;
+                                    font: inherit;
+                                    font-size: 0.8em;
+                                    color: @gg-disabled-grey;
+                                }
+                            }
+                        }
+                        .comments {
+                            li {
+                                background-color: @gg-grey;
+
+                                .posted-details {
+                                    font: inherit;
+                                    color: @gg-disabled-grey;
+                                    font-size: 0.8em;
+
+                                    .timeago {
+                                        font: inherit;
+                                        font-weight: 600;
+                                    }
+
+                                    .staff-label {
+                                        font: inherit;
+                                        font-size: 0.8em;
+                                        background-color: @gg-orange;
+                                        color: @white;
+                                        margin: 0 0 0 5px;
+                                    }
+                                }
+                            }
+
+                            .new-comment {
+                                background: none;
+                                padding: 0;
+                                border: 0 none;
+
+                                .comment-form {
+                                    background: none;
+                                    background-color: @gg-grey;
+                                    padding: 1em 0.5em;
+                                    border-top: 1px solid @gg-border-grey;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
