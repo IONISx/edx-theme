@@ -74,7 +74,22 @@ module.exports = function (grunt) {
         // ## //
 
         autoprefixer: {
-            template: {
+            theme: {
+                files: {
+                    '<%= c.static %>/css/main.css': [
+                        '<%= c.static %>/css/main.css'
+                    ]
+                }
+            }
+        },
+
+        // ## //
+
+        cssmin: {
+            theme: {
+                options: {
+                    report: 'min'
+                },
                 files: {
                     '<%= c.static %>/css/main.css': [
                         '<%= c.static %>/css/main.css'
@@ -93,4 +108,11 @@ module.exports = function (grunt) {
             'watch'
         ]);
     });
+
+    grunt.registerTask('build', [
+        'jshint:browser',
+        'less',
+        'autoprefixer',
+        'cssmin'
+    ]);
 };
