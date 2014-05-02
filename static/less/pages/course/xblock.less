@@ -164,6 +164,31 @@
     }
 
     &.xmodule_CapaModule {
+        .problem {
+            p.inline-text {
+                display: inline;
+
+                + span {
+                    display: inline;
+                    margin-left: 5px;
+                    margin-right: -10px;
+
+                    > form {
+                        display: inline;
+
+                        select {
+                            margin-right: 5px;
+                        }
+
+                        span.status,
+                        span.unanswered {
+                            top: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
         button, input[type=button] {
             .ionisx-btn(@white, @gg-alt-blue);
 
