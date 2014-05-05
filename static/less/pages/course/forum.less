@@ -431,6 +431,7 @@
                         border: 1px solid @gg-border-grey;
                         border-radius: @default-border-radius;
                         transition: none;
+                        overflow: hidden;
                         padding: 0;
 
                         &:last-child {
@@ -438,6 +439,10 @@
                         }
 
                         .discussion-response {
+                            border-radius: @default-border-radius;
+                            background-color: @white;
+                            padding: 1em;
+
                             &.staff {
                                 .staff-banner {
                                     .square(auto);
@@ -484,6 +489,7 @@
                         .comments {
                             li {
                                 background-color: @gg-grey;
+                                padding: 0.6em 1em;
 
                                 .posted-details {
                                     font: inherit;
