@@ -42,14 +42,22 @@ module.exports = function (grunt) {
             browser: {
                 files: {
                     src: [
+                        '<%= c.static %>/js/**/*.js'
                     ]
                 },
                 options: {
                     'browser': true,
-                    'jquery': true,
-                    'globals': {
-                        'smoothScroll': true
-                    }
+                    'jquery': true
+                }
+            },
+            node: {
+                files: {
+                    src: [
+                        'Gruntfile.js'
+                    ]
+                },
+                options: {
+                    'node': true
                 }
             }
         },
