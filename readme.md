@@ -1,5 +1,7 @@
 # edx-theme
 
+[![Build Status](https://travis-ci.org/IONISx/edx-theme.svg?branch=master)](https://travis-ci.org/IONISx/edx-theme)
+
 > This repository contains the Open edX theme used by IONISx.
 
 ## Getting started
