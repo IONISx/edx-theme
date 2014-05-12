@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git://github.com/IONISx/edx-theme.git"
   },
+  "scripts": {
+    "test": "grunt test"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IONISx/edx-theme/issues"

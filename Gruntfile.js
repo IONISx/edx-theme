@@ -16,7 +16,7 @@ module.exports = function (grunt) {
         watch: {
             less: {
                 files: ['<%= c.static %>/less/**/*.less'],
-                tasks: ['less', 'autoprefixer']
+                tasks: ['less', 'autoprefixer', 'cssmin']
             }
         },
 
@@ -99,20 +99,23 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.registerTask('build', [
+        'less',
+        'autoprefixer',
+        'cssmin'
+    ]);
+
     grunt.registerTask('default', function () {
         grunt.option('force', true);
 
         grunt.task.run([
-            'less',
-            'autoprefixer',
+            'build',
             'watch'
         ]);
     });
 
-    grunt.registerTask('build', [
-        'jshint:browser',
-        'less',
-        'autoprefixer',
-        'cssmin'
+    grunt.registerTask('test', [
+        'jshint',
+        'build'
     ]);
 };
