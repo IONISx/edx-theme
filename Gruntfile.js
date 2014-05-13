@@ -40,24 +40,24 @@ module.exports = function (grunt) {
                 'eqnull': true
             },
             browser: {
+                options: {
+                    'browser': true,
+                    'jquery': true
+                },
                 files: {
                     src: [
                         '<%= c.static %>/js/**/*.js'
                     ]
-                },
-                options: {
-                    'browser': true,
-                    'jquery': true
                 }
             },
             node: {
+                options: {
+                    'node': true
+                },
                 files: {
                     src: [
                         'Gruntfile.js'
                     ]
-                },
-                options: {
-                    'node': true
                 }
             }
         },
