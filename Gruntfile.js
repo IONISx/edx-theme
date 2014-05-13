@@ -40,27 +40,27 @@ module.exports = function (grunt) {
                 'eqnull': true
             },
             browser: {
-                files: {
-                    src: [
-                        '<%= c.static %>/js/**/*.js'
-                    ]
-                },
                 options: {
                     'browser': true,
                     'jquery': true,
                     'globals': {
                         'IocCourses': true
                     }
+                },
+                files: {
+                    src: [
+                        '<%= c.static %>/js/**/*.js'
+                    ]
                 }
             },
             node: {
+                options: {
+                    'node': true
+                },
                 files: {
                     src: [
                         'Gruntfile.js'
                     ]
-                },
-                options: {
-                    'node': true
                 }
             }
         },
