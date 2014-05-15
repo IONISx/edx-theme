@@ -104,13 +104,32 @@ module.exports = function (grunt) {
                     ]
                 }
             }
+        },
+
+        // ## //
+
+        imagemin: {
+            theme: {
+                options: {
+                    report: 'min'
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= c.static %>/images/',
+                    dest: '<%= c.static %>/images/',
+                    src: [
+                        '**/*.{png,jpg,gif}'
+                    ]
+                }]
+            }
         }
     });
 
     grunt.registerTask('build', [
         'less',
         'autoprefixer',
-        'cssmin'
+        'cssmin',
+        'imagemin'
     ]);
 
     grunt.registerTask('default', function () {
