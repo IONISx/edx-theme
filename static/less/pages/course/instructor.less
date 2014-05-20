@@ -23,7 +23,12 @@
             }
         }
 
-        h2.instructor-nav {
+        .wrapper-msg {
+            .ionisx-alert();
+            .ionisx-alert-warning();
+        }
+
+        ul.instructor-nav {
             font: inherit;
             color: inherit;
             padding: 0;
@@ -32,21 +37,26 @@
             border-radius: @default-border-radius;
             overflow: hidden;
 
-            a {
-                float: none;
-                display: inline-block;
-                color: inherit;
-                padding: 0.5em 1em;
+            li {
+                padding: 0;
                 margin: 0;
 
-                &:hover {
-                    text-decoration: none;
-                    background-color: @gg-grey;
-                }
+                a {
+                    float: none;
+                    display: inline-block;
+                    color: inherit;
+                    padding: 0.5em 1em;
+                    margin: 0;
 
-                &.active-section {
-                    background-color: @gg-alt-blue;
-                    color: @white;
+                    &:hover {
+                        text-decoration: none;
+                        background-color: @gg-grey;
+                    }
+
+                    &.active-section {
+                        background-color: @gg-alt-blue;
+                        color: @white;
+                    }
                 }
             }
         }
