@@ -1,19 +1,27 @@
-.wrapper-footer {
-    border: 0 none;
-    box-shadow: none;
+footer {
     background-color: @gg-blue;
+    color: @gg-grey;
+    padding: 30px 0;
     font-size: 0.9em;
+    overflow: hidden;
 
-    > footer {
+    .footer-container {
         .ionisx-container();
 
-        > p {
-            color: @white;
-            margin: 0;
+        i.icon-envelope {
+            margin-right: 5px;
+        }
 
-            > a, > a:link, > a:visited {
-                color: @white;
+        a, a:link, a:visited {
+            color: inherit;
+
+            &:hover {
+                color: inherit;
             }
+        }
+
+        p:last-child {
+            margin-bottom: 0;
         }
     }
 }
