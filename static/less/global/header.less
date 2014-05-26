@@ -98,6 +98,7 @@ header.global, header.global.slim {
                 border-radius: 0;
                 border-top-left-radius: 4px;
                 border-bottom-left-radius: 4px;
+                border-radius: @default-border-radius 0 0 @default-border-radius;
 
                 &.user-link {
                     max-width: 120px;
@@ -110,9 +111,8 @@ header.global, header.global.slim {
                 &.dropdown {
                     padding: 8px 10px;
                     border-left: none;
-                    border-radius: 0;
-                    border-top-right-radius: 4px;
-                    border-bottom-right-radius: 4px;
+                    border-radius: 0 @default-border-radius @default-border-radius 0;
+                    letter-spacing: normal;
                 }
 
                 > span.avatar {
@@ -122,6 +122,8 @@ header.global, header.global.slim {
             }
 
             ul.dropdown-menu {
+                .square(auto);
+
                 padding: 0;
                 z-index: 10;
                 top: 36px;
