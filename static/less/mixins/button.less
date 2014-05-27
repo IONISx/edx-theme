@@ -16,6 +16,12 @@
     outline: none;
     overflow: hidden;
 
+    &:focus {
+        background-color: @bg-color;
+        color: @fg-color;
+        border-color: @fg-color;
+    }
+
     & when (@fg-color = @white) {
         border-color: @bg-color;
     }
@@ -24,7 +30,14 @@
         border-color: @bg-color;
     }
 
-    &:hover, &:active, &:focus {
+    &:focus, &:active {
+        .ionisx-btn-hover(@fg-color, @bg-color);
+
+        border-color: @bg-color;
+        outline: none;
+    }
+
+    &:hover {
         .ionisx-btn-hover(@fg-color, @bg-color);
     }
 }
@@ -35,7 +48,6 @@
     color: @bg-color;
     border-color: @bg-color;
     box-shadow: none;
-    outline: none;
 
     & when (@bg-color = @white) {
         border-color: @fg-color;
