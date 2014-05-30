@@ -16,8 +16,7 @@
   if cert_name_long == "":
     cert_name_long = settings.CERT_NAME_LONG
 
-  course_about_url = "https://courses.ionisx.com{path}".format(
-                      path=reverse('about_course', args=[course.id]))
+  course_about_url = reverse('about_course', args=[course.id.to_deprecated_string()])
 %>
 
 <%namespace name='static' file='../static_content.html'/>
@@ -67,16 +66,16 @@
 
       % if enrollment.mode != "verified":
       ## Translators: The course's name will be added to the end of this sentence.
-      <a href="#unenroll-modal" rel="leanModal" class="unregister unenroll" data-course-id="${course.id}" data-course-number="${course.number}" onclick="document.getElementById('track-info').innerHTML='${_("Are you sure you want to unregister from")}'; document.getElementById('refund-info').innerHTML=''">
+      <a href="#unenroll-modal" rel="leanModal" class="unregister unenroll" data-course-id="${course.id.to_deprecated_string()}" data-course-number="${course.number}" onclick="document.getElementById('track-info').innerHTML='${_("Are you sure you want to unregister from")}'; document.getElementById('refund-info').innerHTML=''">
       </a>
       % elif show_refund_option:
       ## Translators: The course's name will be added to the end of this sentence.
-      <a href="#unenroll-modal" rel="leanModal" class="unregister unenroll" data-course-id="${course.id}" data-course-number="${course.number}" onclick="document.getElementById('track-info').innerHTML='${_("Are you sure you want to unregister from the verified {cert_name_long} track of").format(cert_name_long=cert_name_long)}';
+      <a href="#unenroll-modal" rel="leanModal" class="unregister unenroll" data-course-id="${course.id.to_deprecated_string()}" data-course-number="${course.number}" onclick="document.getElementById('track-info').innerHTML='${_("Are you sure you want to unregister from the verified {cert_name_long} track of").format(cert_name_long=cert_name_long)}';
         document.getElementById('refund-info').innerHTML=gettext('You will be refunded the amount you paid.')">
       </a>
       % else:
       ## Translators: The course's name will be added to the end of this sentence.
-      <a href="#unenroll-modal" rel="leanModal" class="unregister unenroll" data-course-id="${course.id}" data-course-number="${course.number}" onclick="document.getElementById('track-info').innerHTML='${_("Are you sure you want to unregister from the verified {cert_name_long} track of").format(cert_name_long=cert_name_long)}';
+      <a href="#unenroll-modal" rel="leanModal" class="unregister unenroll" data-course-id="${course.id.to_deprecated_string()}" data-course-number="${course.number}" onclick="document.getElementById('track-info').innerHTML='${_("Are you sure you want to unregister from the verified {cert_name_long} track of").format(cert_name_long=cert_name_long)}';
         document.getElementById('refund-info').innerHTML=gettext('The refund deadline for this course has passed, so you will not receive a refund.')">
       </a>
       % endif
