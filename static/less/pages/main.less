@@ -8,13 +8,15 @@ body,
         margin: 0;
         padding: 0;
         background: none;
-        min-height: 100vh;
-        margin-top: -@layout-header-height - @layout-footer-height;
-        padding-top: @layout-header-height + @layout-footer-height;
         padding-bottom: @layout-bottom-spacing;
+
+        @media (min-width: @screen-md-min) {
+            min-height: 100vh;
+            margin-top: -@layout-header-height - @layout-footer-height;
+            padding-top: @layout-header-height + @layout-footer-height;
+        }
     }
 }
-
 
 .content-wrapper {
     .introduction {
