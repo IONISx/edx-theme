@@ -87,11 +87,16 @@ section.course-info {
                     }
 
                     .social-sharing {
-                        .pull-left();
-
+                        float: left;
                         display: block;
                         margin: 20px 0 0 0;
                         padding-right: 10px;
+
+                        @media (max-width: @screen-sm-max) {
+                            float: none;
+                            text-align: center;
+                            margin: 0;
+                        }
 
                         a {
                             text-decoration: none;
@@ -120,6 +125,11 @@ section.course-info {
                         margin: 20px 0 0 0;
                         padding: 0 0 0 20px;
                         border-left: 1px solid @gg-border-grey;
+
+                        @media (max-width: @screen-sm-max) {
+                            padding: 0;
+                            border: 0 none;
+                        }
 
                         > span.register.disabled {
                             .ionisx-btn-disabled();
