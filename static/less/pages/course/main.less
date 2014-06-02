@@ -24,6 +24,21 @@
 
                 &:last-child {
                     margin: 0;
+
+                    @media (max-width: @screen-xs-max) {
+                        &.right {
+                            .clearfix();
+                            .square(auto);
+
+                            float: none;
+
+                            a {
+                                .size(100%, auto);
+
+                                margin-top: 10px;
+                            }
+                        }
+                    }
                 }
 
                 a {
@@ -89,6 +104,10 @@
         border: 1px solid @gg-border-grey;
         border-radius: @default-border-radius;
         overflow: hidden;
+
+        @media (max-width: @screen-xs-max) {
+            padding: 10px;
+        }
 
         .wrap-instructor-info {
             float: right;
