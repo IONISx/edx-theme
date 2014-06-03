@@ -31,18 +31,19 @@ header.global, header.global.slim {
             }
 
             a {
-                .size(273px, 48px);
+                .size(@logo-img-width, 48px);
 
                 text-indent: 100%;
                 white-space: nowrap;
                 overflow: hidden;
-                background-image: url(../images/logo-white.png);
+                background-image: url(@logo-img-path);
                 background-size: contain;
+                background-repeat: no-repeat;
 
                 @media (max-width: @screen-xs-max) {
-                    .size(70px, 48px);
+                    .size(@logo-sm-img-width, 48px);
 
-                    background-image: url(../images/logo-x-white.png);
+                    background-image: url(@logo-sm-img-path);
                 }
             }
         }
