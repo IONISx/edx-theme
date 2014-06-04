@@ -164,6 +164,8 @@
                     border: 1px solid @gg-grey;
                     border-radius: @default-border-radius;
                     float: left;
+                    display: block;
+                    min-height: 126px;
 
                     @media (max-width: @screen-sm-max) {
                         .size(100%, auto);
@@ -221,7 +223,57 @@
                         .square(auto);
 
                         overflow: hidden;
-                        padding: 0 0 2em 1em;
+                        padding: 0 0 0 1em;
+                    }
+
+                    hgroup {
+                        margin: 0;
+
+                        @media (min-width: @screen-md-min) {
+                            margin: 0 0 38px 0;
+                        }
+
+                        h3 {
+                            margin-top: 0;
+
+                            a {
+                                font: inherit;
+                            }
+                        }
+
+                        .university {
+                            font: inherit;
+                            color: inherit;
+                            margin: 0;
+                        }
+
+                        .date-block {
+                            font: inherit;
+                            color: inherit;
+                            font-size: 0.9em;
+                            position: static;
+
+                            @media (min-width: @screen-md-min) {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+
+                    .unenroll, .email-settings {
+                        font: inherit;
+                        color: inherit;
+                        font-size: 0.8em;
+                        margin-top: 15px;
+                        text-decoration: underline;
+
+                        @media (min-width: @screen-md-min) {
+                            display: inline;
+                            float: right;
+                            vertical-align: bottom;
+                            margin: 1.2em 0 0 0.5em;
+                        }
                     }
 
                     h4 {
@@ -230,29 +282,6 @@
 
                     hr {
                         display: none;
-                    }
-
-                    .unregister {
-                        text-decoration: none;
-                        line-height: inherit;
-                        position: absolute;
-                        font: inherit;
-                        float: none;
-                        padding: 0;
-                        margin: 0;
-                        right: -10px;
-                        top: -19px;
-
-                        @media (max-width: @screen-sm-max) {
-                            top: -29px;
-                        }
-
-                        &:before {
-                            font-family: 'FontAwesome';
-                            font-size: 1.2em;
-                            color: @gg-pomegranate;
-                            content: '\f00d';
-                        }
                     }
 
                     p {
@@ -268,9 +297,48 @@
 
                         @media (min-width: @screen-md-min) {
                             .square(auto);
+                        }
+                    }
+                }
 
+                &.ionisxed {
+                    .info {
+                        @media (min-width: @screen-md-min) {
+                            padding: 0 0 2em 1em;
+                        }
+
+                        hgroup {
+                            margin: 0;
+                        }
+
+                        .unregister {
+                            text-decoration: none;
+                            line-height: inherit;
                             position: absolute;
-                            bottom: 0;
+                            font: inherit;
+                            float: none;
+                            padding: 0;
+                            margin: 0;
+                            right: -10px;
+                            top: -19px;
+
+                            @media (max-width: @screen-sm-max) {
+                                top: -29px;
+                            }
+
+                            &:before {
+                                font-family: 'FontAwesome';
+                                font-size: 1.2em;
+                                color: @gg-pomegranate;
+                                content: '\f00d';
+                            }
+                        }
+
+                        .enter-course {
+                            @media (min-width: @screen-md-min) {
+                                position: absolute;
+                                bottom: 0;
+                            }
                         }
                     }
                 }
