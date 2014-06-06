@@ -16,11 +16,11 @@
         border: 0 none;
         transition: none;
         box-sizing: border-box;
-        border-right: 1px solid @gg-border-grey;
+        border-right: 1px solid @color-border;
 
         @media (max-width: @screen-sm-max) {
             border-right: none;
-            border-bottom: 2px solid @gg-border-grey;
+            border-bottom: 2px solid @color-border;
         }
 
         #accordion {
@@ -30,7 +30,7 @@
             .chapter {
                 border-radius: 0;
                 box-shadow: none;
-                border-bottom: 1px solid @gg-border-grey;
+                border-bottom: 1px solid @color-border;
                 padding: 0;
 
                 &:last-child {
@@ -75,7 +75,7 @@
 
                         a {
                             font: inherit;
-                            color: @gg-blue;
+                            color: @color-primary;
                             background: none;
                             padding: 0.3em 0.5em;
                             border-radius: @default-border-radius;
@@ -83,7 +83,7 @@
                             box-shadow: none;
 
                             &:hover {
-                                border-color: @gg-border-grey;
+                                border-color: @color-border;
                             }
 
                             p {
@@ -111,8 +111,8 @@
                             font: inherit;
 
                             a {
-                                border-color: @gg-blue;
-                                background-color: @gg-blue;
+                                border-color: @color-primary;
+                                background-color: @color-primary;
                                 color: @white;
                             }
                         }
@@ -148,7 +148,7 @@
 
                     background: none;
                     box-shadow: none;
-                    border: 3px solid @gg-border-grey;
+                    border: 3px solid @color-border;
                     overflow: hidden;
 
                     &.prev {
@@ -168,7 +168,7 @@
                         background-position: center 12px;
 
                         &.disabled {
-                            background-color: @gg-border-grey;
+                            background-color: @color-border;
                         }
                     }
                 }
@@ -192,11 +192,11 @@
                         min-width: 0;
 
                         &:first-child a {
-                            border-left: 3px solid @gg-border-grey;
+                            border-left: 3px solid @color-border;
                         }
 
                         &:last-child a {
-                            border-right: 3px solid @gg-border-grey;
+                            border-right: 3px solid @color-border;
                         }
 
                         a {
@@ -207,70 +207,70 @@
                             border: 0 none;
                             box-shadow: none;
                             color: @white;
-                            border-top: 3px solid @gg-border-grey;
-                            border-bottom: 3px solid @gg-border-grey;
+                            border-top: 3px solid @color-border;
+                            border-bottom: 3px solid @color-border;
 
                             @media (max-width: @screen-sm-max) {
                                 display: none;
                             }
 
                             &.active {
-                                border-color: @gg-blue;
-                                color: @gg-blue;
+                                border-color: @color-primary;
+                                color: @color-primary;
 
                                 @media (max-width: @screen-sm-max) {
                                     display: block;
-                                    border: 3px solid @gg-blue;
+                                    border: 3px solid @color-primary;
                                 }
 
                                 &.progress-none {
-                                    border-color: @gg-blue;
-                                    color: @gg-blue;
+                                    border-color: @color-primary;
+                                    color: @color-primary;
                                 }
 
                                 &.progress-some {
-                                    border-color: @gg-orange;
-                                    color: @gg-orange;
+                                    border-color: @color-warning;
+                                    color: @color-warning;
                                 }
 
                                 &.progress-in_progress {
-                                    border-color: @gg-orange;
-                                    color: @gg-orange;
+                                    border-color: @color-warning;
+                                    color: @color-warning;
                                 }
 
                                 &.progress-done {
-                                    border-color: @gg-emerald;
-                                    color: @gg-emerald;
+                                    border-color: @color-success;
+                                    color: @color-success;
                                 }
                             }
 
                             &.inactive, &.visited {
                                 &.progress-none, &.progress-0 {
-                                    background-color: @gg-border-grey;
+                                    background-color: @color-border;
 
                                     &:hover {
                                         background: @white;
-                                        color: @gg-border-grey;
+                                        color: @color-border;
                                     }
                                 }
 
                                 &.progress-some, &.progress-in_progress {
-                                    background-color: @gg-orange;
-                                    border-color: @gg-orange;
+                                    background-color: @color-warning;
+                                    border-color: @color-warning;
 
                                     &:hover {
                                         background-color: @white;
-                                        color: @gg-orange;
+                                        color: @color-warning;
                                     }
                                 }
 
                                 &.progress-done {
-                                    background-color: @gg-emerald;
-                                    border-color: @gg-emerald;
+                                    background-color: @color-success;
+                                    border-color: @color-success;
 
                                     &:hover {
                                         background-color: @white;
-                                        color: @gg-emerald;
+                                        color: @color-success;
                                     }
                                 }
                             }
@@ -321,7 +321,7 @@
 
                     background: none;
                     box-shadow: none;
-                    border: 3px solid @gg-border-grey;
+                    border: 3px solid @color-border;
                     overflow: hidden;
 
                     &.prev {
@@ -336,7 +336,7 @@
                         background-position: center 0.85em;
 
                         &.disabled {
-                            background-color: @gg-border-grey;
+                            background-color: @color-border;
                         }
                     }
                 }

@@ -5,14 +5,14 @@ header.global, header.global.slim {
 
     padding: 0;
     border: 0 none;
-    background-color: @gg-blue;
+    background-color: @color-primary;
     margin-bottom: 0;
     transition: all .2s ease-in;
     box-shadow: none;
     border-radius: 0 !important;
 
     &:hover {
-        background-color: fadeout(@gg-blue, 20%);
+        background-color: fadeout(@color-primary, 20%);
     }
 
     > nav {
@@ -57,7 +57,7 @@ header.global, header.global.slim {
             margin: 0.9em 0 0 0;
             padding: 0;
             text-shadow: none;
-            color: @gg-grey;
+            color: @color-background;
 
             @media (max-width: @screen-sm-max) {
                 display: none;
@@ -74,7 +74,7 @@ header.global, header.global.slim {
             > li > a {
                 padding: 0;
                 font-weight: 500;
-                color: @gg-grey;
+                color: @color-background;
 
                 &:hover {
                     color: @white;
@@ -95,7 +95,7 @@ header.global, header.global.slim {
             margin: 0;
 
             > li > a.cta-login {
-                .ionisx-btn(@gg-blue, @white);
+                .ionisx-btn(@color-primary, @white);
             }
         }
 
@@ -103,7 +103,7 @@ header.global, header.global.slim {
             margin: 0;
 
             > li.primary > a {
-                .ionisx-btn(@gg-blue, @white);
+                .ionisx-btn(@color-primary, @white);
 
                 border-radius: 0;
                 border-top-left-radius: 4px;
@@ -115,7 +115,7 @@ header.global, header.global.slim {
                 }
 
                 &.dropdown.active {
-                    .ionisx-btn-hover(@gg-blue, @white);
+                    .ionisx-btn-hover(@color-primary, @white);
                 }
 
                 &.dropdown {
@@ -140,7 +140,7 @@ header.global, header.global.slim {
                 left: initial;
                 right: 0;
                 box-shadow: none;
-                border: 1px solid @gg-blue;
+                border: 1px solid @color-primary;
                 border-top: 0 none;
                 border-top-right-radius: 0;
                 background-color: @white;
@@ -159,7 +159,7 @@ header.global, header.global.slim {
                     }
 
                     &:hover {
-                        background-color: @gg-blue;
+                        background-color: @color-primary;
 
                         > a {
                             color: @white;
@@ -169,7 +169,7 @@ header.global, header.global.slim {
                     > a {
                         border: 0 none;
                         outline: none;
-                        color: @gg-blue;
+                        color: @color-primary;
                         padding: 0;
                         letter-spacing: normal;
 
