@@ -50,7 +50,7 @@
                             .text-right();
 
                             font: inherit;
-                            color: @gg-blue;
+                            color: @color-primary;
                             margin: 0 10px 0 0;
                             float: none;
                             display: inline-block;
@@ -111,7 +111,7 @@
             }
 
             > a {
-                .ionisx-btn(@white, @gg-alt-blue);
+                .ionisx-btn(@white, @color-secondary);
 
                 font-size: 0.9em;
             }
@@ -124,7 +124,7 @@
                 margin: 0 0 30px 0;
                 transition: all .1s ease-in;
                 background-color: @white;
-                border: 1px solid @gg-border-grey;
+                border: 1px solid @color-border;
                 border-radius: @default-border-radius;
                 padding: 20px;
 
@@ -147,7 +147,7 @@
                 }
 
                 &:hover {
-                    border-color: @gg-blue;
+                    border-color: @color-primary;
                 }
 
                 &:last-child {
@@ -157,11 +157,11 @@
                 .cover {
                     .size(200px, auto);
 
-                    background-color: @gg-grey;
+                    background-color: @color-background;
                     transition: none;
                     max-height: none;
                     text-align: center;
-                    border: 1px solid @gg-grey;
+                    border: 1px solid @color-background;
                     border-radius: @default-border-radius;
                     float: left;
                     display: block;
@@ -191,7 +191,7 @@
                         font-size: 0.9em;
 
                         &.cover-university {
-                            color: @gg-blue;
+                            color: @color-primary;
                             font-weight: @headings-font-weight;
                             font-size: 0.9em;
                         }
@@ -199,15 +199,15 @@
                         &.cover-course-status {
 
                             &.course-soon {
-                                color: @gg-disabled-grey;
+                                color: @color-disabled;
                             }
 
                             &.course-open {
-                                color: @gg-emerald;
+                                color: @color-success;
                             }
 
                             &.course-ended {
-                                color: @gg-pomegranate;
+                                color: @color-error;
                             }
                         }
                     }
@@ -290,7 +290,7 @@
                     }
 
                     .enter-course {
-                        .ionisx-btn(@white, @gg-alt-blue);
+                        .ionisx-btn(@white, @color-secondary);
                         .size(100%, auto);
 
                         font-size: 0.9em;
@@ -329,7 +329,7 @@
                             &:before {
                                 font-family: 'FontAwesome';
                                 font-size: 1.2em;
-                                color: @gg-pomegranate;
+                                color: @color-error;
                                 content: '\f00d';
                             }
                         }

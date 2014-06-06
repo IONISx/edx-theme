@@ -6,12 +6,12 @@
                 margin: 0 0 2em 0;
                 padding: 0 0 2em 0;
                 position: relative;
-                border-bottom: 1px solid @gg-border-grey;
+                border-bottom: 1px solid @color-border;
 
                 &:after {
                     content: '\f103';
                     font-family: 'FontAwesome';
-                    color: @gg-border-grey;
+                    color: @color-border;
                     display: block;
                     margin: 2em 0 0 0;
                     text-align: center;
@@ -62,7 +62,7 @@
 
     &.xmodule_DiscussionModule {
         .discussion-module {
-            border: 1px solid @gg-border-grey;
+            border: 1px solid @color-border;
             border-radius: @default-border-radius;
 
             .discussion {
@@ -90,7 +90,7 @@
                         > .new-post-form {
                             .square(auto);
 
-                            border: 1px solid @gg-border-grey;
+                            border: 1px solid @color-border;
                             border-radius: @default-border-radius;
                             margin: 0;
                             background: none;
@@ -126,13 +126,13 @@
                             }
 
                             input[type=submit] {
-                                .ionisx-btn(@white, @gg-emerald);
+                                .ionisx-btn(@white, @color-success);
 
                                 font-size: 0.9em;
                             }
 
                             .new-post-cancel {
-                                .ionisx-btn(@black, @gg-grey);
+                                .ionisx-btn(@black, @color-background);
 
                                 font-size: 0.9em;
                                 margin-left: 1em;
@@ -144,7 +144,7 @@
         }
 
         .new-post-btn {
-            .ionisx-btn(@white, @gg-alt-blue);
+            .ionisx-btn(@white, @color-secondary);
 
             font-size: 0.9em;
 
@@ -189,7 +189,7 @@
         }
 
         button, input[type=button] {
-            .ionisx-btn(@white, @gg-alt-blue);
+            .ionisx-btn(@white, @color-secondary);
 
             font-size: 0.9em;
             display: inline;
@@ -202,7 +202,7 @@
 
         .submission_feedback {
             font: inherit;
-            color: @gg-disabled-grey;
+            color: @color-disabled;
         }
 
         .action {
@@ -219,7 +219,7 @@
 
     .taggedtext {
         button, input[type=button] {
-            .ionisx-btn(@white, @gg-alt-blue);
+            .ionisx-btn(@white, @color-secondary);
 
             font-size: 0.9em;
             display: inline;
@@ -232,7 +232,7 @@
 
         .submission_feedback {
             font: inherit;
-            color: @gg-disabled-grey;
+            color: @color-disabled;
         }
     }
 }

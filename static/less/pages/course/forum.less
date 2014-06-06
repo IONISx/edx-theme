@@ -13,7 +13,7 @@
         > .new-post-form {
             .square(auto);
 
-            border: 1px solid @gg-border-grey;
+            border: 1px solid @color-border;
             border-radius: @default-border-radius;
             margin: 0;
             background: none;
@@ -91,13 +91,13 @@
                 }
 
                 input[type=submit] {
-                    .ionisx-btn(@white, @gg-emerald);
+                    .ionisx-btn(@white, @color-success);
 
                     font-size: 0.9em;
                 }
 
                 .new-post-cancel {
-                    .ionisx-btn(@black, @gg-grey);
+                    .ionisx-btn(@black, @color-background);
 
                     font-size: 0.9em;
                     margin-left: 1em;
@@ -117,7 +117,7 @@
         overflow: visible;
 
         > .sidebar {
-            border: 1px solid @gg-border-grey;
+            border: 1px solid @color-border;
             border-radius: @default-border-radius;
             box-shadow: none;
             display: block;
@@ -153,7 +153,7 @@
                             background: none;
                             box-shadow: none;
                             color: @black;
-                            border-bottom: 1px solid @gg-border-grey;
+                            border-bottom: 1px solid @color-border;
                             margin: 0;
                             padding: 0 0.4em 0 1.9em;
 
@@ -163,7 +163,7 @@
                                 position: absolute;
                                 left: 0.5em;
                                 top: 0.75em;
-                                color: @gg-blue;
+                                color: @color-primary;
                             }
 
                             span {
@@ -202,7 +202,7 @@
                             }
 
                             &.active {
-                                background: @gg-blue;
+                                background: @color-primary;
                                 color: @white;
 
                                 &:before {
@@ -240,7 +240,7 @@
         }
 
         > .discussion-column {
-            border: 1px solid @gg-border-grey;
+            border: 1px solid @color-border;
             border-radius: @default-border-radius;
             box-shadow: none;
             background: none;
@@ -263,7 +263,7 @@
                     }
 
                     .home-header {
-                        border-bottom: 1px solid @gg-border-grey;
+                        border-bottom: 1px solid @color-border;
                         margin: 0 0 1em 0;
 
                         .label {
@@ -274,7 +274,7 @@
                             font: inherit;
                             font-size: @font-size-h2;
                             font-weight: @headings-font-weight;
-                            color: @gg-blue;
+                            color: @color-primary;
                             border: 0 none;
                             padding: 0;
                             margin: 0 0 0.5em 0;
@@ -311,14 +311,14 @@
                 input[type=submit],
                 .discussion-submit-post,
                 .discussion-submit-comment {
-                    .ionisx-btn(@white, @gg-emerald);
+                    .ionisx-btn(@white, @color-success);
 
                     font-size: 0.9em;
                     margin-top: 1em;
                 }
 
                 .post-cancel {
-                    .ionisx-btn(@black, @gg-grey);
+                    .ionisx-btn(@black, @color-background);
 
                     font-size: 0.9em;
                     margin-left: 1em;
@@ -328,21 +328,21 @@
                 .moderator-actions {
                     a {
                         &.action-edit {
-                            .ionisx-btn(@white, @gg-alt-blue);
+                            .ionisx-btn(@white, @color-secondary);
 
                             font-size: 0.8em;
                             padding: 0.2em 1.2em;
                         }
 
                         &.action-delete {
-                            .ionisx-btn(@white, @gg-pomegranate);
+                            .ionisx-btn(@white, @color-error);
 
                             font-size: 0.8em;
                             padding: 0.2em 1.2em;
                         }
 
                         &.action-openclose {
-                            .ionisx-btn(@black, @gg-border-grey);
+                            .ionisx-btn(@black, @color-border);
 
                             font-size: 0.8em;
                             padding: 0.2em 1.2em;
@@ -359,7 +359,7 @@
                 .discussion-post {
                     padding: 30px;
                     box-shadow: none;
-                    border-bottom: 1px solid @gg-border-grey;
+                    border-bottom: 1px solid @color-border;
 
                     @media (max-width: @screen-xs-max) {
                         padding: 10px;
@@ -369,7 +369,7 @@
                         font: inherit;
                         font-size: @font-size-h2;
                         font-weight: @headings-font-weight;
-                        color: @gg-blue;
+                        color: @color-primary;
                         border: 0 none;
                         padding: 0;
                         margin: 0 0 0.5em 0;
@@ -380,7 +380,7 @@
                             font: inherit;
                             font-size: @font-size-h2;
                             font-weight: @headings-font-weight;
-                            color: @gg-blue;
+                            color: @color-primary;
                             border: 0 none;
                             padding: 0;
                             margin: 0 0 0.5em 0;
@@ -409,14 +409,14 @@
 
                                 &:hover {
                                     text-decoration: none;
-                                    color: fadeout(@gg-blue, 10%);
+                                    color: fadeout(@color-primary, 10%);
                                 }
                             }
 
                             .timeago {
                                 font: inherit;
                                 font-size: 0.8em;
-                                color: @gg-disabled-grey;
+                                color: @color-disabled;
                             }
                         }
                     }
@@ -425,7 +425,7 @@
                 .response-count {
                     margin: 0;
                     padding: 20px 30px;
-                    border-bottom: 1px solid @gg-border-grey;
+                    border-bottom: 1px solid @color-border;
 
                     @media (max-width: @screen-xs-max) {
                         padding: 10px;
@@ -441,7 +441,7 @@
                     }
 
                     button {
-                        .ionisx-btn(@white, @gg-alt-blue);
+                        .ionisx-btn(@white, @color-secondary);
 
                         width: 100%;
                     }
@@ -461,7 +461,7 @@
                         display: block;
                         margin: 0 0 1em 0;
                         box-shadow: none;
-                        border: 1px solid @gg-border-grey;
+                        border: 1px solid @color-border;
                         border-radius: @default-border-radius;
                         transition: none;
                         overflow: hidden;
@@ -486,7 +486,7 @@
                                     text-transform: none;
                                     position: static;
                                     background: none;
-                                    background-color: @gg-orange;
+                                    background-color: @color-warning;
                                     color: @white;
                                     margin: 0 0.6em 0 0;
                                     padding: 2px 8px;
@@ -507,7 +507,7 @@
 
                                     &:hover {
                                         text-decoration: none;
-                                        color: fadeout(@gg-blue, 10%);
+                                        color: fadeout(@color-primary, 10%);
                                     }
                                 }
 
@@ -515,18 +515,18 @@
                                     display: inline;
                                     font: inherit;
                                     font-size: 0.8em;
-                                    color: @gg-disabled-grey;
+                                    color: @color-disabled;
                                 }
                             }
                         }
                         .comments {
                             li {
-                                background-color: @gg-grey;
+                                background-color: @color-background;
                                 padding: 0.6em 1em;
 
                                 .posted-details {
                                     font: inherit;
-                                    color: @gg-disabled-grey;
+                                    color: @color-disabled;
                                     font-size: 0.8em;
 
                                     .timeago {
@@ -537,7 +537,7 @@
                                     .staff-label {
                                         font: inherit;
                                         font-size: 0.8em;
-                                        background-color: @gg-orange;
+                                        background-color: @color-warning;
                                         color: @white;
                                         margin: 0 0 0 5px;
                                     }
@@ -551,9 +551,9 @@
 
                                 .comment-form {
                                     background: none;
-                                    background-color: @gg-grey;
+                                    background-color: @color-background;
                                     padding: 1em;
-                                    border-top: 1px solid @gg-border-grey;
+                                    border-top: 1px solid @color-border;
                                 }
                             }
                         }
@@ -564,8 +564,8 @@
                     padding: 20px 30px;
                     box-shadow: none;
                     background: none;
-                    border-top: 1px solid @gg-border-grey;
-                    border-bottom: 1px solid @gg-border-grey;
+                    border-top: 1px solid @color-border;
+                    border-bottom: 1px solid @color-border;
 
                     @media (max-width: @screen-xs-max) {
                         padding: 10px;

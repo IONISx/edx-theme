@@ -13,7 +13,7 @@
             font: inherit;
             font-size: @font-size-h2;
             font-weight: @headings-font-weight;
-            color: @gg-blue;
+            color: @color-primary;
             border: 0 none;
             padding: 0;
             margin: 0 0 1.5em 0;
@@ -33,7 +33,7 @@
             color: inherit;
             padding: 0;
             margin: 0;
-            border: 1px solid @gg-border-grey;
+            border: 1px solid @color-border;
             border-radius: @default-border-radius;
             overflow: hidden;
 
@@ -50,11 +50,11 @@
 
                     &:hover {
                         text-decoration: none;
-                        background-color: @gg-grey;
+                        background-color: @color-background;
                     }
 
                     &.active-section {
-                        background-color: @gg-alt-blue;
+                        background-color: @color-secondary;
                         color: @white;
                     }
                 }
@@ -70,7 +70,7 @@
         }
 
         input[type=button] {
-            .ionisx-btn(@white, @gg-alt-blue);
+            .ionisx-btn(@white, @color-secondary);
 
             font-size: 0.9em;
         }

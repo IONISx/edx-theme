@@ -7,7 +7,7 @@
     color: inherit;
     box-shadow: none;
     border-radius: @default-border-radius;
-    border: 2px solid @gg-border-grey;
+    border: 2px solid @color-border;
     outline: none;
     padding: 0.6em 1em;
     transition: all .1s ease-in;
@@ -23,29 +23,29 @@
     }
 
     &.valid-input {
-        border-color: @gg-emerald;
+        border-color: @color-success;
 
         & + span:after {
-            color: @gg-emerald;
+            color: @color-success;
             content: '\f058';
         }
     }
 
     &.invalid-input {
-        border-color: @gg-pomegranate;
+        border-color: @color-error;
 
         & + span:after {
-            color: @gg-pomegranate;
+            color: @color-error;
             content: '\f057';
         }
     }
 
     &:focus, &:active {
-        border-color: @gg-blue;
+        border-color: @color-primary;
         box-shadow: none;
 
         & + span:after {
-            color: @gg-blue;
+            color: @color-primary;
         }
     }
 }

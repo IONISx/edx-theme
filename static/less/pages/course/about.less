@@ -4,7 +4,7 @@ section.course-info {
     header.course-profile {
         .square(auto);
 
-        background-color: @gg-blue;
+        background-color: @color-primary;
         border: 0 none;
         box-shadow: none;
         margin: 0;
@@ -18,7 +18,7 @@ section.course-info {
             background: none;
 
             .table {
-                background-color: @gg-grey;
+                background-color: @color-background;
                 display: block;
                 border-radius: @default-border-radius;
 
@@ -106,12 +106,12 @@ section.course-info {
                                 font-size: 42px;
                                 line-height: 44px;
                                 transition: all .1s ease-in;
-                                color: @gg-emerald;
+                                color: @color-success;
                             }
 
                             &:hover {
                                 span {
-                                    color: fadeout(@gg-emerald, 50%);
+                                    color: fadeout(@color-success, 50%);
                                 }
                             }
                         }
@@ -124,7 +124,7 @@ section.course-info {
                         float: none;
                         margin: 20px 0 0 0;
                         padding: 0 0 0 20px;
-                        border-left: 1px solid @gg-border-grey;
+                        border-left: 1px solid @color-border;
 
                         @media (max-width: @screen-sm-max) {
                             padding: 0;
@@ -142,7 +142,7 @@ section.course-info {
                             padding: 0;
 
                             strong, &.register, &.add-to-cart {
-                                .ionisx-btn(@white, @gg-alt-blue);
+                                .ionisx-btn(@white, @color-secondary);
                                 .size(49%, auto);
 
                                 @media (max-width: @screen-xs-max) {
@@ -170,7 +170,7 @@ section.course-info {
                             }
 
                             span.register.disabled.private {
-                                .ionisx-btn-disabled(@gg-pomegranate);
+                                .ionisx-btn-disabled(@color-error);
                                 .size(100%, auto);
                             }
                         }
@@ -193,13 +193,13 @@ section.course-info {
             table.course-summary {
                 .table-rounded(4px);
 
-                border: 1px solid @gg-border-grey;
+                border: 1px solid @color-border;
                 table-layout: fixed;
                 margin: 0 0 60px 0;
                 width: 100%;
 
                 thead {
-                    background-color: @gg-blue;
+                    background-color: @color-primary;
                     color: @white;
 
                     th {
@@ -280,7 +280,7 @@ section.course-info {
                                 font-family: 'FontAwesome';
                                 content: '\f054';
                                 margin-right: 0.5em;
-                                color: @gg-blue;
+                                color: @color-primary;
                             }
                         }
                     }
