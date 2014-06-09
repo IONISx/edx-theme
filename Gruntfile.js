@@ -122,6 +122,22 @@ module.exports = function (grunt) {
                     ]
                 }]
             }
+        },
+
+        // ## //
+
+        copy: {
+            fontawesome: {
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    cwd: '<%= c.bower %>/',
+                    dest: '<%= c.static %>/fonts/font-awesome/',
+                    src: [
+                        'font-awesome/fonts/*.{otf,eot,svg,ttf,woff}'
+                    ]
+                }]
+            }
         }
     });
 
@@ -129,7 +145,8 @@ module.exports = function (grunt) {
         'less',
         'autoprefixer',
         'cssmin',
-        'imagemin'
+        'imagemin',
+        'copy'
     ]);
 
     grunt.registerTask('default', function () {
