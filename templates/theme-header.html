@@ -2,11 +2,13 @@
 <%namespace name='static' file='/static_content.html'/>
 <%inherit file="/navigation.html"/>
 
+<%! from microsite_configuration.templatetags.microsite import platform_name %>
+
 <%block name="navigation_top">
 </%block>
 
 <%block name="navigation_logo">
-  IONISx
+  ${platform_name()}
 </%block>
 
 ## When unauthenticated, only show the about page link

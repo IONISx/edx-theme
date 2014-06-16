@@ -1,13 +1,31 @@
+## mako
+<%! from django.utils.translation import ugettext as _ %>
+<%! from microsite_configuration.templatetags.microsite import platform_name %>
+<%namespace name='static' file='static_content.html'/>
+
 <footer>
   <div class="footer-container">
+    <nav class="nav">
+      <ul>
+        <li>
+          <a id="about" href="${marketing_link('ABOUT')}">${_("About")}</a>
+        </li>
+        <li>
+          <a id="faq" href="${marketing_link('FAQ')}">${_("FAQ")}</a>
+        </li>
+        <li>
+          <a id="contact" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
+        </li>
+        <li>
+          <a href="${marketing_link('TOS')}">${_("Terms of Service and Honor Code")}</a>
+        </li>
+        <li>
+          <a href="${marketing_link('PRIVACY')}">${_("Privacy Policy")}</a>
+        </li>
+      </ul>
+    </nav>
     <div class="row">
-      <i class="fa fa-envelope"></i><a href="https://ionisx.com/contact">Contactez-nous</a> |
-      <i class="fa fa-empire"></i><a href="https://ionisx.com/jobs">Rejoignez-nous</a>
-    </div>
-    <div class="row">
-      <p>
-        Tous droits réservés | IONISx | <a href="http://ionis-group.com" target="_blank">IONIS Education Group</a>
-      </p>
+      <p class="copyright">${_("&copy; 2014 {platform_name}, some rights reserved.").format(platform_name=platform_name())}</p>
     </div>
   </div>
 </footer>
