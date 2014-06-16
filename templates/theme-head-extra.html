@@ -1,4 +1,4 @@
 ## mako
 <%namespace name='static' file='/static_content.html'/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="${static.url('themes/ionisx/css/main.css')}" />
+<link rel="stylesheet" href="${static.url('themes/{theme_name}/css/main.css').format(theme_name=settings.THEME_NAME)}" />
