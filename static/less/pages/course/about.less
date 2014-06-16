@@ -181,14 +181,66 @@ section.course-info {
         }
     }
 
+    .course-sidebar {
+        .square(auto);
+        .make-lg-column(4);
+        .make-md-column(4);
+
+        margin: 20px 0 0 0;
+
+        .course-summary {
+            box-shadow: none;
+            border: 0 none;
+            padding: 0;
+            margin: 0;
+
+            header {
+                padding: 0 0 15px 0;
+                margin: 0 0 15px 0;
+                border-bottom: 1px solid @color-border;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            .important-dates {
+                padding: 0;
+
+                li {
+                    border: 0 none;
+                    margin: 0;
+                    padding: 0;
+
+                    p {
+                        font: inherit;
+                        color: inherit;
+                    }
+
+                    span {
+                        font: inherit;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
     .details {
         .square(auto);
+        .make-lg-column(8);
+        .make-md-column(8);
 
+        padding-left: 0;
         margin: 0;
         font: inherit;
 
+        nav {
+            display: none;
+        }
+
         .inner-wrapper {
-            margin: 60px 0 0 0;
+            margin: 0;
 
             table.course-summary {
                 .table-rounded(4px);
