@@ -7,21 +7,36 @@
   <div class="footer-container">
     <nav class="nav">
       <ul>
+        %if settings.MKTG_URL_LINK_MAP.get('ABOUT'):
         <li>
           <a id="about" href="${marketing_link('ABOUT')}">${_("About")}</a>
         </li>
+        %endif
+        %if settings.MKTG_URL_LINK_MAP.get('FAQ'):
         <li>
           <a id="faq" href="${marketing_link('FAQ')}">${_("FAQ")}</a>
         </li>
+        %endif
+        %if settings.MKTG_URL_LINK_MAP.get('CONTACT'):
         <li>
           <a id="contact" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
         </li>
+        %endif
+        %if settings.MKTG_URL_LINK_MAP.get('TOS'):
         <li>
-          <a href="${marketing_link('TOS')}">${_("Terms of Service and Honor Code")}</a>
+          <a href="${marketing_link('TOS')}">${_("Terms of Service")}</a>
         </li>
+        %endif
+        %if settings.MKTG_URL_LINK_MAP.get('HONOR'):
+        <li>
+          <a href="${marketing_link('HONOR')}">${_("Honor Code")}</a>
+        </li>
+        %endif
+        %if settings.MKTG_URL_LINK_MAP.get('PRIVACY'):
         <li>
           <a href="${marketing_link('PRIVACY')}">${_("Privacy Policy")}</a>
         </li>
+        %endif
       </ul>
     </nav>
     <div>
