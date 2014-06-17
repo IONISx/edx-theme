@@ -2,21 +2,27 @@
 
 [![Build Status](https://travis-ci.org/IONISx/edx-theme.svg?branch=master)](https://travis-ci.org/IONISx/edx-theme)
 
-> This repository contains the Open edX theme used by IONISx.
+> Open edX responsive theme using [Bootstrap](http://getbootstrap.com/).
+
+![Screenshot](https://raw.githubusercontent.com/IONISx/edx-theme/docs/images/responsive.png)
 
 ## Getting started
 
-    npm install -g grunt-cli bower
-    npm install
+First, install `grunt-cli` and `bower` globally (or not) in order to have the required build tools.
 
+    npm install -g grunt-cli bower
+
+Then fetch the local depedencies.
+
+    npm install
     bower install
 
-    grunt build
+Finally, run `grunt` to build the theme’s source files.
+`grunt` will watch for changes and re-build the output automatically.
+
+Run `grunt build` for a one time build.  
+Run `grunt test` to lint your source files as well.
 
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
-
-## Credits
-
-Inspired by Stanford’s [works](https://github.com/Stanford-Online/edx-theme).
