@@ -18,102 +18,58 @@ section.course-info {
             background: none;
 
             .table {
+                .clearfix();
+
                 background-color: @color-background;
                 display: block;
                 border-radius: @default-border-radius;
 
-                .intro {
-                    .square(auto);
+                .media {
+                    .size(100%, auto);
+                    .make-md-column(4);
+                    .make-lg-column(4);
+
+                    padding: 0;
                     display: block;
 
-                    .row.top-row {
-                        .media {
-                            .size(100%, auto);
-                            .make-md-column(4);
-                            .make-lg-column(4);
+                    .hero {
+                        .square(auto);
 
-                            padding: 0;
-                            display: block;
+                        border: 0 none;
+                        padding: 0 0 56.25% 0;
+                        position: relative;
 
-                            .hero {
-                                .square(auto);
+                        img {
+                            .square(100%);
 
-                                border: 0 none;
-                                padding: 0 0 56.25% 0;
-                                position: relative;
-
-                                img {
-                                    .square(100%);
-
-                                    position: absolute;
-                                    left: 0;
-                                    top: 0;
-                                }
-                            }
-                        }
-
-                        .metadata {
-                            .size(100%, auto);
-
-                            .make-md-column(8);
-                            .make-lg-column(8);
-
-                            margin: -8px 0 0 0;
-
-                            @media (max-width: @screen-sm-max) {
-                                padding: 0;
-                                margin: 0;
-                            }
-
-                            hgroup {
-                                color: inherit;
-
-                                h1 {
-                                    font: inherit;
-                                    font-size: 1.6em;
-                                    line-height: 1.4em;
-                                    font-weight: @headings-font-weight;
-                                    color: inherit;
-                                    letter-spacing: normal;
-                                    text-align: left;
-                                    margin: 0;
-                                }
-                            }
-
-                            .short-description {
-                                padding-top: 20px;
-                            }
+                            position: absolute;
+                            left: 0;
+                            top: 0;
                         }
                     }
+                }
 
-                    .social-sharing {
-                        float: left;
-                        display: block;
-                        margin: 20px 0 0 0;
-                        padding-right: 10px;
+                .intro {
+                    .square(auto);
+                    .make-md-column(8);
+                    .make-lg-column(8);
 
-                        @media (max-width: @screen-sm-max) {
-                            float: none;
-                            text-align: center;
+                    display: block;
+
+                    hgroup {
+                        box-shadow: none;
+                        border-bottom: 1px solid @color-border;
+
+                        h1 {
+                            text-shadow: none;
+                            font: inherit;
+                            font-size: 1.6em;
+                            line-height: 1.4em;
+                            font-weight: 500;
+                            color: inherit;
+                            letter-spacing: normal;
+                            text-align: left;
                             margin: 0;
-                        }
-
-                        a {
-                            text-decoration: none;
-                            margin-right: 10px;
-
-                            span {
-                                font-size: 42px;
-                                line-height: 44px;
-                                transition: all .1s ease-in;
-                                color: @color-success;
-                            }
-
-                            &:hover {
-                                span {
-                                    color: fadeout(@color-success, 50%);
-                                }
-                            }
                         }
                     }
 
@@ -123,8 +79,7 @@ section.course-info {
                         overflow: hidden;
                         float: none;
                         margin: 20px 0 0 0;
-                        padding: 0 0 0 20px;
-                        border-left: 1px solid @color-border;
+                        padding: 0;
 
                         @media (max-width: @screen-sm-max) {
                             padding: 0;
