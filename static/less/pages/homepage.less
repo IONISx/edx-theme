@@ -1,9 +1,101 @@
 > .home {
-    margin-top: @layout-top-spacing;
+    margin: 0;
     background: none;
 
-    header {
-        display: none;
+    > header {
+        .square(auto);
+
+        box-shadow: none;
+        background: 0;
+        border: none;
+        background-color: @color-primary;
+        margin: 0;
+        padding: 60px 0;
+
+        .outer-wrapper {
+            .ionisx-container();
+
+            border-radius: @default-border-radius;
+            padding-bottom: 15px;
+            padding-top: 15px;
+
+            .title {
+                .square(auto);
+                .make-md-column(8);
+                .make-lg-column(8);
+
+                background: none;
+                box-shadow: none;
+                border: 0 none;
+                transition: none;
+                float: none;
+                min-height: 0;
+                margin: 0;
+                padding: 0;
+
+                hgroup {
+                    padding: 0;
+                    transition: none;
+                    color: @white;
+
+                    h1 {
+                        font: inherit;
+                        font-size: @font-size-h1;
+                        font-weight: 500;
+                        color: inherit;
+                        text-shadow: none;
+                        text-transform: none;
+                        margin: 0;
+                    }
+
+                    h2 {
+                        font: inherit;
+                        font-size: @font-size-h2;
+                        color: inherit;
+                        text-shadow: none;
+                        text-transform: none;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .media {
+                .square(auto);
+                .make-md-column(4);
+                .make-lg-column(4);
+
+                display: block;
+                background: none;
+                border: 0 none;
+                float: none;
+                margin: 0;
+                padding: 0;
+
+                @media (max-width: @screen-sm-max) {
+                    width: 350px;
+                }
+
+                @media (max-width: @screen-xs-max) {
+                    width: auto;
+                }
+
+                .hero {
+                    .size(auto, 170px);
+
+                    background: none;
+                    overflow: initial;
+                    position: static;
+                    margin: auto;
+                    background: @black;
+                    border: 1px solid @color-border;
+                    border-radius: @default-border-radius;
+
+                    @media (max-width: @screen-sm-max) {
+                        margin: 15px 0 0 0;
+                    }
+                }
+            }
+        }
     }
 
     .container {
