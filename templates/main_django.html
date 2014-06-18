@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load compressed %}{% load sekizai_tags i18n microsite %}{% load url from future %}{% load staticfiles %}
+<html lang="{{LANGUAGE_CODE}}">
+<head>
+  <meta charset="UTF-8">
+  {% block title %}<title>{% platform_name %}</title>{% endblock %}
+
+  <link rel="icon" type="image/x-icon" href="{% static "images/favicon.ico" %}" />
+
+  {% compressed_css 'style-vendor' %}
+  {% compressed_css 'style-app' %}
+  {% compressed_css 'style-app-extend1' %}
+  {% compressed_css 'style-app-extend2' %}
+  {% compressed_css 'style-course-vendor' %}
+  {% compressed_css 'style-course' %}
+
+  {% block main_vendor_js %}
+  {% compressed_js 'main_vendor' %}
+  {% endblock %}
+  {% block headextra %}{% endblock %}
+  {% render_block "css" %}
+
+  {% include "theme-head-extra.html" %}
+
+  <!--[if lt IE 9]>
+  <script src="{% static 'js/html5shiv.js' %}"></script>
+  <![endif]-->
+
+  <meta name="path_prefix" content="{{EDX_ROOT_URL}}">
+</head>
+
+<body class="{% block bodyclass %}{% endblock %} lang_{{LANGUAGE_CODE}}">
+  <a class="nav-skip" href="{% block nav_skip %}#content{% endblock %}">{% trans "Skip to this view's content" %}</a>
+  {% include "theme-header.html" %}
+  <div class="content-wrapper" id="content">
+    {% block body %}{% endblock %}
+    {% block bodyextra %}{% endblock %}
+  </div>
+
+  {% include "theme-footer.html" %}
+
+  {% compressed_js 'application' %}
+  {% compressed_js 'module-js' %}
+
+  {% render_block "js" %}
+</body>
+</html>
+
+{% comment %}
+  This is a django template version of our main page from which all
+  other pages inherit. This file should be rewritten to reflect any
+  changes in main.html! Files used by {% include %} can be written
+  as mako templates.
+
+  Inheriting from this file allows us to include apps that use the
+  django templating system without rewriting all of their views in
+  mako.
+{% endcomment %}
