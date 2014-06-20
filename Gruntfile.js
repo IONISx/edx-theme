@@ -2,7 +2,7 @@
 
 module.exports = function (grunt) {
     require('time-grunt')(grunt);
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    require('load-grunt-tasks')(grunt);
 
     var config = {
         'static': 'static',
