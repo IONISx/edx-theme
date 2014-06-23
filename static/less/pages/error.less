@@ -1,0 +1,27 @@
+> .outside-app {
+    .ionisx-container();
+
+    margin-top: @layout-top-spacing;
+
+    h1 {
+        font: inherit;
+        font-size: @font-size-h1;
+        text-transform: none;
+        margin-top: 0;
+        text-align: left;
+        padding-bottom: 30px;
+        border-bottom: 1px solid @color-border;
+
+        &:before {
+            font-family: 'FontAwesome';
+            content: '\f071';
+            margin-right: 15px;
+        }
+    }
+
+    p {
+        max-width: none;
+        font: inherit;
+        color: inherit;
+    }
+}
