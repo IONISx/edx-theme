@@ -151,24 +151,27 @@ header.global, header.global.slim {
                     transition: all .1s ease-in;
                     border: 0 none;
                     padding: 3px 8px;
-
-                    &:hover {
-                        background-color: @color-primary;
-
-                        > a {
-                            color: @white;
-                        }
-                    }
+                    color: @color-primary;
 
                     > a {
                         border: 0 none;
                         outline: none;
-                        color: @color-primary;
                         padding: 0;
                         letter-spacing: normal;
+                        color: inherit;
 
-                        &:hover, &:focus {
+                        &:hover, &:focus, &:active {
                             background: none;
+                            color: inherit;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: @color-primary;
+                        color: @white;
+
+                        > a {
+                            color: inherit;
                         }
                     }
                 }
