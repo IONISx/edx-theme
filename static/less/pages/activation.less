@@ -1,0 +1,39 @@
+> .activation {
+    .ionisx-container();
+
+    margin-top: @layout-top-spacing;
+
+    .message {
+        .square(auto);
+
+        margin: 0;
+        padding: 0;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        border: 0 none;
+
+        h1 {
+            margin-top: 0;
+            text-align: left;
+            padding: 0 0 30px 0;
+            border-bottom: 1px solid @color-border;
+
+            &.valid {
+                background: none;
+                border: 0 none;
+                color: inherit;
+            }
+
+            &:before {
+                font-family: 'FontAwesome';
+                content: '\f084';
+                margin-right: 15px;
+            }
+        }
+
+        hr {
+            display: none;
+        }
+    }
+}
