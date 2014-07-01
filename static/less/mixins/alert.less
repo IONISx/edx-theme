@@ -3,15 +3,21 @@
     box-shadow: none;
     border: 0 none;
     background: none;
+    margin: 0 0 20px 0;
     padding: 15px 20px;
     color: inherit;
+    border-radius: @default-border-radius;
 
-    h1, h2, h3, h4, h5 {
+    h2, h3, h4, h5 {
         font: inherit;
         text-transform: none;
+        margin: 0;
+        color: inherit;
+        letter-spacing: normal;
+        font-weight: 600;
     }
 
-    p {
+    p, ul {
         font: inherit;
         color: inherit;
 
@@ -20,57 +26,44 @@
         }
     }
 
-    ul {
-        .ionisx-alert-body();
+    &.alert-warning {
+        background-color: lighten(@color-warning, 5%);
+        color: lighten(@color-warning, 60%);
     }
-}
 
-.ionisx-alert-body {
-    margin: 0;
-    font: inherit;
-    font-weight: 300;
-    list-style: inherit;
-    list-style-position: inside;
+    &.alert-danger, &.alert-error {
+        background-color: lighten(@color-error, 5%);
+        color: lighten(@color-error, 60%);
+    }
 
-    li {
-        background: none;
-        padding: 0;
+    &.alert-info {
+        background-color: lighten(@color-primary, 5%);
+        color: lighten(@color-primary, 60%);
+    }
+
+    &.alert-success {
+        background-color: lighten(@color-success, 5%);
+        color: lighten(@color-success, 60%);
     }
 }
 
 .ionisx-alert-error {
-    background-color: @color-error;
-    color: @color-background;
-
-    h1, h2, h3, h4, h5 {
-        color: @white;
-    }
-
-    ul {
-        color: inherit;
-    }
-
-    a {
-        color: @white;
-        text-decoration: underline;
-    }
+    .ionisx-alert();
+    .alert-error();
 }
-
 
 .ionisx-alert-warning {
-    background-color: @color-warning;
-    color: @white;
-
-    h1, h2, h3, h4, h5 {
-        color: @white;
-    }
-
-    ul {
-        color: inherit;
-    }
-
-    a {
-        color: @white;
-        text-decoration: underline;
-    }
+    .ionisx-alert();
+    .alert-warning();
 }
+
+.ionisx-alert-info {
+    .ionisx-alert();
+    .alert-info();
+}
+
+.ionisx-alert-success {
+    .ionisx-alert();
+    .alert-success();
+}
+
