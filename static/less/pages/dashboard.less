@@ -13,6 +13,8 @@
         .make-md-column(3);
         .make-lg-column(3);
 
+        background: none;
+        box-shadow: none;
         padding-left: 0;
         margin: 0;
 
@@ -44,40 +46,32 @@
                         font-size: 0.9em;
                         margin: 0;
 
+                        &.title {
+                            text-transform: none;
+
+                            &:before {
+                                display: inline-block;
+                                width: 20px;
+                                color: @color-primary;
+                                font-family: 'FontAwesome';
+                            }
+                        }
+
                         &.data {
                             margin-left: 20px;
                             font-weight: @headings-font-weight;
                         }
+                    }
 
-                        > .icon {
-                            .size(10px, auto);
-                            .text-right();
+                    &.info--username {
+                        .title:before {
+                            content: '\f007';
+                        }
+                    }
 
-                            font: inherit;
-                            color: @color-primary;
-                            margin: 0 10px 0 0;
-                            float: none;
-                            display: inline-block;
-                            opacity: 1;
-                            transition: none;
-
-                            &.name-icon {
-                                background: none;
-
-                                &:before {
-                                    content: '\f007';
-                                    font-family: 'FontAwesome';
-                                }
-                            }
-
-                            &.email-icon {
-                                background: none;
-
-                                &:before {
-                                    content: '\f0e0';
-                                    font-family: 'FontAwesome';
-                                }
-                            }
+                    &.info--email {
+                        .title:before {
+                            content: '\f0e0';
                         }
                     }
                 }
