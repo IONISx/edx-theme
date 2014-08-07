@@ -118,123 +118,76 @@
         border-radius: 0;
         overflow: visible;
 
-        > .sidebar {
+        > .forum-nav {
+            background-color: @white;
             border: 1px solid @color-border;
             border-radius: @default-border-radius;
-            box-shadow: none;
-            display: block;
-            height: auto !important;
+            overflow: hidden;
 
-            @media (max-width: @screen-sm-max) {
-                .square(auto) !important;
+            .forum-nav-header {
+                border: 0 none;
+                background-color: @color-primary;
+                color: @white;
 
-                margin-bottom: 1em;
-                float: none;
+                .forum-nav-browse {
+                    color: inherit;
+
+                    &:hover, &.is-active {
+                        color: @black;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+
+                    .forum-nav-browse-current {
+                        font-size: 0.9em;
+                    }
+                }
+
+                .forum-nav-search {
+                    color: @black;
+
+                    .forum-nav-search-input {
+                        font-size: 0.9em;
+                        border-color: @color-primary;
+                    }
+                }
             }
 
-            .browse-topic-drop-btn {
-                text-decoration: none;
+            .forum-nav-browse-filter {
+                .forum-nav-browse-filter-input {
+                    font-size: 0.9em;
+                }
             }
 
-            .post-list-wrapper {
-                height: auto !important;
+            .forum-nav-browse-menu {
+                li {
+                    .forum-nav-browse-title {
+                        border-bottom: 1px solid @color-border;
 
-                .post-list {
-                    border-bottom-left-radius: @default-border-radius;
-                    border-bottom-right-radius: @default-border-radius;
+                        &:hover {
+                            background-color: lighten(@color-secondary, 40%);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .forum-nav-refine-bar {
+                color: inherit;
+                border-color: @color-border;
+                background-color: @color-border;
+            }
+
+            .forum-nav-thread-list {
+                > li {
                     background: none;
-                    background-color: @white;
-                    padding: 0 0 3em 0;
-                    margin: 0;
+                    border-color: @color-border;
 
-                    li {
-                        padding: 0;
-                        margin: 0;
-
-                        a {
-                            background: none;
-                            box-shadow: none;
-                            color: @black;
-                            border-bottom: 1px solid @color-border;
-                            margin: 0;
-                            padding: 0 0.4em 0 1.9em;
-
-                            &:before {
-                                font-family: 'FontAwesome';
-                                content: '\f006';
-                                position: absolute;
-                                left: 0.5em;
-                                top: 0.75em;
-                                color: @color-primary;
-                            }
-
-                            span {
-                                color: inherit;
-                                font: inherit;
-
-                                &.votes-count {
-                                    .square(auto);
-
-                                    font-size: 0.9em;
-                                    padding: 2px 4px;
-                                    background: none;
-                                }
-
-                                &.comments-count {
-                                    .square(auto);
-
-                                    font-size: 0.9em;
-                                    padding: 2px 4px;
-                                    background: none;
-
-                                    &:before {
-                                        font-family: 'FontAwesome';
-                                        content: '\f086';
-                                    }
-
-                                    &:after {
-                                        background: none;
-                                        display: none;
-                                    }
-                                }
-                            }
-
-                            &.read {
-                                background: none;
-                            }
-
-                            &.active {
-                                background: @color-primary;
-                                color: @white;
-
-                                &:before {
-                                    color: @white;
-                                }
-                            }
-
-                            &.followed {
-                                &:before {
-                                    content: '\f005';
-                                }
-
-                                &:after {
-                                    display: none;
-                                    background: none;
-                                }
-                            }
-                        }
-
-                        &.more-pages {
-                            a:before {
-                                content: none;
-                                display: none;
-                            }
-                        }
-
-                        &:last-child {
-                            a {
-                                border: 0 none;
-                            }
+                    .forum-nav-thread-link {
+                        &:hover, &.is-active {
+                            background-color: lighten(@color-secondary, 40%);
                         }
                     }
                 }
@@ -249,6 +202,7 @@
             min-height: 0;
             background-color: @white;
             display: block;
+            overflow: hidden;
 
             @media (max-width: @screen-sm-max) {
                 .square(auto);
@@ -257,6 +211,9 @@
             }
 
             > .discussion-article {
+                background: none;
+                background-color: @white;
+
                 &.blank-slate {
                     padding: 30px;
 
