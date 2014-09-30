@@ -1,4 +1,4 @@
-header.global, header.global.slim {
+header.global, header.global-new, header.global.slim {
     .square(auto);
     .navbar();
     .navbar-default();
@@ -68,31 +68,45 @@ header.global, header.global.slim {
                 display: none;
             }
 
-            > li > a {
-                padding: 0;
-                font-weight: 500;
-                color: @color-background;
+            > li {
+                font: inherit;
 
-                &:hover {
-                    color: @white;
+                a {
+                    font: inherit;
+                    font-weight: 500;
+                    padding: 0;
+                    color: @color-background;
+                    text-transform: none;
+                    border: 0 none;
+                    letter-spacing: 0;
+
+                    &:hover {
+                        color: @white;
+                    }
+
+                    &:focus {
+                        color: @white;
+                        text-decoration: underline;
+                    }
                 }
-
-                &:focus {
-                    color: @white;
-                    text-decoration: underline;
-                }
-            }
-
-            .cta-register {
-                display: none;
             }
         }
 
         ol.nav-courseware {
             margin: 0;
 
-            > li > a.cta-login {
-                .ionisx-btn(@color-primary, @white);
+            li {
+                margin: 0 5px 0 0;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                .cta-login, .cta-register {
+                    .ionisx-btn(@color-primary, @white);
+
+                    text-transform: none;
+                }
             }
         }
 
