@@ -14,7 +14,7 @@
             text-transform: none;
             letter-spacing: inherit;
             color: @color-primary;
-            margin: 0 0 1.5em 0;
+            margin: 0 0 (@line-height-computed / 2) 0;
         }
 
         h3 {
@@ -22,12 +22,13 @@
             font-size: @font-size-h3;
             font-weight: @headings-font-weight;
             color: @color-secondary;
+            margin: @line-height-computed 0 (@line-height-computed / 2) 0;
         }
 
         p {
             font: inherit;
             color: inherit;
-            margin: 0 0 1em 0;
+            margin: 0 0 (@line-height-computed / 2) 0;
         }
 
         a {
@@ -38,10 +39,10 @@
         ul, ol {
             color: inherit;
             list-style-position: inside;
-            margin: 0 0 1em 0;
+            margin: 0 0 (@line-height-computed / 2) 0;
             padding: 0;
 
-            li {
+            li {
                 margin: 0;
             }
         }
