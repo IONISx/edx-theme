@@ -6,7 +6,7 @@
     min-height: 80vh;
 
     > .book-sidebar {
-        .square(100%);
+        .size(100%, auto);
         .make-md-column(3);
         .make-lg-column(3);
 
@@ -40,7 +40,7 @@
     }
 
     > .book {
-        .square(100%);
+        .size(100%, auto);
         .make-md-column(9);
         .make-lg-column(9);
 
@@ -55,14 +55,10 @@
         background-color: @white;
 
         @media (max-width: @screen-sm-max) {
-            .square(100%);
+            .square(auto);
 
             border-radius: @default-border-radius;
             float: none;
-        }
-
-        iframe {
-            .square(100%);
         }
     }
 }
