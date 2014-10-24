@@ -61,48 +61,46 @@ header.global, header.global-new, header.global.slim {
             }
         }
 
-        ol.nav-global {
+        .nav-global {
             margin: 0.6em 0 0 0;
 
             @media (max-width: @screen-xs-min) {
                 display: none;
             }
 
-            > li {
+            a {
                 font: inherit;
+                font-weight: 500;
+                letter-spacing: inherit;
+                padding: 0;
+                color: @color-background;
+                text-transform: none;
+                border: 0 none;
 
-                a {
-                    font: inherit;
-                    font-weight: 500;
-                    padding: 0;
-                    color: @color-background;
-                    text-transform: none;
-                    border: 0 none;
-                    letter-spacing: 0;
+                &:hover {
+                    color: @white;
+                }
 
-                    &:hover {
-                        color: @white;
-                    }
-
-                    &:focus {
-                        color: @white;
-                        text-decoration: underline;
-                    }
+                &:focus {
+                    color: @white;
+                    text-decoration: underline;
                 }
             }
         }
 
-        ol.nav-courseware {
+        .nav-courseware {
             margin: 0;
 
-            li {
+            div {
                 margin: 0 5px 0 0;
 
                 &:last-child {
                     margin: 0;
                 }
+            }
 
-                .cta-login, .cta-register {
+            a {
+                &.cta-login, &.cta-register {
                     .ionisx-btn(@color-primary, @white);
 
                     text-transform: none;
