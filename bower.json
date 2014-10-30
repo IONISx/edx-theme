@@ -5,7 +5,7 @@
   "description": "Open edX theme for IONISx",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "~3.1.1",
-    "font-awesome": "~4.1.0"
+    "bootstrap": "~3.3.0",
+    "font-awesome": "~4.2.0"
   }
 }
