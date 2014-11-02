@@ -12,10 +12,11 @@ First, install `grunt-cli` and `bower` globally (or not) in order to have the re
 
     npm install -g grunt-cli bower
 
-Then fetch the local depedencies.
+Then fetch and update the local depedencies.
 
     npm install
     bower install
+    bower update
 
 Finally, run `grunt` to build the theme’s source files.
 `grunt` will watch for changes and re-build the output automatically.
