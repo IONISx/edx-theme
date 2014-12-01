@@ -25,4 +25,4 @@ Run `grunt test` to lint your source files as well.
 
 ## License
 
-[MIT License](http://en.wikipedia.org/wiki/MIT_License)
+[AGPL License](http://en.wikipedia.org/wiki/Affero_General_Public_License)

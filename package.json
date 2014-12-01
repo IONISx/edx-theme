@@ -9,7 +9,7 @@
   "scripts": {
     "test": "grunt test"
   },
-  "license": "MIT",
+  "license": "AGPL",
   "bugs": {
     "url": "https://github.com/IONISx/edx-theme/issues"
   },
