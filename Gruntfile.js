@@ -135,7 +135,7 @@ module.exports = function (grunt) {
                     cwd: '<%= c.bower %>/',
                     dest: '<%= c.static %>/fonts/font-awesome/',
                     src: [
-                        'font-awesome/fonts/*.{otf,eot,svg,ttf,woff}'
+                        'font-awesome/fonts/*'
                     ]
                 }]
             }
