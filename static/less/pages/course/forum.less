@@ -96,8 +96,6 @@
             border-bottom: 1px solid @color-border;
 
             header {
-                border-bottom: 1px solid @color-border;
-
                 .group-visibility-label {
                     font: inherit;
                     font-size: 12px;
@@ -172,8 +170,12 @@
                     padding: 10px 15px;
 
                     header {
-                        border-bottom: 1px solid @color-border;
                         padding-bottom: 10px;
+
+                        .response-header-content,
+                        response-header-actions {
+                            .square(auto);
+                        }
 
                         .username {
                             font-size: inherit;

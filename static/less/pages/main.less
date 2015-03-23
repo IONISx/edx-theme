@@ -18,6 +18,71 @@ body,
     }
 }
 
+.wrapper-msg {
+    background-color: @state-success-bg;
+    padding: 15px 0;
+
+    .msg {
+        .container();
+
+        min-width: 0;
+        color: @state-success-text;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        a, a:hover {
+            text-decoration: underline;
+            color: inherit;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &.urgency-low {
+        background-color: @state-info-bg;
+
+        .msg {
+            color: @state-info-text;
+        }
+    }
+
+    &.urgency-mid {
+        background-color: @state-warning-bg;
+
+        .msg {
+            color: @state-warning-text;
+        }
+    }
+
+    &.urgency-high {
+        background-color: @state-danger-bg;
+
+        .msg {
+            color: @state-danger-text;
+        }
+    }
+}
+
+.wrapper-preview-menu {
+    background-color: @black;
+    padding: 15px 0;
+
+    .preview-menu {
+        .container();
+
+        font-size: 0.9em;
+        color: @white;
+
+        .action-preview-select {
+            color: @black;
+        }
+    }
+}
+
 .content-wrapper {
     > .introduction {
         .ionisx-container();

@@ -1,84 +1,61 @@
 footer {
     background-color: @color-primary;
-    color: @color-background;
-    padding: 30px 0;
     font-size: 0.9em;
+    color: @color-background;
+    padding: 20px 0;
     overflow: hidden;
 
     .footer-container {
-        .ionisx-container();
+        .container();
 
         position: relative;
+    }
 
-        i.fa {
-            margin-right: 5px;
-        }
+    ul.links {
+        .list-unstyled();
 
-        a, a:link, a:visited {
-            color: inherit;
+        margin: 0;
 
-            &:hover {
-                color: inherit;
+        li {
+            display: inline-block;
+            margin: 0 5px 0 0;
+
+            &:after {
+                content: '•';
+                padding: 0 0 0 5px;
             }
-        }
 
-        nav {
-            ul {
-                li {
-                    display: inline-block;
-                    margin: 0 5px 0 0;
+            &:last-child {
+                margin: 0;
 
-                    &:after {
-                        content: '|';
-                        padding: 0 0 0 5px;
-                    }
-
-                    &:last-child {
-                        margin: 0;
-
-                        &:after {
-                            display: none;
-                        }
-                    }
-                }
-
-                @media (max-width: @screen-xs-max) {
-                    border-bottom: 1px solid @color-border;
-                    padding-bottom: 5px;
-                    margin-bottom: 5px;
-
-                    li {
-                        display: block;
-                        margin: 0;
-
-                        &:after {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-
-        .by-ionisx {
-            .pull-right();
-
-            a {
-                position: absolute;
-                right: 0;
-                top: -15px;
-
-                @media (max-width: @screen-sm-max) {
+                &:after {
                     display: none;
                 }
+            }
 
-                img {
-                    max-width: @layout-footer-height;
+            a {
+                color: @color-background;
+
+                &:hover {
+                    color: @color-background;
                 }
             }
+        }
+    }
+
+    .copyright {
+        margin: 0;
+    }
+
+    .by-ionisx {
+        .hidden-xs();
+
+        position: absolute;
+        top: -8px;
+        right: 0;
+
+        img {
+            height: 50px;
         }
     }
 }

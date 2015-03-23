@@ -23,9 +23,12 @@
             border-bottom: 2px solid @color-border;
         }
 
+        #courseware-search-bar {
+            display: none;
+        }
+
         #accordion {
             font: inherit;
-            font-size: 0.9em;
 
             .chapter {
                 border-radius: 0;
@@ -105,6 +108,10 @@
                                 right: 0.5em;
                                 bottom: 0.15em;
                             }
+
+                            img {
+                                display: none;
+                            }
                         }
 
                         &.active {
@@ -129,8 +136,10 @@
 
         font: inherit;
         display: block;
-        margin: 0;
+        margin: 0 0 0 -1px;
         padding: 30px;
+
+        border-left: 1px solid @color-border;
 
         @media (max-width: @screen-xs-max) {
             padding: 10px;
@@ -142,24 +151,23 @@
             margin: 0 0 2em 0;
             border: 0 none;
 
+            button {
+                .size(auto, 44px);
+
+                border: 2px solid @color-border;
+                background-position: center center;
+                box-shadow: none;
+                text-shadow: none;
+            }
+
             ul {
                 li {
                     .size(auto, 44px);
 
                     background: none;
                     box-shadow: none;
-                    border: 3px solid @color-border;
+                    border: 2px solid @color-border;
                     overflow: hidden;
-
-                    &.prev {
-                        left: 0;
-                        border-right: 0 none;
-                    }
-
-                    &.next {
-                        right: 1px;
-                        border-left: 0 none;
-                    }
 
                     a {
                         margin: 0;
@@ -178,7 +186,7 @@
                 background: none;
                 box-shadow: none;
                 border: 0 none;
-                margin: 0 43px;
+                margin: 0 32px;
                 padding: 0;
 
                 .left-shadow, .right-shadow {
@@ -192,11 +200,11 @@
                         min-width: 0;
 
                         &:first-child a {
-                            border-left: 3px solid @color-border;
+                            border-left: 2px solid @color-border;
                         }
 
                         &:last-child a {
-                            border-right: 3px solid @color-border;
+                            border-right: 2px solid @color-border;
                         }
 
                         a {
@@ -207,8 +215,8 @@
                             border: 0 none;
                             box-shadow: none;
                             color: @white;
-                            border-top: 3px solid @color-border;
-                            border-bottom: 3px solid @color-border;
+                            border-top: 2px solid @color-border;
+                            border-bottom: 2px solid @color-border;
 
                             @media (max-width: @screen-sm-max) {
                                 display: none;
@@ -220,7 +228,7 @@
 
                                 @media (max-width: @screen-sm-max) {
                                     display: block;
-                                    border: 3px solid @color-primary;
+                                    border: 2px solid @color-primary;
                                 }
 
                                 &.progress-none {
@@ -286,7 +294,7 @@
                                 font-family: 'FontAwesome';
                                 font-size: 1.2em;
                                 display: block;
-                                margin: 0.2em auto 0;
+                                margin: 8px auto 0;
                                 padding: 0
                             }
 
@@ -312,35 +320,28 @@
         }
 
         .sequence-bottom {
+            .square(auto);
+
             margin: 2em 0;
             text-align: center;
 
-            ul {
-                li {
-                    .size(50px, 44px);
+            .prev, .next {
+                background: none;
+                display: inline-block;
+                position: static;
+                border: 2px solid @color-border;
+                overflow: hidden;
+                margin: 0 -1px;
 
-                    background: none;
-                    box-shadow: none;
-                    border: 3px solid @color-border;
-                    overflow: hidden;
+                a {
+                    background-position: center center;
+                    transition: none;
 
-                    &.prev {
-                        border-right-width: 1px;
-                    }
-
-                    &.next {
-                        border-left-width: 1px;
-                    }
-
-                    a, a:hover {
-                        background-position: center 0.85em;
-
-                        &.disabled {
-                            background-color: @color-border;
-                        }
+                    &.disabled {
+                        background-color: @color-disabled;
                     }
                 }
             }
         }
     }
- }
+}

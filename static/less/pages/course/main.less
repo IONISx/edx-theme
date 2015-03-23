@@ -1,5 +1,15 @@
 @import 'about.less';
 
+.wrapper-course-material {
+    .size(100%, auto);
+
+    margin: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
 .course-material {
     .ionisx-container();
 
@@ -8,75 +18,67 @@
     border-radius: 0;
     margin-top: @layout-top-spacing / 2;
 
-    .inner-wrapper {
-        .square(auto);
-
+    .course-tabs {
+        border-radius: 0;
+        padding: 0;
         margin: 0;
-        max-width: none;
 
-        .course-tabs {
-            border-radius: 0;
-            padding: 0;
-            margin: 0;
+        li {
+            margin: 0 0.5em 0 0;
 
-            li {
-                margin: 0 0.5em 0 0;
+            &:last-child {
+                margin: 0;
 
-                &:last-child {
-                    margin: 0;
+                @media (max-width: @screen-xs-max) {
+                    &.right {
+                        .clearfix();
+                        .square(auto);
 
-                    @media (max-width: @screen-xs-max) {
-                        &.right {
-                            .clearfix();
-                            .square(auto);
+                        float: none;
 
-                            float: none;
+                        a {
+                            .size(100%, auto);
 
-                            a {
-                                .size(100%, auto);
-
-                                margin-top: 10px;
-                            }
+                            margin-top: 10px;
                         }
                     }
                 }
+            }
 
-                a {
-                    font: inherit;
-                    color: inherit;
+            a {
+                font: inherit;
+                color: inherit;
+                font-weight: @headings-font-weight;
+                border-radius: @default-border-radius;
+                padding: 8px 12px;
+
+                &:hover {
+                    background-color: @white;
+                }
+
+                &.active {
+                    box-shadow: none;
+                    text-shadow: none;
+                    background: none;
+                    background-color: @color-primary;
+                    color: @white;
+                }
+
+                &.new-post-btn {
+                    .ionisx-btn(@white, @color-secondary);
+
                     font-size: 0.9em;
-                    font-weight: @headings-font-weight;
-                    border-radius: @default-border-radius;
-                    padding: 8px 12px;
 
-                    &:hover {
-                        background-color: @white;
-                    }
+                    span.icon {
+                        .square(auto);
 
-                    &.active {
-                        box-shadow: none;
-                        text-shadow: none;
-                        background: none;
-                        background-color: @color-primary;
-                        color: @white;
-                    }
-
-                    &.new-post-btn {
-                        .ionisx-btn(@white, @color-secondary);
-
-                        font-size: 0.9em;
-
-                        span.icon {
-                            .square(auto);
-
-                            font: inherit;
-                            font-family: 'FontAwesome';
-                            color: inherit;
-                            display: inline;
-                            float: none;
-                            margin: 0;
-                            padding: 0 0.5em 0 0;
-                        }
+                        font: inherit;
+                        font-family: 'FontAwesome';
+                        color: inherit;
+                        display: inline;
+                        float: none;
+                        margin: 0;
+                        padding: 0 0.5em 0 0;
                     }
                 }
             }

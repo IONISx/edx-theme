@@ -8,30 +8,34 @@ body {
     background: none;
 }
 
-h1 {
+h1, .h1 {
     color: inherit;
     font-weight: 500;
+    letter-spacing: normal;
     -webkit-font-smoothing: auto;
 }
 
-h2 {
+h2, .h2 {
     color: @color-primary;
     text-transform: none;
+    letter-spacing: normal;
     -webkit-font-smoothing: auto;
 }
 
-h3 {
+h3, .h3 {
     color: inherit;
+    letter-spacing: normal;
     -webkit-font-smoothing: auto;
 }
 
-h4 {
+h4, .h4 {
     color: @color-primary;
     font-weight: 500;
+    letter-spacing: normal;
     -webkit-font-smoothing: auto;
 }
 
-p {
+p, .p {
     color: inherit;
     font: inherit;
     margin: 0 0 1em 0;
@@ -41,6 +45,10 @@ p {
             .text-justify();
         }
     }
+
+    &+ p {
+        margin: 0 0 1em 0;
+    }
 }
 
 blockquote {
@@ -49,14 +57,22 @@ blockquote {
     border-color: @color-border;
 }
 
-ul, ol {
+ul, ol, .ul, .ol {
     font: inherit;
     color: inherit;
     list-style-position: inside;
     padding-left: 0;
+
+    &+ p {
+        margin: 0 0 1em 0;
+    }
+
+    li {
+        margin: 0;
+    }
 }
 
-a, a:link, a:visited,
+a, .a, a:link, a:visited,
 p a, p a:link, p a:visited {
     font: inherit;
     color: @color-primary;
@@ -72,9 +88,10 @@ p a, p a:link, p a:visited {
 label {
     color: inherit;
     font: inherit;
+    text-shadow: none;
 }
 
-b, strong {
+b, strong, .strong {
     font-weight: 600;
 }
 

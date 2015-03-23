@@ -58,7 +58,6 @@
                         }
 
                         &.data {
-                            margin-left: 20px;
                             font-weight: @headings-font-weight;
                         }
                     }
@@ -84,10 +83,8 @@
         .make-md-column(9);
         .make-lg-column(9);
 
-        overflow: hidden;
         margin: 0;
         padding: 0;
-        float: none;
 
         header {
             border: 0 none;
@@ -124,11 +121,7 @@
                 background-color: @white;
                 border: 1px solid @color-border;
                 border-radius: @default-border-radius;
-                padding: 20px;
-
-                @media (max-width: @screen-sm-max) {
-                    padding: 30px 20px;
-                }
+                padding: 15px;
 
                 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
                     @_margin-right: 10px;

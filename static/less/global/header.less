@@ -31,7 +31,7 @@ header.global, header.global-new, header.global.slim {
             }
 
             a {
-                .size(@logo-img-width, 48px);
+                .size(@logo-img-width, 36px);
                 .text-hide();
 
                 background-image: url(@logo-img-path);
@@ -39,7 +39,7 @@ header.global, header.global-new, header.global.slim {
                 background-repeat: no-repeat;
 
                 @media (max-width: @screen-xs-max) {
-                    .size(@logo-sm-img-width, 48px);
+                    .size(@logo-sm-img-width, 36px);
 
                     background-image: url(@logo-sm-img-path);
                 }
@@ -109,6 +109,10 @@ header.global, header.global-new, header.global.slim {
 
                     text-transform: none;
                 }
+
+                &.cta-register {
+                    display: none;
+                }
             }
         }
 
@@ -125,6 +129,15 @@ header.global, header.global-new, header.global.slim {
 
                 &.user-link {
                     max-width: 120px;
+
+                    i.fa {
+                        display: none;
+                    }
+
+                    div {
+                        margin: 0;
+                        padding: 0;
+                    }
                 }
 
                 &.dropdown.active {
@@ -132,7 +145,7 @@ header.global, header.global-new, header.global.slim {
                 }
 
                 &.dropdown {
-                    padding: 8px 10px;
+                    padding: 7px 8px;
                     border-left: none;
                     border-radius: 0 @default-border-radius @default-border-radius 0;
                     letter-spacing: normal;
@@ -149,7 +162,7 @@ header.global, header.global-new, header.global.slim {
 
                 padding: 0;
                 z-index: 10;
-                top: 36px;
+                top: 28px;
                 left: initial;
                 right: 0;
                 box-shadow: none;
@@ -165,7 +178,7 @@ header.global, header.global-new, header.global.slim {
                 > li {
                     transition: all .1s ease-in;
                     border: 0 none;
-                    padding: 3px 8px;
+                    padding: 2px 8px;
                     color: @color-primary;
 
                     > a {
