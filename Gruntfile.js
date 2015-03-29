@@ -5,7 +5,8 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     var config = {
-        'static': 'static',
+        src: 'src',
+        dest: 'static',
         bower: 'bower_components'
     };
 
@@ -16,8 +17,8 @@ module.exports = function (grunt) {
 
         watch: {
             less: {
-                files: ['<%= c.static %>/less/**/*.less'],
-                tasks: ['less', 'autoprefixer', 'cssmin']
+                files: ['<%= c.src %>/less/**/*.less'],
+                tasks: ['less', 'autoprefixer', 'cssmin', 'bless']
             }
         },
 
@@ -70,13 +71,9 @@ module.exports = function (grunt) {
                 options: {
                     paths: ['<%= c.bower %>']
                 },
-                files: [{
-                    expand: true,
-                    cwd: '<%= c.static %>/less',
-                    src: 'main.less',
-                    dest: '<%= c.static %>/css',
-                    ext: '.css'
-                }]
+                files: {
+                    '<%= c.dest %>/css/bundle.css': '<%= c.src %>/less/main.less'
+                }
             }
         },
 
@@ -84,9 +81,27 @@ module.exports = function (grunt) {
 
         autoprefixer: {
             theme: {
+                options: {
+                    browsers: ['last 2 versions', 'ie 9']
+                },
                 files: {
-                    '<%= c.static %>/css/main.css': [
-                        '<%= c.static %>/css/main.css'
+                    '<%= c.dest %>/css/bundle.css': [
+                        '<%= c.dest %>/css/bundle.css'
+                    ]
+                }
+            }
+        },
+
+        // ## //
+
+        bless: {
+            theme: {
+                options: {
+                    force: true
+                },
+                files: {
+                    '<%= c.dest %>/css/bundle.css': [
+                        '<%= c.dest %>/css/bundle.css'
                     ]
                 }
             }
@@ -99,11 +114,12 @@ module.exports = function (grunt) {
                 options: {
                     report: 'min'
                 },
-                files: {
-                    '<%= c.static %>/css/main.css': [
-                        '<%= c.static %>/css/main.css'
-                    ]
-                }
+                files: [{
+                    expand: true,
+                    cwd: '<%= c.dest %>/css',
+                    dest: '<%= c.dest %>/css',
+                    src: ['*.css']
+                }]
             }
         },
 
@@ -116,8 +132,8 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: '<%= c.static %>/images/',
-                    dest: '<%= c.static %>/images/',
+                    cwd: '<%= c.dest %>/images/',
+                    dest: '<%= c.dest %>/images/',
                     src: [
                         '**/*.{png,jpg,gif}'
                     ]
@@ -133,7 +149,7 @@ module.exports = function (grunt) {
                     expand: true,
                     flatten: true,
                     cwd: '<%= c.bower %>/',
-                    dest: '<%= c.static %>/fonts/font-awesome/',
+                    dest: '<%= c.dest %>/fonts/font-awesome/',
                     src: [
                         'font-awesome/fonts/*'
                     ]
@@ -146,6 +162,7 @@ module.exports = function (grunt) {
         'less',
         'autoprefixer',
         'cssmin',
+        'bless',
         'imagemin',
         'copy'
     ]);
