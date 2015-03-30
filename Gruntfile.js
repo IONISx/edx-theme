@@ -39,6 +39,18 @@ module.exports = function (grunt) {
 
         // ## //
 
+        jscs: {
+            all: {
+                files: {
+                    src: [
+                        'Gruntfile.js'
+                    ]
+                }
+            }
+        },
+
+        // ## //
+
         less: {
             theme: {
                 options: {
@@ -151,6 +163,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', [
         'jshint',
+        'jscs',
         'build'
     ]);
 };
