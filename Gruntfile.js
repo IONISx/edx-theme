@@ -25,36 +25,9 @@ module.exports = function (grunt) {
         // ## //
 
         jshint: {
-            options: {
-                'curly': true,
-                'eqeqeq': true,
-                'immed': true,
-                'latedef': true,
-                'newcap': true,
-                'noarg': true,
-                'noempty': true,
-                'unused': true,
-                'undef': true,
-                'trailing': true,
-                'quotmark': 'single',
-
-                'boss': true,
-                'eqnull': true
-            },
-            browser: {
-                options: {
-                    'browser': true,
-                    'jquery': true
-                },
-                files: {
-                    src: [
-                        '<%= c.static %>/js/**/*.js'
-                    ]
-                }
-            },
             node: {
                 options: {
-                    'node': true
+                    jshintrc: true
                 },
                 files: {
                     src: [
