@@ -12,13 +12,13 @@
 
 This theme is developped originally for [IONISx](https://ionisx.com).
 
-As it’s based on [Bootstrap](http://getbootstrap.com/), it used [Less](http://lesscss.org/)(instead of
+As it’s based on [Bootstrap](http://getbootstrap.com/), it used [Less](http://lesscss.org/) (instead of
 Sass – which is used by Open edX).
 It is very simply customizable, you just need to change a few Less variables (see `/src/less/variables.less`).
 
 ## Getting started
 
-First of all, you need to know that the CSS output of the LESS files is included in the repository.
+First of all, you need to know that the CSS output of the Less files is included in the repository.
 It’s not a very good practice, but it simplifies the (already cumbersome) deployment workflow of Open edX.
 
 This is so you will **never** need to install any of the development dependencies in your production environment.
