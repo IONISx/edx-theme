@@ -123,8 +123,6 @@ body,
         }
     }
 
-    @import 'course/main.less';
-
     @import 'static.less';
     @import 'error.less';
 
@@ -136,4 +134,8 @@ body,
     @import 'login.less';
     @import 'password-reset.less';
     @import 'activation.less';
+}
+
+body.view-incourse .content-wrapper {
+    @import 'course/main.less';
 }

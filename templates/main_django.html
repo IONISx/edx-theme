@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-{% load compressed %}{% load sekizai_tags i18n microsite %}{% load url from future %}{% load staticfiles %}
+{% load compressed %}
+{% load sekizai_tags i18n microsite %}
+{% load url from future %}
+{% load staticfiles %}
 <html lang="{{LANGUAGE_CODE}}">
 <head>
   <meta charset="UTF-8">
   {% block title %}<title>{% platform_name %}</title>{% endblock %}
 
-  <link rel="icon" type="image/x-icon" href="{% static "images/favicon.ico" %}" />
+ <link rel="icon" type="image/x-icon" href="{% favicon_path %}" />
 
   {% compressed_css 'style-vendor' %}
-  {% compressed_css 'style-app' %}
-  {% compressed_css 'style-app-extend1' %}
-  {% compressed_css 'style-app-extend2' %}
+  {% compressed_css 'style-main' %}
   {% compressed_css 'style-course-vendor' %}
   {% compressed_css 'style-course' %}
 
@@ -22,22 +23,21 @@
 
   {% include "theme-head-extra.html" %}
 
-  <!--[if lt IE 9]>
-  <script src="{% static 'js/html5shiv.js' %}"></script>
-  <![endif]-->
-
   <meta name="path_prefix" content="{{EDX_ROOT_URL}}">
 </head>
 
 <body class="{% block bodyclass %}{% endblock %} lang_{{LANGUAGE_CODE}}">
-  <a class="nav-skip" href="{% block nav_skip %}#content{% endblock %}">{% trans "Skip to this view's content" %}</a>
-  {% include "theme-header.html" %}
-  <div class="content-wrapper" id="content">
-    {% block body %}{% endblock %}
-    {% block bodyextra %}{% endblock %}
+  <div class="window-wrap" dir="${static.dir_rtl()}">
+    <a class="nav-skip" href="{% block nav_skip %}#content{% endblock %}">{% trans "Skip to main content" %}</a>
+    {% with course=request.course %}
+      {% include "theme-header.html" %}
+    {% endwith %}
+    <div class="content-wrapper" id="content">
+      {% block body %}{% endblock %}
+      {% block bodyextra %}{% endblock %}
+    </div>
+    {% include "theme-footer.html" %}
   </div>
-
-  {% include "theme-footer.html" %}
 
   {% compressed_js 'application' %}
   {% compressed_js 'module-js' %}

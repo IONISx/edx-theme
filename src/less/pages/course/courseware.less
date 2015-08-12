@@ -152,32 +152,20 @@
             border: 0 none;
 
             button {
-                .size(auto, 44px);
-
+                background: none;
                 border: 2px solid @color-border;
-                background-position: center center;
                 box-shadow: none;
+                height: 44px;
+                overflow: hidden;
                 text-shadow: none;
-            }
+                transition: none;
 
-            ul {
-                li {
-                    .size(auto, 44px);
+                &.disabled {
+                    background-color: fade(@color-disabled, 25%);
+                    opacity: 1;
 
-                    background: none;
-                    box-shadow: none;
-                    border: 2px solid @color-border;
-                    overflow: hidden;
-
-                    a {
-                        margin: 0;
-                        transition: none;
-                        overflow: hidden;
-                        background-position: center 12px;
-
-                        &.disabled {
-                            background-color: @color-border;
-                        }
+                    .icon {
+                        opacity: 0.5;
                     }
                 }
             }
@@ -186,7 +174,7 @@
                 background: none;
                 box-shadow: none;
                 border: 0 none;
-                margin: 0 32px;
+                margin: 0 38px;
                 padding: 0;
 
                 .left-shadow, .right-shadow {
@@ -306,6 +294,10 @@
                                 content: '\f040';
                             }
 
+                            .icon {
+                                display: none;
+                            }
+
                             > p {
                                 display: none;
                             }
@@ -320,25 +312,24 @@
         }
 
         .sequence-bottom {
-            .square(auto);
+            .button-previous {
+                margin: 0 1px;
+            }
 
-            margin: 2em 0;
-            text-align: center;
-
-            .prev, .next {
+            .button-previous, .button-next {
                 background: none;
+                box-shadow: none;
                 display: inline-block;
-                position: static;
                 border: 2px solid @color-border;
                 overflow: hidden;
-                margin: 0 -1px;
+                transition: none;
 
-                a {
-                    background-position: center center;
-                    transition: none;
+                &.disabled {
+                    background-color: fade(@color-disabled, 25%);
+                    opacity: 1;
 
-                    &.disabled {
-                        background-color: @color-disabled;
+                    .icon {
+                        opacity: 0.5;
                     }
                 }
             }
