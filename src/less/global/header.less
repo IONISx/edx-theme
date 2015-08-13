@@ -30,13 +30,14 @@ header.global, header.global-new, header.global.slim {
                 display: none;
             }
 
-            a {
+            span {
                 .size(@logo-img-width, 36px);
                 .text-hide();
 
                 background-image: url(@logo-img-path);
                 background-size: contain;
                 background-repeat: no-repeat;
+                display: block;
 
                 @media (max-width: @screen-xs-max) {
                     .size(@logo-sm-img-width, 36px);

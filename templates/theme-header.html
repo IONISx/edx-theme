@@ -2,13 +2,23 @@
 <%namespace name='static' file='/static_content.html'/>
 <%inherit file="/navigation.html"/>
 
-<%! from microsite_configuration.templatetags.microsite import platform_name %>
+<%!
+import branding
+from microsite_configuration import microsite
+from microsite_configuration.templatetags.microsite import platform_name
+%>
 
 <%block name="navigation_top">
 </%block>
 
 <%block name="navigation_logo">
-  ${platform_name()}
+  % if microsite.is_request_in_microsite():
+  <span style="background-image:url(${static.url(branding.get_logo_url())})">
+  % else:
+  <span>
+  % endif
+    ${platform_name()}
+  </span>
 </%block>
 
 ## When unauthenticated, only show the about page link
