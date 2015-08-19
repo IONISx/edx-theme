@@ -49,7 +49,7 @@ As said earlier, DO NOT run `npm install` nor `bower install` on your production
 to install `nodejs`, `npm` and `bower`, and why would you need that for a bunch of static files?
 
 Just drop the files into `/edx/edxapp/themes/$WHATEVER` using your deployment tools.
-If you’re using Open edX’s [configuration ansible playbooks](github.com/edx/configuration), you’ll just need to set
+If you’re using Open edX’s [configuration ansible playbooks](https://github.com/edx/configuration), you’ll just need to set
 
 ```yml
 edxapp_theme_source_repo: https://github.com/your-user/your-repo.git
