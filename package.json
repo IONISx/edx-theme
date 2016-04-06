@@ -23,7 +23,7 @@
     "grunt-contrib-imagemin": "1.0.0",
     "grunt-contrib-copy": "0.8.0",
     "grunt-autoprefixer": "3.0.0",
-    "grunt-bless": "0.2.0",
+    "grunt-bless": "1.0.2",
     "grunt-jscs": "1.6.0",
     "time-grunt": "1.1.1",
     "load-grunt-tasks": "3.1.0"
