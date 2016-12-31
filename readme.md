@@ -61,6 +61,24 @@ edxapp_use_custom_theme: true
 See Open edX’s documentation on [custom theming](https://github.com/edx/edx-platform/wiki/Custom-Theming) for more
 information.
 
+
+## Installation
+
+Add the following lines to /edx/app/edx_ansible/server-vars.yml
+```yml
+edxapp_use_custom_theme: true
+edxapp_theme_name: 'ionisx'
+edxapp_theme_source_repo: 'https://github.com/IONISx/edx-theme.git'
+edxapp_theme_version: 'HEAD'
+```
+Make sure to keep file permissions for server-vars.yml assigned to edx-ansible:edx-ansible
+
+	sudo chmod edx-ansible:edx-ansible /edx/app/edx_ansible/server-vars.yml
+
+Re-run the provisioning scripts:
+
+    sudo /edx/bin/update edx-platform release    
+
 ## License
 
 [AGPL](http://en.wikipedia.org/wiki/Affero_General_Public_License)
